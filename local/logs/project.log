@@ -1,0 +1,88 @@
+2021-12-08T08:16:02.965Z - normal: Load ~/.CocosCreator/settings.json
+2021-12-08T08:16:03.016Z - normal: Initializing Asset Database
+2021-12-08T08:16:03.018Z - normal: checking language setting...
+2021-12-08T08:16:03.018Z - normal: Language: en
+2021-12-08T08:16:03.496Z - success: preview server running at http://localhost:7456
+2021-12-08T08:16:03.508Z - success: protocol editor-framework registered
+2021-12-08T08:16:03.508Z - success: protocol app registered
+2021-12-08T08:16:03.508Z - success: protocol theme registered
+2021-12-08T08:16:03.508Z - success: protocol packages registered
+2021-12-08T08:16:03.508Z - success: protocol uuid registerred
+2021-12-08T08:16:03.508Z - success: protocol db registerred
+2021-12-08T08:16:03.508Z - success: protocol thumbnail registerred
+2021-12-08T08:16:03.508Z - success: protocol unpack registerred
+2021-12-08T08:16:03.508Z - success: protocol disable-commonjs registerred
+2021-12-08T08:16:04.782Z - normal: connected!
+2021-12-08T08:16:04.784Z - normal: Check project /Users/fe-danghai-fresher/Desktop/Training/cocos_training/HW/2044Clone
+2021-12-08T08:16:04.789Z - normal: Initializing project /Users/fe-danghai-fresher/Desktop/Training/cocos_training/HW/2044Clone
+2021-12-08T08:16:05.041Z - normal: Initializing Cocos2d
+2021-12-08T08:16:05.491Z - normal: Initializing engine extends
+2021-12-08T08:16:05.511Z - success: alipay-adapter loaded
+2021-12-08T08:16:05.519Z - success: asset-db-debugger loaded
+2021-12-08T08:16:05.525Z - success: baidu-adapter loaded
+2021-12-08T08:16:05.530Z - success: color-picker loaded
+2021-12-08T08:16:05.618Z - success: fb-audience-network loaded
+2021-12-08T08:16:05.646Z - success: fb-live-stream loaded
+2021-12-08T08:16:05.648Z - success: google-play-instant loaded
+2021-12-08T08:16:05.650Z - success: huawei-runtime loaded
+2021-12-08T08:16:05.791Z - success: cpk-publish loaded
+2021-12-08T08:16:05.791Z - success: jsb-adapter loaded
+2021-12-08T08:16:05.794Z - success: oppo-runtime loaded
+2021-12-08T08:16:05.797Z - success: package-manager loaded
+2021-12-08T08:16:05.864Z - success: qqplay-adapter loaded
+2021-12-08T08:16:05.865Z - success: runtime-dev-tools loaded
+2021-12-08T08:16:05.869Z - success: sdkbox loaded
+2021-12-08T08:16:05.871Z - success: tester loaded
+2021-12-08T08:16:05.873Z - success: ui-kit-preview-extra loaded
+2021-12-08T08:16:05.875Z - success: ui-kit-preview loaded
+2021-12-08T08:16:05.877Z - success: ui-kit loaded
+2021-12-08T08:16:05.881Z - success: vivo-runtime loaded
+2021-12-08T08:16:05.881Z - success: weapp-adapter loaded
+2021-12-08T08:16:05.882Z - success: xiaomi-adapter loaded
+2021-12-08T08:16:05.884Z - success: alipay-minigame loaded
+2021-12-08T08:16:05.920Z - success: assets loaded
+2021-12-08T08:16:05.922Z - success: builder loaded
+2021-12-08T08:16:06.079Z - success: cocos-services loaded
+2021-12-08T08:16:06.084Z - success: console loaded
+2021-12-08T08:16:06.113Z - success: fb-instant-games loaded
+2021-12-08T08:16:06.116Z - success: game-window loaded
+2021-12-08T08:16:06.117Z - success: google-instant-games loaded
+2021-12-08T08:16:06.121Z - success: hierarchy loaded
+2021-12-08T08:16:06.124Z - success: inspector loaded
+2021-12-08T08:16:06.125Z - success: keystore loaded
+2021-12-08T08:16:06.129Z - success: node-library loaded
+2021-12-08T08:16:06.130Z - success: package-asset loaded
+2021-12-08T08:16:06.131Z - success: preferences loaded
+2021-12-08T08:16:06.133Z - success: project-exporter loaded
+2021-12-08T08:16:06.137Z - success: project-importer loaded
+2021-12-08T08:16:06.140Z - success: project-settings loaded
+2021-12-08T08:16:06.144Z - success: scene loaded
+2021-12-08T08:16:06.145Z - success: simulator-debugger loaded
+2021-12-08T08:16:06.146Z - success: sprite-editor loaded
+2021-12-08T08:16:06.150Z - success: store loaded
+2021-12-08T08:16:06.156Z - success: timeline loaded
+2021-12-08T08:16:06.159Z - success: xiaomi-runtime loaded
+2021-12-08T08:16:09.040Z - info: Cocos Services load base data!
+2021-12-08T08:16:09.713Z - normal: Loading packages
+2021-12-08T08:16:09.719Z - normal: Watching packages
+2021-12-08T08:16:09.793Z - normal: Run Application
+2021-12-08T08:18:13.470Z - error: Can't init canvas 'New Canvas' because it conflicts with the existing 'Canvas', the scene should only have one active canvas at the same time
+    at Object.cc.errorID (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCDebug.js:167:16)
+    at cc_Canvas.__preload (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCCanvas.js:82:31)
+    at eval (eval at createInvokeImpl (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/component-scheduler.js:1:1), <anonymous>:3:65)
+    at CCClass._invoke (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/component-scheduler.js:165:21)
+    at CCClass.invoke (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/node-activator.js:50:22)
+    at CCClass.activateNode (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/node-activator.js:184:34)
+    at cc_Node._onHierarchyChanged (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/utils/base-node.js:623:48)
+    at cc_Node._onHierarchyChanged (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCNode.js:726:22)
+    at cc_Node.setParent (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/utils/base-node.js:219:26)
+2021-12-08T08:23:12.978Z - error: Can't init canvas 'New Canvas' because it conflicts with the existing 'Canvas', the scene should only have one active canvas at the same time
+    at Object.cc.errorID (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCDebug.js:167:16)
+    at cc_Canvas.__preload (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/components/CCCanvas.js:82:31)
+    at eval (eval at createInvokeImpl (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/component-scheduler.js:1:1), <anonymous>:3:65)
+    at CCClass._invoke (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/component-scheduler.js:165:21)
+    at CCClass.invoke (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/node-activator.js:50:22)
+    at CCClass.activateNode (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/node-activator.js:184:34)
+    at cc_Node._onHierarchyChanged (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/utils/base-node.js:623:48)
+    at cc_Node._onHierarchyChanged (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCNode.js:726:22)
+    at cc_Node.setParent (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/utils/base-node.js:219:26)
