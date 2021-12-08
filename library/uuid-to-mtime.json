@@ -433,5 +433,15 @@
     "asset": 1638953303522,
     "meta": 1638953303534,
     "relativePath": "Prefab/New Sprite.prefab"
+  },
+  "8261e93a-e29e-4d70-8c1c-464cb1bf9042": {
+    "asset": 1638954527920,
+    "meta": 1638954527995,
+    "relativePath": "button.png"
+  },
+  "d959274f-3378-439d-bc29-b49ae36d425a": {
+    "asset": 1638955765223,
+    "meta": 1638955765291,
+    "relativePath": "button-the-button-icon-web-pages-66164.png"
   }
 }

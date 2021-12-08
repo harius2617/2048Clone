@@ -49,7 +49,7 @@
                 "width": 1009
               },
               {
-                "active": 2,
+                "active": 0,
                 "children": [
                   "console",
                   "timeline",
@@ -88,32 +88,6 @@
         "inspector",
         "cocos-services",
         "scene"
-      ]
-    },
-    "window-1638953544707": {
-      "main": false,
-      "url": "unpack://static/window.html",
-      "windowType": "dockable",
-      "x": 0,
-      "y": 0,
-      "width": 1680,
-      "height": 1050,
-      "layout": {
-        "children": [
-          {
-            "active": 0,
-            "children": [
-              "sprite-editor"
-            ],
-            "height": 1050,
-            "type": "panel",
-            "width": 1680
-          }
-        ],
-        "type": "dock-v"
-      },
-      "panels": [
-        "sprite-editor"
       ]
     }
   },

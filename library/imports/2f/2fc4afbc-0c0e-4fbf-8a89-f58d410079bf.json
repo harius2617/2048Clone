@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "button-the-button-icon-web-pages-66164",
+    "texture": "d959274f-3378-439d-bc29-b49ae36d425a",
+    "atlas": "",
+    "rect": [
+      0,
+      157,
+      1280,
+      326
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1280,
+      640
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
