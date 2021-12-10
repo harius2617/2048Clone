@@ -1,0 +1,22 @@
+{
+  "name": "2048clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harius2617/2048Clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harius2617/2048Clone/issues"
+  },
+  "homepage": "https://github.com/harius2617/2048Clone#readme",
+  "dependencies": {
+    "events": "^3.3.0"
+  }
+}

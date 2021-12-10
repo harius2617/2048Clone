@@ -27,7 +27,7 @@
     "_prefab": {
       "__id__": 3
     },
-    "_opacity": 255,
+    "_opacity": 89,
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
@@ -47,8 +47,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
+      "x": -160,
+      "y": 160,
       "z": 0
     },
     "_scale": {
@@ -107,9 +107,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "351e66a2-1e55-43bd-b11b-8e46ecde34de"
+      "__uuid__": "da22e953-f1e2-412f-8326-95b8a5a10bf8"
     },
-    "fileId": "7cPA55WgBGiJvFRfl01jQF",
+    "fileId": "72gJQAmidIXZNcIM2jygKh",
     "sync": false
   }
 ]
