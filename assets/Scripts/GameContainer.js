@@ -47,7 +47,7 @@ cc.Class({
         switch(event.keyCode){
             case cc.macro.KEY.left:
                 cc.log("left");
-                if(this.lbl2.node.x == 390) {
+                if(this.lbl2.node.x == 60) {
                     this.lbl2.node.setPosition(cc.v2(this.lbl2.node.x, this.lbl2.node.y))
                 }else {
                     this.lbl2.node.setPosition(cc.v2(this.lbl2.node.x-110,this.lbl2.node.y))
@@ -72,7 +72,7 @@ cc.Class({
         switch(event.keyCode){
             case cc.macro.KEY.down:
                 cc.log("down");
-                if(this.lbl2.node.y == 390) {
+                if(this.lbl2.node.y == 60) {
                     this.lbl2.node.setPosition(cc.v2(this.lbl2.node.x, this.lbl2.node.y))
                 }else {
                     this.lbl2.node.setPosition(cc.v2(this.lbl2.node.x,this.lbl2.node.y-110))
