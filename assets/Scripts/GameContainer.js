@@ -16,7 +16,9 @@ cc.Class({
         lbl2: cc.Prefab,
          _padX: 10,
          _padY: 10,
-        
+        _newItem: null,
+        _arr: [],
+        _indexItem: [],
     },
     
     createItem(){
@@ -31,67 +33,87 @@ cc.Class({
     },
 
     createNewItem() {
-        let newItem = cc.instantiate(this.lbl2);
-        this.node.addChild(newItem)
-        let arr = Math.floor(Math.random()+1)*4
-        newItem.setPosition(cc.v2((newItem.width+this._padX)*arr/2-(newItem.width)/2, (newItem.height+this._padY)*arr-(newItem.height)/2))
+        this._newItem = cc.instantiate(this.lbl2);
+        this.node.addChild(this._newItem)
+        let posX = Math.floor(Math.random()*4)+1;
+        let posY = Math.floor(Math.random()*4)+1;
+        this._newItem.setPosition(cc.v2((this._newItem.width+this._padX)*posX-(this._newItem.width)/2, (this._newItem.height+this._padY)*posY-(this._newItem.height)/2))
+        cc.log(this._newItem.position)
+        cc.warn(this.node)
+
     },
+
 
     onKeyRight: function(event){
         switch(event.keyCode){
             case cc.macro.KEY.right:
                 cc.log("right");
-                if(this.lbl2.x == 390) {
-                    this.lbl2.setPosition(cc.v2(this.lbl2.x, this.lbl2.y))
-                }else {
-                    this.lbl2.setPosition(cc.v2(390,this.lbl2.y))
-                }
+                if(this._newItem.x === 390){
+                    return;
+                }else{
+                    cc.tween(this._newItem)
+                        .by(1, {position: cc.v2(this._newItem.width + this._padX,0)})
+                        .start()
+                    }
+                this.createNewItem();
                 break;
         }
     },
 
     onKeyLeft: function(event){
-        // switch(event.keyCode){
-        //     case cc.macro.KEY.left:
-        //         cc.log("left");
-        //         if(this.lbl2.node.x == 60) {
-        //             this.lbl2.node.setPosition(cc.v2(this.lbl2.node.x, this.lbl2.node.y))
-        //         }else {
-        //             this.lbl2.node.setPosition(cc.v2(60,this.lbl2.node.y))
-        //         }
-        //         break;
-        // }
+        switch(event.keyCode){
+            case cc.macro.KEY.left:
+                cc.log("left");
+                if(this._newItem.x === 60){
+                    return
+                }else{
+                    cc.tween(this._newItem)
+                            .by(1, {position: cc.v2(-(this._newItem.width + this._padX),0)})
+                            .start()
+                }
+                this.createNewItem();
+                break
+        }
     },
 
     onKeyUp: function(event){
-        // switch(event.keyCode){
-        //     case cc.macro.KEY.up:
-        //         cc.log("up");
-        //         if(this.lbl2.node.y == 390) {
-        //             this.lbl2.node.setPosition(cc.v2(this.lbl2.node.x, this.lbl2.node.y))
-        //         }else {
-        //             this.lbl2.node.setPosition(cc.v2(this.lbl2.node.x,390))
-        //         }
-        //         break;
-        // }
+        switch(event.keyCode){
+            case cc.macro.KEY.up:
+                cc.log("up");
+                if(this._newItem.y == 390) {
+                    return;
+                }else {
+                    cc.tween(this._newItem)
+                        .by(1, {position: cc.v2(0,this._newItem.height + this._padY)})
+                        .start()
+                    }
+                    this.createNewItem();
+                break;
+        }
     },
     onKeyDown: function(event){
-        // switch(event.keyCode){
-        //     case cc.macro.KEY.down:
-        //         cc.log("down");
-        //         if(this.lbl2.node.y == 60) {
-        //             this.lbl2.node.setPosition(cc.v2(this.lbl2.node.x, this.lbl2.node.y))
-        //         }else {
-        //             this.lbl2.node.setPosition(cc.v2(this.lbl2.node.x,60))
-        //         }
-        //         break;
-        // }
+        switch(event.keyCode){
+            case cc.macro.KEY.down:
+                cc.log("down");
+
+                if(this._newItem.y == 60) {
+                    return;
+                }else {
+                    cc.tween(this._newItem)
+                        .by(1, {position: cc.v2(0,-(this._newItem.height + this._padY))})
+                        .start()
+                    }
+                    this.createNewItem();
+
+                break;
+        }
     },
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
         this.createItem();
         this.createNewItem();
+        // this.createNewItem();
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyRight, this);
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyLeft, this);
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyUp, this);

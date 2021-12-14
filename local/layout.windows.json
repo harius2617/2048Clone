@@ -7,7 +7,7 @@
       "url": "app://editor/index.html",
       "windowType": "dockable",
       "x": 0,
-      "y": 25,
+      "y": 27,
       "width": 1680,
       "height": 945,
       "layout": {
@@ -19,7 +19,7 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 427.984375,
+                "height": 428,
                 "type": "panel",
                 "width": 271
               },
@@ -55,7 +55,7 @@
                   "timeline",
                   "game-window"
                 ],
-                "height": 427.984375,
+                "height": 428,
                 "type": "panel",
                 "width": 1000.984375
               }

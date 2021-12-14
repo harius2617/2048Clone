@@ -1167,7 +1167,7 @@
       "__id__": 25
     },
     "_name": "2",
-    "_active": true,
+    "_active": false,
     "_position": {
       "__type__": "cc.Vec3",
       "x": 60,
@@ -1309,6 +1309,7 @@
     },
     "_padX": 10,
     "_padY": 10,
+    "_newItem": null,
     "_id": "7djSJnC11Nzpro4OF+rNC0"
   },
   {
