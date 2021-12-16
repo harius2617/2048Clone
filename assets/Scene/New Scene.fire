@@ -69,7 +69,7 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 31
+        "__id__": 29
       }
     ],
     "_prefab": null,
@@ -153,7 +153,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 329.0896534380867
+      "z": 469.3857688511658
     },
     "_scale": {
       "__type__": "cc.Vec3",
@@ -236,7 +236,7 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 30
+        "__id__": 28
       }
     ],
     "_prefab": null,
@@ -1098,19 +1098,16 @@
     "_children": [
       {
         "__id__": 24
-      },
-      {
-        "__id__": 26
       }
     ],
     "_active": true,
     "_level": 2,
     "_components": [
       {
-        "__id__": 28
+        "__id__": 26
       },
       {
-        "__id__": 29
+        "__id__": 27
       }
     ],
     "_prefab": null,
@@ -1158,42 +1155,6 @@
   },
   {
     "__type__": "cc.Node",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 23
-    },
-    "_id": "bdrqAgG0tGKLiVRS6TocM3",
-    "_prefab": {
-      "__id__": 25
-    },
-    "_name": "2",
-    "_active": false,
-    "_position": {
-      "__type__": "cc.Vec3",
-      "x": 60,
-      "y": 60,
-      "z": 0
-    },
-    "_eulerAngles": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    }
-  },
-  {
-    "__type__": "cc.PrefabInfo",
-    "root": {
-      "__id__": 24
-    },
-    "asset": {
-      "__uuid__": "2581ec5a-9324-4009-8600-f7e591dd99c0"
-    },
-    "fileId": "bdrqAgG0tGKLiVRS6TocM3",
-    "sync": true
-  },
-  {
-    "__type__": "cc.Node",
     "_name": "New TiledMap",
     "_objFlags": 0,
     "_parent": {
@@ -1204,7 +1165,7 @@
     "_level": 3,
     "_components": [
       {
-        "__id__": 27
+        "__id__": 25
       }
     ],
     "_prefab": null,
@@ -1255,7 +1216,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 26
+      "__id__": 24
     },
     "_enabled": true,
     "_tmxFile": null,
@@ -1309,9 +1270,6 @@
     },
     "_padX": 10,
     "_padY": 10,
-    "_newItem": null,
-    "_arr": [],
-    "_indexItem": [],
     "_id": "7djSJnC11Nzpro4OF+rNC0"
   },
   {

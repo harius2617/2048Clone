@@ -1,7 +1,6 @@
 {
   "version": "1.1.1",
   "windows": {
-    "worker": {},
     "main": {
       "main": true,
       "url": "app://editor/index.html",
@@ -44,7 +43,7 @@
                 "children": [
                   "scene"
                 ],
-                "height": 427,
+                "height": 589,
                 "type": "panel",
                 "width": 1000.984375
               },
@@ -55,7 +54,7 @@
                   "timeline",
                   "game-window"
                 ],
-                "height": 428,
+                "height": 266,
                 "type": "panel",
                 "width": 1000.984375
               }
