@@ -52,10 +52,10 @@ cc.Class({
                     return;
                 }else{
                     cc.tween(this._newItem)
-                        .by(1, {position: cc.v2(this._newItem.width + this._padX,0)})
+                        .by(0.5, {position: cc.v2(this._newItem.width + this._padX,0)})
                         .start()
                     }
-                this.createNewItem();
+                // this.createNewItem();
                 break;
         }
     },
@@ -68,10 +68,10 @@ cc.Class({
                     return
                 }else{
                     cc.tween(this._newItem)
-                            .by(1, {position: cc.v2(-(this._newItem.width + this._padX),0)})
+                            .by(0.5, {position: cc.v2(-(this._newItem.width + this._padX),0)})
                             .start()
                 }
-                this.createNewItem();
+                // this.createNewItem();
                 break
         }
     },
@@ -84,10 +84,10 @@ cc.Class({
                     return;
                 }else {
                     cc.tween(this._newItem)
-                        .by(1, {position: cc.v2(0,this._newItem.height + this._padY)})
+                        .by(0.5, {position: cc.v2(0,this._newItem.height + this._padY)})
                         .start()
                     }
-                    this.createNewItem();
+                    // this.createNewItem();
                 break;
         }
     },
@@ -100,10 +100,10 @@ cc.Class({
                     return;
                 }else {
                     cc.tween(this._newItem)
-                        .by(1, {position: cc.v2(0,-(this._newItem.height + this._padY))})
+                        .by(0.5, {position: cc.v2(0,-(this._newItem.height + this._padY))})
                         .start()
                     }
-                    this.createNewItem();
+                    // this.createNewItem();
 
                 break;
         }
