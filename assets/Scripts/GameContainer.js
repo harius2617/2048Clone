@@ -34,27 +34,33 @@ cc.Class({
     },
 
     createNewItem() {
-        cc.log(this.i)
-        this.i++
+        // cc.log(this.i)
+        // this.i++
         this._newItem = cc.instantiate(this.lbl2);
         this.node.addChild(this._newItem)
+        // cc.log(this._newItem.getComponent(cc.Sprite).x)
         let posX = Math.floor(Math.random() * 4) + 1;
         let posY = Math.floor(Math.random() * 4) + 1;
         this._newItem.setPosition(cc.v2((this._newItem.width + this._padX) * posX - (this._newItem.width) / 2, (this._newItem.height + this._padY) * posY - (this._newItem.height) / 2))
     },
 
-    onKeyUp: function (event) {
-        this.createNewItem()
+    onKeyDown: function (event) {
+        cc.tween(this.node)
+            .delay(1.2)
+            .call(()=>{
+                this.createNewItem()
+            })
+            .start()
     },
     onLoad() {
-        cc.warn(this.node)
+        // cc.warn(this.node.getComponent(cc.Prefab))
         this.createItem();
         this.createNewItem();
         // this.createNewItem();
         // cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyRight, this);
         // cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyLeft, this);
-        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyUp, this);
-        // cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+        // cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyUp, this);
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
         // cc.warn(this.item.node.position)
     },
 

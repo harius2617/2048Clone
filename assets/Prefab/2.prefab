@@ -217,11 +217,9 @@
       "__id__": 1
     },
     "_enabled": true,
-    "lbl2": {
-      "__uuid__": "2581ec5a-9324-4009-8600-f7e591dd99c0"
-    },
     "_padX": 10,
     "_padY": 10,
+    "_newItem": null,
     "_id": ""
   },
   {
