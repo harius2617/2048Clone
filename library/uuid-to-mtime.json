@@ -460,8 +460,8 @@
     "relativePath": "Scene"
   },
   "8029e165-9a07-4adb-a404-d6b6558b12a1": {
-    "asset": 1639650227000,
-    "meta": 1639650227004,
+    "asset": 1639651618487,
+    "meta": 1639651618496,
     "relativePath": "Scene/New Scene.fire"
   },
   "d959274f-3378-439d-bc29-b49ae36d425a": {
@@ -494,14 +494,14 @@
     "meta": 1639650222885,
     "relativePath": "Prefab/2.prefab"
   },
-  "9ff7316d-45ea-402b-87c4-c3af1451be32": {
-    "asset": 1639646890806,
-    "meta": 1639646891925,
-    "relativePath": "Scripts/GameContainer.js"
-  },
   "fb76c291-cd5d-431b-a936-8b4aba61c279": {
-    "asset": 1639650005187,
-    "meta": 1639650006413,
+    "asset": 1639650405463,
+    "meta": 1639650431780,
     "relativePath": "Scripts/lblControl.js"
+  },
+  "9ff7316d-45ea-402b-87c4-c3af1451be32": {
+    "asset": 1639652039533,
+    "meta": 1639652041008,
+    "relativePath": "Scripts/GameContainer.js"
   }
 }

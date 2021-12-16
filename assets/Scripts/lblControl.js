@@ -27,7 +27,7 @@ cc.Class({
             case cc.macro.KEY.right:
                 // cc.log("right");
                 // cc.log(this.node.position)
-                cc.log(this.node.children)
+                // cc.log(this.node.x)
                 if(this.node.x === 390){
                     return;
                 }else{

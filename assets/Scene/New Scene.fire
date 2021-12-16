@@ -69,7 +69,7 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 27
+        "__id__": 28
       }
     ],
     "_prefab": null,
@@ -229,14 +229,14 @@
         "__id__": 16
       },
       {
-        "__id__": 23
+        "__id__": 24
       }
     ],
     "_active": true,
     "_level": 1,
     "_components": [
       {
-        "__id__": 26
+        "__id__": 27
       }
     ],
     "_prefab": null,
@@ -1018,7 +1018,11 @@
     "_enabled": true,
     "duration": 0.1,
     "zoomScale": 1.2,
-    "clickEvents": [],
+    "clickEvents": [
+      {
+        "__id__": 23
+      }
+    ],
     "_N$interactable": true,
     "_N$enableAutoGrayEffect": false,
     "_N$transition": 2,
@@ -1089,6 +1093,16 @@
     "_id": "60gf2orWdKPID8lYPykvP5"
   },
   {
+    "__type__": "cc.ClickEvent",
+    "target": {
+      "__id__": 24
+    },
+    "component": "",
+    "_componentId": "9ff73FtRepAK4fEw68UUb4y",
+    "handler": "newGame",
+    "customEventData": ""
+  },
+  {
     "__type__": "cc.Node",
     "_name": "GameContainer",
     "_objFlags": 0,
@@ -1100,10 +1114,10 @@
     "_level": 2,
     "_components": [
       {
-        "__id__": 24
+        "__id__": 25
       },
       {
-        "__id__": 25
+        "__id__": 26
       }
     ],
     "_prefab": null,
@@ -1154,7 +1168,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 23
+      "__id__": 24
     },
     "_enabled": true,
     "_materials": [
@@ -1186,7 +1200,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 23
+      "__id__": 24
     },
     "_enabled": true,
     "item": {
@@ -1198,6 +1212,9 @@
     "_padX": 10,
     "_padY": 10,
     "i": 1,
+    "newGameBtn": {
+      "__id__": 22
+    },
     "_id": "7djSJnC11Nzpro4OF+rNC0"
   },
   {

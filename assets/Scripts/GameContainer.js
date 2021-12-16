@@ -16,7 +16,8 @@ cc.Class({
         lbl2: cc.Prefab,
         _padX: 10,
         _padY: 10,
-        i: 0
+        i: 0,
+        newGameBtn: cc.Button
         // _newItem: null,
         // _arr: [],
         // _indexItem: [],
@@ -38,6 +39,7 @@ cc.Class({
         // this.i++
         this._newItem = cc.instantiate(this.lbl2);
         this.node.addChild(this._newItem)
+        cc.warn(this.node.children)
         // cc.log(this._newItem.getComponent(cc.Sprite).x)
         let posX = Math.floor(Math.random() * 4) + 1;
         let posY = Math.floor(Math.random() * 4) + 1;
@@ -51,6 +53,12 @@ cc.Class({
                 this.createNewItem()
             })
             .start()
+    },
+
+    newGame() {
+        this.node.removeChild(this.node.children);
+        // this.createItem()
+        // this.createNewItem()
     },
     onLoad() {
         // cc.warn(this.node.getComponent(cc.Prefab))
