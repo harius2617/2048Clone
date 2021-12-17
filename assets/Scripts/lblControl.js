@@ -1,5 +1,4 @@
 
-
 cc.Class({
     extends: cc.Component,
 
@@ -7,9 +6,9 @@ cc.Class({
         // lbl2: cc.Prefab,
         _padX: 10,
         _padY: 10,
-        _newItem: null,
+        // _newItem: null,
+        // _arr: []
     },
-
 
     onLoad() {
         // this.createNewItem();
@@ -18,8 +17,11 @@ cc.Class({
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyUp, this);
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
     },
-
-    start() {
+    init(){
+        /***
+         * create block
+         * init number, color
+         */
     },
 
     onKeyRight: function (event) {
@@ -32,7 +34,8 @@ cc.Class({
                         .to(1, { position: cc.v2(390, this.node.y) })
                         .start()
                     }
-                cc.log(this.node)
+                // this._arr.push(this.node)
+                // cc.log(this._arr)
                 break;
         }
     },
@@ -44,7 +47,6 @@ cc.Class({
                 if(this.node.x === 60){
                     return
                 }else{
-                    
                     cc.tween(this.node)
                         .to(1, { position: cc.v2(60, this.node.y) })
                         .start()
@@ -63,17 +65,13 @@ cc.Class({
                     cc.tween(this.node)
                         .to(1, { position: cc.v2(this.node.x, 390) })
                         .start()
-                    
                     }
-
                 break;
         }
     },
     onKeyDown: function (event) {
         switch (event.keyCode) {
             case cc.macro.KEY.down:
-                // cc.log("down");
-
                 if(this.node.y == 60 && this.node.x === 60) {
                     cc.log(1)
                     return;
@@ -81,7 +79,6 @@ cc.Class({
                     cc.tween(this.node)
                         .to(1, { position: cc.v2(this.node.x, 60) })
                         .start()
-
                     }
                 break;
         }

@@ -22,11 +22,12 @@ cc.Class({
         this.node.children[0].active = true;
         this.node.children[1].active = false;
         // this._sound = cc.audioEngine;
+        // this.soundBg.play(this.soundBg, true,1)
     },
     soundOn() {
         this.node.children[0].active = true;
         this.node.children[1].active = false;
-        this.soundBg.play(this.soundBg, false,1)
+        this.soundBg.play(this.soundBg, true,1)
     },
 
     soundOff() {
@@ -34,9 +35,5 @@ cc.Class({
         this.node.children[1].active = true;
         this.soundBg.stop(this.soundBg, true,1)
     },
-    start () {
 
-    },
-
-    // update (dt) {},
 });
