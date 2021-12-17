@@ -32,6 +32,7 @@ cc.Class({
                         .to(1, { position: cc.v2(390, this.node.y) })
                         .start()
                     }
+                cc.log(this.node)
                 break;
         }
     },

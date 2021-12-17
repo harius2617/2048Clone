@@ -7,6 +7,10 @@ cc.Class({
         item: cc.Prefab,
         _padX: 10,
         _padY: 10,
+        _newItem: null,
+        arr: [],
+        soundOn: true,
+        _soundOff: false,
     },
 
     createItem() {
@@ -14,10 +18,10 @@ cc.Class({
             for (let j = 1; j < 5; j++) {
                 let itemBg = cc.instantiate(this.item);
                 this.node.addChild(itemBg);
+                this.arr.push(i,j)
                 itemBg.setPosition(cc.v2((itemBg.width + this._padX) * i - (itemBg.width) / 2, (itemBg.height + this._padY) * j - (itemBg.height) / 2))
             }
         }
-
     },
 
     createNewItem() {
@@ -52,7 +56,6 @@ cc.Class({
 
     onLoad() {
         this.createItem();
-        cc.log(this.item);
         this.createNewItem();
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
     },

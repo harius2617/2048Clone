@@ -1,75 +1,298 @@
-2021-12-17T03:45:43.878Z - normal: Load ~/.CocosCreator/settings.json
-2021-12-17T03:45:43.916Z - normal: Initializing Asset Database
-2021-12-17T03:45:43.918Z - normal: checking language setting...
-2021-12-17T03:45:43.918Z - normal: Language: en
-2021-12-17T03:45:44.380Z - success: preview server running at http://localhost:7456
-2021-12-17T03:45:44.391Z - success: protocol editor-framework registered
-2021-12-17T03:45:44.391Z - success: protocol app registered
-2021-12-17T03:45:44.391Z - success: protocol theme registered
-2021-12-17T03:45:44.391Z - success: protocol packages registered
-2021-12-17T03:45:44.391Z - success: protocol uuid registerred
-2021-12-17T03:45:44.391Z - success: protocol db registerred
-2021-12-17T03:45:44.391Z - success: protocol thumbnail registerred
-2021-12-17T03:45:44.391Z - success: protocol unpack registerred
-2021-12-17T03:45:44.391Z - success: protocol disable-commonjs registerred
-2021-12-17T03:45:45.556Z - normal: connected!
-2021-12-17T03:45:45.558Z - normal: Check project /Users/fe-danghai-fresher/Desktop/2048Clone
-2021-12-17T03:45:45.559Z - normal: Initializing project /Users/fe-danghai-fresher/Desktop/2048Clone
-2021-12-17T03:45:45.806Z - normal: Initializing Cocos2d
-2021-12-17T03:45:46.253Z - normal: Initializing engine extends
-2021-12-17T03:45:46.267Z - success: alipay-adapter loaded
-2021-12-17T03:45:46.272Z - success: asset-db-debugger loaded
-2021-12-17T03:45:46.277Z - success: baidu-adapter loaded
-2021-12-17T03:45:46.281Z - success: color-picker loaded
-2021-12-17T03:45:46.374Z - success: fb-audience-network loaded
-2021-12-17T03:45:46.431Z - success: fb-live-stream loaded
-2021-12-17T03:45:46.433Z - success: google-play-instant loaded
-2021-12-17T03:45:46.437Z - success: huawei-runtime loaded
-2021-12-17T03:45:46.578Z - success: cpk-publish loaded
-2021-12-17T03:45:46.578Z - success: jsb-adapter loaded
-2021-12-17T03:45:46.581Z - success: oppo-runtime loaded
-2021-12-17T03:45:46.584Z - success: package-manager loaded
-2021-12-17T03:45:46.662Z - success: qqplay-adapter loaded
-2021-12-17T03:45:46.670Z - success: runtime-dev-tools loaded
-2021-12-17T03:45:46.676Z - success: sdkbox loaded
-2021-12-17T03:45:46.680Z - success: tester loaded
-2021-12-17T03:45:46.682Z - success: ui-kit-preview-extra loaded
-2021-12-17T03:45:46.684Z - success: ui-kit-preview loaded
-2021-12-17T03:45:46.687Z - success: ui-kit loaded
-2021-12-17T03:45:46.691Z - success: vivo-runtime loaded
-2021-12-17T03:45:46.692Z - success: weapp-adapter loaded
-2021-12-17T03:45:46.693Z - success: xiaomi-adapter loaded
-2021-12-17T03:45:46.695Z - success: alipay-minigame loaded
-2021-12-17T03:45:46.724Z - success: assets loaded
-2021-12-17T03:45:46.726Z - success: builder loaded
-2021-12-17T03:45:46.889Z - success: cocos-services loaded
-2021-12-17T03:45:46.895Z - success: console loaded
-2021-12-17T03:45:46.918Z - success: fb-instant-games loaded
-2021-12-17T03:45:46.920Z - success: game-window loaded
-2021-12-17T03:45:46.921Z - success: google-instant-games loaded
-2021-12-17T03:45:46.925Z - success: hierarchy loaded
-2021-12-17T03:45:46.928Z - success: inspector loaded
-2021-12-17T03:45:46.929Z - success: keystore loaded
-2021-12-17T03:45:46.932Z - success: node-library loaded
-2021-12-17T03:45:46.933Z - success: package-asset loaded
-2021-12-17T03:45:46.933Z - success: preferences loaded
-2021-12-17T03:45:46.935Z - success: project-exporter loaded
-2021-12-17T03:45:46.938Z - success: project-importer loaded
-2021-12-17T03:45:46.941Z - success: project-settings loaded
-2021-12-17T03:45:46.946Z - success: scene loaded
-2021-12-17T03:45:46.948Z - success: simulator-debugger loaded
-2021-12-17T03:45:46.948Z - success: sprite-editor loaded
-2021-12-17T03:45:46.951Z - success: store loaded
-2021-12-17T03:45:46.956Z - success: timeline loaded
-2021-12-17T03:45:46.959Z - success: xiaomi-runtime loaded
-2021-12-17T03:45:47.618Z - normal: Loading packages
-2021-12-17T03:45:47.624Z - normal: Watching packages
-2021-12-17T03:45:47.692Z - normal: Run Application
-2021-12-17T03:45:49.363Z - info: Cocos Services load base data!
-2021-12-17T03:54:12.350Z - info: Only the prefab node "item" and its child nodes are saved.
-2021-12-17T03:54:30.868Z - info: Only the prefab node "2" and its child nodes are saved.
-2021-12-17T03:54:38.867Z - info: Only the prefab node "2" and its child nodes are saved.
-2021-12-17T03:57:50.324Z - info: Only the prefab node "2" and its child nodes are saved.
-2021-12-17T03:57:51.315Z - info: Only the prefab node "2" and its child nodes are saved.
-2021-12-17T03:57:56.789Z - info: Only the prefab node "item" and its child nodes are saved.
-2021-12-17T03:57:57.517Z - info: Only the prefab node "item" and its child nodes are saved.
+2021-12-17T05:03:03.376Z - normal: Load ~/.CocosCreator/settings.json
+2021-12-17T05:03:03.410Z - normal: Initializing Asset Database
+2021-12-17T05:03:03.412Z - normal: checking language setting...
+2021-12-17T05:03:03.412Z - normal: Language: en
+2021-12-17T05:03:03.837Z - success: preview server running at http://localhost:7456
+2021-12-17T05:03:03.847Z - success: protocol editor-framework registered
+2021-12-17T05:03:03.847Z - success: protocol app registered
+2021-12-17T05:03:03.847Z - success: protocol theme registered
+2021-12-17T05:03:03.848Z - success: protocol packages registered
+2021-12-17T05:03:03.848Z - success: protocol uuid registerred
+2021-12-17T05:03:03.848Z - success: protocol db registerred
+2021-12-17T05:03:03.848Z - success: protocol thumbnail registerred
+2021-12-17T05:03:03.848Z - success: protocol unpack registerred
+2021-12-17T05:03:03.848Z - success: protocol disable-commonjs registerred
+2021-12-17T05:03:04.972Z - normal: connected!
+2021-12-17T05:03:04.973Z - normal: Check project /Users/fe-danghai-fresher/Desktop/2048Clone
+2021-12-17T05:03:04.975Z - normal: Initializing project /Users/fe-danghai-fresher/Desktop/2048Clone
+2021-12-17T05:03:05.221Z - normal: Initializing Cocos2d
+2021-12-17T05:03:05.609Z - normal: Initializing engine extends
+2021-12-17T05:03:05.629Z - success: alipay-adapter loaded
+2021-12-17T05:03:05.636Z - success: asset-db-debugger loaded
+2021-12-17T05:03:05.639Z - success: baidu-adapter loaded
+2021-12-17T05:03:05.642Z - success: color-picker loaded
+2021-12-17T05:03:05.736Z - success: fb-audience-network loaded
+2021-12-17T05:03:05.771Z - success: fb-live-stream loaded
+2021-12-17T05:03:05.773Z - success: google-play-instant loaded
+2021-12-17T05:03:05.776Z - success: huawei-runtime loaded
+2021-12-17T05:03:05.910Z - success: cpk-publish loaded
+2021-12-17T05:03:05.911Z - success: jsb-adapter loaded
+2021-12-17T05:03:05.913Z - success: oppo-runtime loaded
+2021-12-17T05:03:05.916Z - success: package-manager loaded
+2021-12-17T05:03:05.983Z - success: qqplay-adapter loaded
+2021-12-17T05:03:05.984Z - success: runtime-dev-tools loaded
+2021-12-17T05:03:05.987Z - success: sdkbox loaded
+2021-12-17T05:03:05.990Z - success: tester loaded
+2021-12-17T05:03:05.991Z - success: ui-kit-preview-extra loaded
+2021-12-17T05:03:05.993Z - success: ui-kit-preview loaded
+2021-12-17T05:03:05.996Z - success: ui-kit loaded
+2021-12-17T05:03:05.999Z - success: vivo-runtime loaded
+2021-12-17T05:03:05.999Z - success: weapp-adapter loaded
+2021-12-17T05:03:06.000Z - success: xiaomi-adapter loaded
+2021-12-17T05:03:06.001Z - success: alipay-minigame loaded
+2021-12-17T05:03:06.029Z - success: assets loaded
+2021-12-17T05:03:06.031Z - success: builder loaded
+2021-12-17T05:03:06.187Z - success: cocos-services loaded
+2021-12-17T05:03:06.192Z - success: console loaded
+2021-12-17T05:03:06.216Z - success: fb-instant-games loaded
+2021-12-17T05:03:06.219Z - success: game-window loaded
+2021-12-17T05:03:06.221Z - success: google-instant-games loaded
+2021-12-17T05:03:06.224Z - success: hierarchy loaded
+2021-12-17T05:03:06.227Z - success: inspector loaded
+2021-12-17T05:03:06.229Z - success: keystore loaded
+2021-12-17T05:03:06.233Z - success: node-library loaded
+2021-12-17T05:03:06.234Z - success: package-asset loaded
+2021-12-17T05:03:06.235Z - success: preferences loaded
+2021-12-17T05:03:06.238Z - success: project-exporter loaded
+2021-12-17T05:03:06.241Z - success: project-importer loaded
+2021-12-17T05:03:06.244Z - success: project-settings loaded
+2021-12-17T05:03:06.248Z - success: scene loaded
+2021-12-17T05:03:06.249Z - success: simulator-debugger loaded
+2021-12-17T05:03:06.250Z - success: sprite-editor loaded
+2021-12-17T05:03:06.253Z - success: store loaded
+2021-12-17T05:03:06.258Z - success: timeline loaded
+2021-12-17T05:03:06.262Z - success: xiaomi-runtime loaded
+2021-12-17T05:03:06.916Z - normal: Loading packages
+2021-12-17T05:03:06.920Z - normal: Watching packages
+2021-12-17T05:03:06.988Z - normal: Run Application
+2021-12-17T05:03:14.110Z - info: Cocos Services load base data!
+2021-12-17T05:26:09.318Z - warn: The Prefab used by component "cc.Button" is missing. Detailed information:
+Node path: "Canvas/Background/NewGame"
+Missing uuid: "bb98766b-ee71-4826-a037-0d0890e68ba5"
+
+2021-12-17T05:26:40.437Z - warn: The Prefab used by component "cc.Button" is missing. Detailed information:
+Node path: "Canvas/Background/NewGame"
+Missing uuid: "bb98766b-ee71-4826-a037-0d0890e68ba5"
+
+2021-12-17T05:27:22.901Z - warn: The Prefab used by component "cc.Button" is missing. Detailed information:
+Node path: "Canvas/Background/NewGame"
+Missing uuid: "bb98766b-ee71-4826-a037-0d0890e68ba5"
+
+2021-12-17T06:42:47.198Z - warn: The Prefab used by component "cc.Button" is missing. Detailed information:
+Node path: "Canvas/Background/NewGame"
+Missing uuid: "bb98766b-ee71-4826-a037-0d0890e68ba5"
+
+2021-12-17T06:43:44.733Z - error: Can not declare GameContainer.newGame method, it is already defined in the properties of GameContainer.
+    at Object.cc.errorID (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCDebug.js:167:16)
+    at Object.exports.doValidateMethodWithProps_DEV (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/preprocess-class.js:248:24)
+    at Object.exports.validateMethodWithProps (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/preprocess-class.js:263:26)
+    at Object.CCClass [as Class] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClass.js:695:33)
+    at __define (/Users/fe-danghai-fresher/Desktop/2048Clone/temp/quick-scripts/assets/Scripts/GameContainer.js:7:4)
+    at /Users/fe-danghai-fresher/Desktop/2048Clone/temp/quick-scripts/assets/Scripts/GameContainer.js:67:13
+    at Object.<anonymous> (/Users/fe-danghai-fresher/Desktop/2048Clone/temp/quick-scripts/assets/Scripts/GameContainer.js:74:11)
+    at Object.<anonymous> (/Users/fe-danghai-fresher/Desktop/2048Clone/temp/quick-scripts/assets/Scripts/GameContainer.js:77:3)
+    at Module._compile (module.js:571:32)
+2021-12-17T06:43:45.098Z - warn: The Asset used by node "New Label" is missing. Detailed information:
+Node path: "Canvas/Background/GameContainer/2/New Label"
+Missing uuid: "bb98766b-ee71-4826-a037-0d0890e68ba5"
+
+2021-12-17T06:43:45.099Z - warn: The Asset used by node "2" is missing. Detailed information:
+Node path: "Canvas/Background/GameContainer/2"
+Missing uuid: "bb98766b-ee71-4826-a037-0d0890e68ba5"
+
+2021-12-17T10:27:55.244Z - error: Property 'button.soundBg' must define at least one of 'default', 'get' or 'set'.
+    at Object.cc.errorID (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCDebug.js:167:16)
+    at Object.exports.preprocessAttrs (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/preprocess-class.js:215:36)
+    at declareProperties (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClass.js:631:28)
+    at Object.CCClass [as Class] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClass.js:674:17)
+    at __define (/Users/fe-danghai-fresher/Desktop/2048Clone/temp/quick-scripts/assets/Scripts/button.js:17:4)
+    at /Users/fe-danghai-fresher/Desktop/2048Clone/temp/quick-scripts/assets/Scripts/button.js:39:13
+    at Object.<anonymous> (/Users/fe-danghai-fresher/Desktop/2048Clone/temp/quick-scripts/assets/Scripts/button.js:46:11)
+    at Object.<anonymous> (/Users/fe-danghai-fresher/Desktop/2048Clone/temp/quick-scripts/assets/Scripts/button.js:49:3)
+    at Module._compile (module.js:571:32)
+2021-12-17T10:31:32.097Z - warn: Please change the definition of property 'soundBg' in class 'button'. Starting from v1.10,
+properties in CCClass can not be abbreviated if they are of type RawAsset.
+Please use the complete form.
+For example, if the type is Texture2D, the previous definition is:
+    soundBg: cc.Texture2D,
+If you use JS, it should be changed to:
+    soundBg: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+      default: null,     // object's default value is null
+    },
+If you use TS, it should be changed to:
+    %s: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+    }
+    %s: cc.Texture2D = null;
+(This helps us to successfully refactor all RawAssets at v2.0, sorry for the inconvenience. 😰 )
+2021-12-17T10:38:05.329Z - warn: Please change the definition of property 'soundBg' in class 'button'. Starting from v1.10,
+properties in CCClass can not be abbreviated if they are of type RawAsset.
+Please use the complete form.
+For example, if the type is Texture2D, the previous definition is:
+    soundBg: cc.Texture2D,
+If you use JS, it should be changed to:
+    soundBg: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+      default: null,     // object's default value is null
+    },
+If you use TS, it should be changed to:
+    %s: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+    }
+    %s: cc.Texture2D = null;
+(This helps us to successfully refactor all RawAssets at v2.0, sorry for the inconvenience. 😰 )
+2021-12-17T10:38:05.330Z - error: Can not declare button.soundOff method, it is already defined in the properties of button.
+    at Object.cc.errorID (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCDebug.js:167:16)
+    at Object.exports.doValidateMethodWithProps_DEV (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/preprocess-class.js:248:24)
+    at Object.exports.validateMethodWithProps (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/preprocess-class.js:263:26)
+    at Object.CCClass [as Class] (/Applications/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClass.js:695:33)
+    at __define (/Users/fe-danghai-fresher/Desktop/2048Clone/temp/quick-scripts/assets/Scripts/button.js:17:4)
+    at /Users/fe-danghai-fresher/Desktop/2048Clone/temp/quick-scripts/assets/Scripts/button.js:48:13
+    at Object.<anonymous> (/Users/fe-danghai-fresher/Desktop/2048Clone/temp/quick-scripts/assets/Scripts/button.js:55:11)
+    at Object.<anonymous> (/Users/fe-danghai-fresher/Desktop/2048Clone/temp/quick-scripts/assets/Scripts/button.js:58:3)
+    at Module._compile (module.js:571:32)
+2021-12-17T10:39:23.022Z - warn: Please change the definition of property 'soundBg' in class 'button'. Starting from v1.10,
+properties in CCClass can not be abbreviated if they are of type RawAsset.
+Please use the complete form.
+For example, if the type is Texture2D, the previous definition is:
+    soundBg: cc.Texture2D,
+If you use JS, it should be changed to:
+    soundBg: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+      default: null,     // object's default value is null
+    },
+If you use TS, it should be changed to:
+    %s: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+    }
+    %s: cc.Texture2D = null;
+(This helps us to successfully refactor all RawAssets at v2.0, sorry for the inconvenience. 😰 )
+2021-12-17T10:41:10.878Z - warn: Please change the definition of property 'soundBg' in class 'button'. Starting from v1.10,
+properties in CCClass can not be abbreviated if they are of type RawAsset.
+Please use the complete form.
+For example, if the type is Texture2D, the previous definition is:
+    soundBg: cc.Texture2D,
+If you use JS, it should be changed to:
+    soundBg: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+      default: null,     // object's default value is null
+    },
+If you use TS, it should be changed to:
+    %s: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+    }
+    %s: cc.Texture2D = null;
+(This helps us to successfully refactor all RawAssets at v2.0, sorry for the inconvenience. 😰 )
+2021-12-17T10:42:11.472Z - warn: Please change the definition of property 'soundBg' in class 'button'. Starting from v1.10,
+properties in CCClass can not be abbreviated if they are of type RawAsset.
+Please use the complete form.
+For example, if the type is Texture2D, the previous definition is:
+    soundBg: cc.Texture2D,
+If you use JS, it should be changed to:
+    soundBg: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+      default: null,     // object's default value is null
+    },
+If you use TS, it should be changed to:
+    %s: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+    }
+    %s: cc.Texture2D = null;
+(This helps us to successfully refactor all RawAssets at v2.0, sorry for the inconvenience. 😰 )
+2021-12-17T10:44:07.141Z - warn: Please change the definition of property 'soundBg' in class 'button'. Starting from v1.10,
+properties in CCClass can not be abbreviated if they are of type RawAsset.
+Please use the complete form.
+For example, if the type is Texture2D, the previous definition is:
+    soundBg: cc.Texture2D,
+If you use JS, it should be changed to:
+    soundBg: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+      default: null,     // object's default value is null
+    },
+If you use TS, it should be changed to:
+    %s: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+    }
+    %s: cc.Texture2D = null;
+(This helps us to successfully refactor all RawAssets at v2.0, sorry for the inconvenience. 😰 )
+2021-12-17T10:45:48.438Z - warn: Please change the definition of property 'soundBg' in class 'button'. Starting from v1.10,
+properties in CCClass can not be abbreviated if they are of type RawAsset.
+Please use the complete form.
+For example, if the type is Texture2D, the previous definition is:
+    soundBg: cc.Texture2D,
+If you use JS, it should be changed to:
+    soundBg: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+      default: null,     // object's default value is null
+    },
+If you use TS, it should be changed to:
+    %s: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+    }
+    %s: cc.Texture2D = null;
+(This helps us to successfully refactor all RawAssets at v2.0, sorry for the inconvenience. 😰 )
+2021-12-17T10:46:25.679Z - warn: Please change the definition of property 'soundBg' in class 'button'. Starting from v1.10,
+properties in CCClass can not be abbreviated if they are of type RawAsset.
+Please use the complete form.
+For example, if the type is Texture2D, the previous definition is:
+    soundBg: cc.Texture2D,
+If you use JS, it should be changed to:
+    soundBg: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+      default: null,     // object's default value is null
+    },
+If you use TS, it should be changed to:
+    %s: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+    }
+    %s: cc.Texture2D = null;
+(This helps us to successfully refactor all RawAssets at v2.0, sorry for the inconvenience. 😰 )
+2021-12-17T10:46:42.660Z - warn: Please change the definition of property 'soundBg' in class 'button'. Starting from v1.10,
+properties in CCClass can not be abbreviated if they are of type RawAsset.
+Please use the complete form.
+For example, if the type is Texture2D, the previous definition is:
+    soundBg: cc.Texture2D,
+If you use JS, it should be changed to:
+    soundBg: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+      default: null,     // object's default value is null
+    },
+If you use TS, it should be changed to:
+    %s: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+    }
+    %s: cc.Texture2D = null;
+(This helps us to successfully refactor all RawAssets at v2.0, sorry for the inconvenience. 😰 )
+2021-12-17T10:47:28.607Z - warn: Please change the definition of property 'soundBg' in class 'button'. Starting from v1.10,
+properties in CCClass can not be abbreviated if they are of type RawAsset.
+Please use the complete form.
+For example, if the type is Texture2D, the previous definition is:
+    soundBg: cc.Texture2D,
+If you use JS, it should be changed to:
+    soundBg: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+      default: null,     // object's default value is null
+    },
+If you use TS, it should be changed to:
+    %s: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+    }
+    %s: cc.Texture2D = null;
+(This helps us to successfully refactor all RawAssets at v2.0, sorry for the inconvenience. 😰 )
+2021-12-17T10:48:49.789Z - warn: Please change the definition of property 'soundBg' in class 'button'. Starting from v1.10,
+properties in CCClass can not be abbreviated if they are of type RawAsset.
+Please use the complete form.
+For example, if the type is Texture2D, the previous definition is:
+    soundBg: cc.Texture2D,
+If you use JS, it should be changed to:
+    soundBg: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+      default: null,     // object's default value is null
+    },
+If you use TS, it should be changed to:
+    %s: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+    }
+    %s: cc.Texture2D = null;
+(This helps us to successfully refactor all RawAssets at v2.0, sorry for the inconvenience. 😰 )
