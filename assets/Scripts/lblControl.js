@@ -25,9 +25,6 @@ cc.Class({
     onKeyRight: function (event) {
         switch (event.keyCode) {
             case cc.macro.KEY.right:
-                // cc.log("right");
-                // cc.log(this.node.position)
-                // cc.log(this.node.x)
                 if(this.node.x === 390){
                     return;
                 }else{

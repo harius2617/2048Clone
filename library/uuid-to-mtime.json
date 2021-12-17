@@ -420,7 +420,7 @@
     "relativePath": "model/primitives.fbx"
   },
   "a47a35a5-546f-4113-9d2c-d2ce98bc3758": {
-    "asset": 1639451262756,
+    "asset": 1639623107609,
     "meta": 1639451262754,
     "relativePath": "images"
   },
@@ -435,7 +435,7 @@
     "relativePath": "images/bg.png"
   },
   "1118708f-d3a5-4385-86f2-182ec1085629": {
-    "asset": 1639621985225,
+    "asset": 1639624666307,
     "meta": 1639451262751,
     "relativePath": "Scripts"
   },
@@ -460,8 +460,8 @@
     "relativePath": "Scene"
   },
   "8029e165-9a07-4adb-a404-d6b6558b12a1": {
-    "asset": 1639651618487,
-    "meta": 1639651618496,
+    "asset": 1639714745422,
+    "meta": 1639714745440,
     "relativePath": "Scene/New Scene.fire"
   },
   "d959274f-3378-439d-bc29-b49ae36d425a": {
@@ -485,23 +485,23 @@
     "relativePath": "images/button.png"
   },
   "da22e953-f1e2-412f-8326-95b8a5a10bf8": {
-    "asset": 1639451262750,
-    "meta": 1639451297174,
+    "asset": 1639713506571,
+    "meta": 1639713506579,
     "relativePath": "Prefab/item.prefab"
   },
   "2581ec5a-9324-4009-8600-f7e591dd99c0": {
-    "asset": 1639650222866,
-    "meta": 1639650222885,
+    "asset": 1639713511677,
+    "meta": 1639713511682,
     "relativePath": "Prefab/2.prefab"
   },
   "fb76c291-cd5d-431b-a936-8b4aba61c279": {
-    "asset": 1639650405463,
-    "meta": 1639650431780,
+    "asset": 1639713967524,
+    "meta": 1639713969766,
     "relativePath": "Scripts/lblControl.js"
   },
   "9ff7316d-45ea-402b-87c4-c3af1451be32": {
-    "asset": 1639652039533,
-    "meta": 1639652041008,
+    "asset": 1639714931252,
+    "meta": 1639714932668,
     "relativePath": "Scripts/GameContainer.js"
   }
 }

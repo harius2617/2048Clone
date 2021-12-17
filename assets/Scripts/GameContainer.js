@@ -1,26 +1,12 @@
-// Learn cc.Class:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
-//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
-// Learn Attribute:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
 
 cc.Class({
     extends: cc.Component,
 
     properties: {
-        item: cc.Prefab,
         lbl2: cc.Prefab,
+        item: cc.Prefab,
         _padX: 10,
         _padY: 10,
-        i: 0,
-        newGameBtn: cc.Button
-        // _newItem: null,
-        // _arr: [],
-        // _indexItem: [],
     },
 
     createItem() {
@@ -35,12 +21,8 @@ cc.Class({
     },
 
     createNewItem() {
-        // cc.log(this.i)
-        // this.i++
         this._newItem = cc.instantiate(this.lbl2);
         this.node.addChild(this._newItem)
-        cc.warn(this.node.children)
-        // cc.log(this._newItem.getComponent(cc.Sprite).x)
         let posX = Math.floor(Math.random() * 4) + 1;
         let posY = Math.floor(Math.random() * 4) + 1;
         this._newItem.setPosition(cc.v2((this._newItem.width + this._padX) * posX - (this._newItem.width) / 2, (this._newItem.height + this._padY) * posY - (this._newItem.height) / 2))
@@ -56,20 +38,23 @@ cc.Class({
     },
 
     newGame() {
-        this.node.removeChild(this.node.children);
-        // this.createItem()
-        // this.createNewItem()
-    },
-    onLoad() {
-        // cc.warn(this.node.getComponent(cc.Prefab))
+        const a = this.node.children.length;
+        for(let i = 0; i <= a ; i ++){
+            this.node.removeChild(this.node.children[0]);
+        }
         this.createItem();
         this.createNewItem();
-        // this.createNewItem();
-        // cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyRight, this);
-        // cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyLeft, this);
-        // cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyUp, this);
+    },
+
+    quitGame() {
+        cc.game.end();
+    },
+
+    onLoad() {
+        this.createItem();
+        cc.log(this.item);
+        this.createNewItem();
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
-        // cc.warn(this.item.node.position)
     },
 
     start() {
