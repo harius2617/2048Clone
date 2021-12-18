@@ -4,6 +4,7 @@ cc.Class({
 
     properties: {
         block2: cc.Prefab,
+
     },
 
     onLoad() {
@@ -13,15 +14,15 @@ cc.Class({
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
         // this.init()
     },
-    init(){
-        let newBlock2 = cc.instantiate(this.block2);
-        this.node.addChild(newBlock2)
-    },
+    // init(){
+    //     let newBlock2 = cc.instantiate(this.block2);
+    //     this.node.addChild(newBlock2)
+    // },
 
     onKeyRight: function (event) {
         switch (event.keyCode) {
             case cc.macro.KEY.right:
-                this.init()
+                // this.init()
                 if(this.node.x === 390){
                     return;
                 }else{
