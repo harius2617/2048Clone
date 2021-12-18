@@ -2,7 +2,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        lbl2: cc.Prefab,
+        // block2: cc.Prefab,
         item: cc.Prefab,
         _padX: 10,
         _padY: 10,
@@ -20,32 +20,32 @@ cc.Class({
         }
     },
 
-    createNewItem() {
-        this._newItem = cc.instantiate(this.lbl2);
-        this.node.addChild(this._newItem)
-        let posX = Math.floor(Math.random() * 4) + 1;
-        let posY = Math.floor(Math.random() * 4) + 1;
-        // this.arr.push(posX, posY)
-        this._newItem.setPosition(cc.v2((this._newItem.width + this._padX) * posX - (this._newItem.width) / 2, (this._newItem.height + this._padY) * posY - (this._newItem.height) / 2))
-        // for(let i = 0; i < 4; i ++) {
-        //     this.arr[posX-1] = []
-        //     for(let j = 0; j < 4; j++) {
-        //         this.arr[posX-1][posY-1] = this._newItem  
-        //     }
-        // }
-        // cc.warn(this.arr)
-    },
+    // createNewItem() {
+    //     let newItem = cc.instantiate(this.block2);
+    //     this.node.addChild(newItem)
+    //     let posX = Math.floor(Math.random() * 4) + 1;
+    //     let posY = Math.floor(Math.random() * 4) + 1;
+    //     // this.arr.push(posX, posY)
+    //     newItem.setPosition(cc.v2((newItem.width + this._padX) * posX - (newItem.width) / 2, (newItem.height + this._padY) * posY - (newItem.height) / 2))
+    //     for(let i = 0; i < 4; i ++) {
+    //         this.arr[posX-1] = []
+    //         for(let j = 0; j < 4; j++) {
+    //             this.arr[posX-1][posY-1] = this._newItem  
+    //         }
+    //     }
+    //     cc.warn(this.arr)
+    // },
 
-    onKeyDown: function (event) {
-        cc.log(event.keyCode)
-        cc.warn(this.arr)
-        cc.tween(this.node)
-            .delay(1.2)
-            .call(()=>{
-                this.createNewItem()
-            })
-            .start()
-    },
+    // onKeyDown: function (event) {
+    //     // cc.log(event.keyCode)
+    //     cc.warn(this.arr)
+    //     cc.tween(this.node)
+    //         .delay(1)
+    //         .call(()=>{
+    //             this.createNewItem()
+    //         })
+    //         .start()
+    // },
 
     newGame() {
         const a = this.node.children.length;
@@ -53,7 +53,7 @@ cc.Class({
             this.node.removeChild(this.node.children[0]);
         }
         this.createItem();
-        this.createNewItem();
+        // this.createNewItem();
     },
 
     quitGame() {
@@ -62,8 +62,8 @@ cc.Class({
 
     onLoad() {
         this.createItem();
-        this.createNewItem();
-        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+        // this.createNewItem();
+        // cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
     },
 
     start() {

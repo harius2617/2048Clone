@@ -3,39 +3,32 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        // lbl2: cc.Prefab,
-        _padX: 10,
-        _padY: 10,
-        // _newItem: null,
-        // _arr: []
+        block2: cc.Prefab,
     },
 
     onLoad() {
-        // this.createNewItem();
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyRight, this);
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyLeft, this);
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyUp, this);
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+        // this.init()
     },
     init(){
-        /***
-         * create block
-         * init number, color
-         */
+        let newBlock2 = cc.instantiate(this.block2);
+        this.node.addChild(newBlock2)
     },
 
     onKeyRight: function (event) {
         switch (event.keyCode) {
             case cc.macro.KEY.right:
+                this.init()
                 if(this.node.x === 390){
                     return;
                 }else{
                     cc.tween(this.node)
-                        .to(1, { position: cc.v2(390, this.node.y) })
+                        .to(0.5, { position: cc.v2(390, this.node.y) })
                         .start()
                     }
-                // this._arr.push(this.node)
-                // cc.log(this._arr)
                 break;
         }
     },
@@ -48,7 +41,7 @@ cc.Class({
                     return
                 }else{
                     cc.tween(this.node)
-                        .to(1, { position: cc.v2(60, this.node.y) })
+                        .to(0.5, { position: cc.v2(60, this.node.y) })
                         .start()
                 }
                 break
@@ -63,7 +56,7 @@ cc.Class({
                     return;
                 }else {
                     cc.tween(this.node)
-                        .to(1, { position: cc.v2(this.node.x, 390) })
+                        .to(0.5, { position: cc.v2(this.node.x, 390) })
                         .start()
                     }
                 break;
@@ -73,11 +66,11 @@ cc.Class({
         switch (event.keyCode) {
             case cc.macro.KEY.down:
                 if(this.node.y == 60 && this.node.x === 60) {
-                    cc.log(1)
+
                     return;
                 }else {
                     cc.tween(this.node)
-                        .to(1, { position: cc.v2(this.node.x, 60) })
+                        .to(0.5, { position: cc.v2(this.node.x, 60) })
                         .start()
                     }
                 break;
