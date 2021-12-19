@@ -420,7 +420,7 @@
     "relativePath": "model\\primitives.fbx"
   },
   "a47a35a5-546f-4113-9d2c-d2ce98bc3758": {
-    "asset": 1639824223572,
+    "asset": 1639825115309,
     "meta": 1639749622115,
     "relativePath": "images"
   },
@@ -460,8 +460,8 @@
     "relativePath": "Scene"
   },
   "8029e165-9a07-4adb-a404-d6b6558b12a1": {
-    "asset": 1639837901524,
-    "meta": 1639837901545,
+    "asset": 1639901197203,
+    "meta": 1639901197273,
     "relativePath": "Scene\\New Scene.fire"
   },
   "45f7400a-4f7b-46de-b922-c37f96526c48": {
@@ -530,13 +530,33 @@
     "relativePath": "Scripts\\ruleBtn.js"
   },
   "fb76c291-cd5d-431b-a936-8b4aba61c279": {
-    "asset": 1639837873190,
-    "meta": 1639837890104,
+    "asset": 1639841812602,
+    "meta": 1639841822781,
     "relativePath": "Scripts\\blockControl.js"
   },
+  "5cf9cc26-91c3-4954-97e3-142b5e0042f7": {
+    "asset": 1639886145914,
+    "meta": 1639886145917,
+    "relativePath": "fonts"
+  },
+  "341b5e69-f5f5-472b-8ae1-da732507f56d": {
+    "asset": 1639886155578,
+    "meta": 1639886155594,
+    "relativePath": "fonts\\SuperMario256.ttf"
+  },
+  "044f08b2-5d29-4a3a-81c2-b52e34fc03e8": {
+    "asset": 1639886476526,
+    "meta": 1639886476539,
+    "relativePath": "fonts\\Cookie.ttf"
+  },
+  "8f71673b-9329-44e1-ac80-d5972b896e04": {
+    "asset": 1639886741533,
+    "meta": 1639886741552,
+    "relativePath": "fonts\\8-BIT WONDER.TTF"
+  },
   "9ff7316d-45ea-402b-87c4-c3af1451be32": {
-    "asset": 1639837801618,
-    "meta": 1639837890105,
+    "asset": 1639902233356,
+    "meta": 1639902237888,
     "relativePath": "Scripts\\GameContainer.js"
   }
 }

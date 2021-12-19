@@ -2,11 +2,13 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+        block2: cc.Prefab,
         cell: cc.Prefab,
         _padX: 10,
         _padY: 10,
         // _newItem: null,
         arr: [],
+        dataPos: [],
         _posX: null,
         _posY: null,
     },
@@ -20,27 +22,27 @@ cc.Class({
         }
     },
 
-    randomAdd() {
+    randomAdd() { 
         this._posX = Math.floor(Math.random() * 4) + 1;
         this._posY = Math.floor(Math.random() * 4) + 1;
     },
 
     createArrBlock() {
-        for(let i = 0; i < 4; i ++) {
+        for(let i = 0; i < 4; i++) {
             this.arr[i] = []
             for(let j = 0; j < 4; j++) {
                 this.arr[i][j] = 0
+                // this.dataPos[i][j] = 0
             }
         }
     },
 
-    createNewItem() {
+    createNewBlock() {
         let newItem = cc.instantiate(this.block2);
         this.node.addChild(newItem)
         this.randomAdd();
         newItem.setPosition(cc.v2((newItem.width + this._padX) * this._posX - (newItem.width) / 2, (newItem.height + this._padY) * this._posY - (newItem.height) / 2))
-        cc.log(this._posX-1, this._posY-1)
-        this.arr[this._posX - 1][this._posY-1] = newItem
+        this.arr[this._posX - 1][this._posY - 1] = newItem
         cc.warn(this.arr)
     },
 
@@ -49,9 +51,13 @@ cc.Class({
         cc.tween(this.node)
             .delay(1)
             .call(()=>{
-                this.createNewItem()
+                this.createNewBlock()
             })
             .start()
+    },
+
+    blockMoveRight() {
+
     },
 
     newGame() {
@@ -59,8 +65,11 @@ cc.Class({
         for(let i = 0; i <= a ; i ++){
             this.node.removeChild(this.node.children[0]);
         }
+        this.arr = []
         this.createItem();
-        // this.createNewItem();
+        this.createNewBlock();
+        // this.createNewBlock();
+        
     },
 
     quitGame() {
@@ -73,7 +82,9 @@ cc.Class({
     },
     
     start() {
-        this.createNewItem();
+        this.createNewBlock();
+        this.createNewBlock();
+
         this.createItem();
         
     },
