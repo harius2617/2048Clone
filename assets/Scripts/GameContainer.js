@@ -30,6 +30,7 @@ cc.Class({
         this.createNewBlock();
         this.createNewBlock(); 
         cc.log(this._lstBlock)
+        // cc.log(this._lstPosition)
     },
     
     createBlockBg() {
@@ -89,13 +90,14 @@ cc.Class({
             case cc.macro.KEY.right:
                 this.canMove = false
                 this.blockMoveRight();
-                // this.createNewBlock()
+                this.createNewBlock();
                 // cc.log("lstPos",this._lstPosition)
                 // cc.log("lstBlock",this._lstBlock)
                 // cc.log("lstEmpty",this._lstEmptySlot)
                 break;
             case cc.macro.KEY.left:
                 this.blockMoveLeft();
+                this.createNewBlock();
                 break;
             case cc.macro.KEY.up:
                 this.blockMoveUp();
@@ -114,11 +116,11 @@ cc.Class({
         const moveCalculator = function(){
             for(let i =0; i <4; i++) {
                 for(let j = 0; j <4; j ++) {
-                    if(arr[i][j] === null){
+                    if(arr[i][j+1] === null && arr[i][j] != null){
                         arr[i][j+1] = arr[i][j];
                         arr[i][j] = null;
-                    }else{
-                        cc.log(arr[i][j])
+                        arr[i][j+1].setPosition(cc.v2(posBlock[i][j+1].x, posBlock[i][j+1].y))
+                        cc.warn(posBlock[i][j+1].x)
                     }
                 }
             }
@@ -141,12 +143,11 @@ cc.Class({
         let moveCalculator = function(){
             for(let i = 0; i <4; i++) {
                 for(let j = 3; j > 0; j --) {
-                    if(arr[i][j-1] === null){
+                    if(arr[i][j-1] === null && arr[i][j] != null){
                         cc.log(arr[i][j])
                         arr[i][j-1] = arr[i][j];
                         arr[i][j] = null
-                        posBlock[i][j-1] = posBlock[i][j];
-                        posBlock[i][j] = null
+                        arr[i][j-1].setPosition(cc.v2(posBlock[i][j-1].x, posBlock[i][j-1].y))
                     }
                 }
             }
@@ -173,8 +174,6 @@ cc.Class({
                     if(arr[i+1][j] === null){
                         arr[i+1][j] = arr[i][j];
                         arr[i][j] = null
-                        posBlock[i+1][j] = posBlock[i][j];
-                        posBlock[i][j] = null
                     } 
                 }
             }
@@ -202,8 +201,6 @@ cc.Class({
                     if(arr[i+1][j] === null){
                         arr[i+1][j] = arr[i][j];
                         arr[i][j] = null
-                        posBlock[i+1][j] = posBlock[i][j];
-                        posBlock[i][j] = null
                     }
                     
                 }
