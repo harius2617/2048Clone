@@ -6,7 +6,7 @@ cc.Class({
         numLabel: cc.Label,
         _value: 0,
         _coordinateX: 0,
-        _coordinateX: 0,
+        _coordinateY: 0,
     },
 
     init(){
@@ -25,10 +25,18 @@ cc.Class({
     },
 
     setValue(val){
-        this._value = value;
+        this._value = val;
+        this.numLabel.string = val.toString();
     },
 
     getValue(){
         return this._value;
-    },   
+    },  
+    
+    move(pos, callBack) {
+        this.node.stopAllActions();
+        const move = cc.moveTo(0.5, pos)
+        const end = cc.callFunc(() => {callBack && callBack()})
+        this.node.runAction(cc.sequence(move, end))
+    }
 });

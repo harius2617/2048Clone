@@ -29,8 +29,8 @@ cc.Class({
         this.createBlockBg();
         this.createNewBlock();
         this.createNewBlock(); 
-        cc.log(this._lstBlock)
-        // cc.log(this._lstPosition)
+        cc.warn(this._lstBlock)
+        cc.warn(this._lstPosition)
     },
     
     createBlockBg() {
@@ -90,11 +90,9 @@ cc.Class({
             case cc.macro.KEY.right:
                 this.canMove = false
                 this.blockMoveRight();
-                this.createNewBlock();
                 break;
             case cc.macro.KEY.left:
                 this.blockMoveLeft();
-                this.createNewBlock();
                 break;
             case cc.macro.KEY.up:
                 this.blockMoveUp();
@@ -116,29 +114,30 @@ cc.Class({
 
     blockMoveRight() {
         cc.warn('moveRight')
-        let arr = this._lstBlock
-        let posBlock = this._lstPosition
+        // let arr = this._lstBlock
+        // let posBlock = this._lstPosition
         // cc.log("lstBlock1",this._lstBlock)
-        const moveCalculator = function(){
-            for(let i = 0; i <4; i++) {
-                for(let j = 0; j <4; j ++) {
-                    if(arr[i][j+1] === null && arr[i][j] != null){
-                        arr[i][j+1] = arr[i][j];
-                        arr[i][j] = null;
-                        arr[i][j+1].setPosition(cc.v2(posBlock[i][j+1].x, posBlock[i][j+1].y))
-                    }else if (arr[i][j] != null && arr[i][j+1] != null){
-                        // cc.log(arr[i][j-1], arr[i][j])
-                        let block2 = arr[i][j+1].children[0].getComponent(cc.Label).string
-                        let block1 = arr[i][j].children[0].getComponent(cc.Label).string
-                        if(block1 == block2) {
-                            arr[i][j] = null
-                            cc.log(arr[i][j])
-                            let num = Number(block2) *2;
-                            arr[i][j+1].children[0].getComponent(cc.Label).string = num.toString()
-                        }
-                        // cc.log(block1, block2)
-
+        const moveCalculator = (block, callBack) =>{
+            const currBlock = block.getComponent("blockControl")
+            const currI =  currBlock.getCoordinates().i;
+            const currJ =  currBlock.getCoordinates().j;
+            if(currJ === 3) {
+                return;
+            }else if (this._lstBlock[currI][currJ + 1] == null) {
+                this._lstBlock[currI][currJ + 1] = block;
+                this._lstBlock[currI][currJ] = null
+                currBlock.setCoordinates(currI, currJ + 1);
+                currBlock.move(this._lstPosition[currI][currJ + 1],callBack);
+                moveCalculator(block, callBack)
+            }else if(this._lstBlock[currI][currJ + 1] != null) {
+                const nextBlock = this._lstBlock[currI][currJ + 1];
+                if(nextBlock.getComponent('blockControl').getValue() === block.getComponent('blockControl').getValue()){
+                    const callBack = () => {
+                        this.makeCombine(block, nextBlock)
                     }
+                    block.getComponent('blockControl').move(this._lstPosition[currI][currJ + 1], callBack)
+                } else {
+                    callBack && callBack()
                 }
             }
         }
@@ -154,7 +153,7 @@ cc.Class({
         let arr = this._lstBlock
         let posBlock = this._lstPosition
         let moveCalculator = function(){
-            for(let i = 0; i <4; i++) {
+            for(let i = 0; i < 4; i++) {
                 for(let j = 3; j > 0; j --) {
                     if(arr[i][j-1] === null && arr[i][j] != null){
                         arr[i][j-1] = arr[i][j];
@@ -162,14 +161,14 @@ cc.Class({
                         arr[i][j-1].setPosition(cc.v2(posBlock[i][j-1].x, posBlock[i][j-1].y))
                     }else if (arr[i][j] != null && arr[i][j-1] != null){
                         // cc.log(arr[i][j-1], arr[i][j])
-                        let block2 = arr[i][j-1].children[0].getComponent(cc.Label).string
-                        let block1 = arr[i][j].children[0].getComponent(cc.Label).string
-                        if(block1 == block2) {
-                            arr[i][j] = null
-                            cc.log(arr[i][j])
-                            let num = Number(block2) *2;
-                            arr[i][j-1].children[0].getComponent(cc.Label).string = num.toString()
-                        }
+                        // let block2 = arr[i][j-1].children[0].getComponent(cc.Label).string
+                        // let block1 = arr[i][j].children[0].getComponent(cc.Label).string
+                        // if(block1 == block2) {
+                        //     arr[i][j].destroy()
+                        //     cc.log(arr[i][j])
+                        //     let num = Number(block2) *2;
+                        //     arr[i][j-1].children[0].getComponent(cc.Label).string = num.toString()
+                        // }
                         // cc.log(block1, block2)
 
                     }
@@ -236,13 +235,27 @@ cc.Class({
         }
     },
 
+    makeCombine(block1, block2){
+        const newBlock = cc.instantiate(this.block2);
+        this.node.addChild(newBlock);
+        const newI = block2.getComponent('blockControl').getCoordinates().i;
+        const newJ = block2.getComponent('blockControl').getCoordinates().j
+        newBlock.setPosition(this._lstPosition[newI][newJ]);
+        this._lstBlock[newI][newJ] = newBlock;
+        const val = block2.getComponent('blockControl').getValue();
+        newBlock.getComponent("blockControl").setValue(val * 2);
+        newBlock.getComponent("blockControl").setCoordinates(newI, newJ);
+        block1.destroy();
+        block2.destroy();
+
+    },
+
     getListBlockByTypeMove(type){
         const lstBlock =[];
         switch(type){
             case "RIGHT":
                 for(let i = 0; i < ROWS; i++){
                     for(let j = COLS - 1; j >= 0; j--){
-                        // cc.warn(i, j)
                         if(this._lstBlock[i][j] != null){
                             lstBlock.push(this._lstBlock[i][j]);
                         }
@@ -268,7 +281,6 @@ cc.Class({
                 }
                 return lstBlock;
             case "DOWN":
-                cc.log(1)
                 for(let i = ROWS - 1; i >= 0; i--){
                     for(let j = 0; j < COLS; j++){
                         if(this._lstBlock[i][j] != null){
