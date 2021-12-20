@@ -105,6 +105,15 @@ cc.Class({
         }
     },
 
+    blSameNum(block1, block2) {
+        cc.log(1)
+        block1 = null
+        cc.log(block1)
+        cc.log(block2.children[0].getComponent(cc.Label).string)
+        num = Number(block2.children[0].getComponent(cc.Label).string) *2
+        newBlock.children[0].getComponent(cc.Label).string = num.toString()
+    },
+
     blockMoveRight() {
         cc.warn('moveRight')
         let arr = this._lstBlock
@@ -117,14 +126,23 @@ cc.Class({
                         arr[i][j+1] = arr[i][j];
                         arr[i][j] = null;
                         arr[i][j+1].setPosition(cc.v2(posBlock[i][j+1].x, posBlock[i][j+1].y))
+                    }else if (arr[i][j] != null && arr[i][j+1] != null){
+                        // cc.log(arr[i][j-1], arr[i][j])
+                        let block2 = arr[i][j+1].children[0].getComponent(cc.Label).string
+                        let block1 = arr[i][j].children[0].getComponent(cc.Label).string
+                        if(block1 == block2) {
+                            arr[i][j] = null
+                            cc.log(arr[i][j])
+                            let num = Number(block2) *2;
+                            arr[i][j+1].children[0].getComponent(cc.Label).string = num.toString()
+                        }
+                        // cc.log(block1, block2)
+
                     }
                 }
             }
         }
-        cc.warn("lstBlock2",this._lstBlock)
-        cc.warn("lstPos",this._lstPosition)
         const lstBlock =this.getListBlockByTypeMove("RIGHT");
-        // cc.warn(lstBlock);
         for(let i = 0; i < lstBlock.length; i++){
             const callBack = () => {};
             moveCalculator(lstBlock[i], callBack)
@@ -135,7 +153,6 @@ cc.Class({
         cc.warn('moveLeft')
         let arr = this._lstBlock
         let posBlock = this._lstPosition
-        cc.log("lstBlock1",this._lstBlock)
         let moveCalculator = function(){
             for(let i = 0; i <4; i++) {
                 for(let j = 3; j > 0; j --) {
@@ -143,14 +160,24 @@ cc.Class({
                         arr[i][j-1] = arr[i][j];
                         arr[i][j] = null
                         arr[i][j-1].setPosition(cc.v2(posBlock[i][j-1].x, posBlock[i][j-1].y))
+                    }else if (arr[i][j] != null && arr[i][j-1] != null){
+                        // cc.log(arr[i][j-1], arr[i][j])
+                        let block2 = arr[i][j-1].children[0].getComponent(cc.Label).string
+                        let block1 = arr[i][j].children[0].getComponent(cc.Label).string
+                        if(block1 == block2) {
+                            arr[i][j] = null
+                            cc.log(arr[i][j])
+                            let num = Number(block2) *2;
+                            arr[i][j-1].children[0].getComponent(cc.Label).string = num.toString()
+                        }
+                        // cc.log(block1, block2)
+
                     }
                 }
             }
         }
         cc.warn("lstBlock2",this._lstBlock)
-        // cc.warn("lstPos",this._lstPosition)
         const lstBlock =this.getListBlockByTypeMove("LEFT");
-        cc.log(lstBlock)
         // cc.warn(lstBlock);
         for(let i = 0; i < lstBlock.length; i++){
             const callBack = () => {};
@@ -163,7 +190,7 @@ cc.Class({
         let arr = this._lstBlock
         let posBlock = this._lstPosition
         const moveCalculator = function(){
-            for(let i = 3; i >= 0 ; i--) {
+            for(let i = 3; i > 0 ; i--) {
                 for(let j = 0; j < 4; j ++) {
                     if(arr[i-1][j] === null && arr[i][j] != null){
                         arr[i-1][j] = arr[i][j];
@@ -199,7 +226,7 @@ cc.Class({
                 }
             }
         }
-        cc.warn("lstBlock2",this._lstBlock)
+        // cc.warn("lstBlock2",this._lstBlock)
         // cc.warn("lstPos",this._lstPosition)
         const lstBlock =this.getListBlockByTypeMove("DOWN");
         // cc.warn(lstBlock);
