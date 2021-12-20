@@ -153,7 +153,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 494.5005055609145
+      "z": 538.6678011539209
     },
     "_scale": {
       "__type__": "cc.Vec3",
@@ -1160,12 +1160,12 @@
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 0
+      "y": 1
     },
     "_position": {
       "__type__": "cc.Vec3",
       "x": -225,
-      "y": -305,
+      "y": 140,
       "z": 0
     },
     "_scale": {
@@ -1238,7 +1238,7 @@
     "_posX": null,
     "_posY": null,
     "canMove": true,
-    "_id": "73ZGSlEHlExKWZOV8tswMt"
+    "_id": "7d5sAYKy5JMLlyt2Gh8cPj"
   },
   {
     "__type__": "cc.ClickEvent",

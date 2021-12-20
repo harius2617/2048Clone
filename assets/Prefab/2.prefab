@@ -217,9 +217,11 @@
       "__id__": 1
     },
     "_enabled": true,
-    "block2": {
-      "__uuid__": "2581ec5a-9324-4009-8600-f7e591dd99c0"
+    "numLabel": {
+      "__id__": 3
     },
+    "_value": 0,
+    "_coordinateX": 0,
     "_id": ""
   },
   {
