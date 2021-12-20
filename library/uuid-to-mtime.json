@@ -460,8 +460,8 @@
     "relativePath": "Scene"
   },
   "8029e165-9a07-4adb-a404-d6b6558b12a1": {
-    "asset": 1639901197203,
-    "meta": 1639901197273,
+    "asset": 1639963259681,
+    "meta": 1639963259742,
     "relativePath": "Scene\\New Scene.fire"
   },
   "45f7400a-4f7b-46de-b922-c37f96526c48": {
@@ -529,13 +529,8 @@
     "meta": 1639826614283,
     "relativePath": "Scripts\\ruleBtn.js"
   },
-  "fb76c291-cd5d-431b-a936-8b4aba61c279": {
-    "asset": 1639841812602,
-    "meta": 1639841822781,
-    "relativePath": "Scripts\\blockControl.js"
-  },
   "5cf9cc26-91c3-4954-97e3-142b5e0042f7": {
-    "asset": 1639886145914,
+    "asset": 1639886741539,
     "meta": 1639886145917,
     "relativePath": "fonts"
   },
@@ -555,8 +550,13 @@
     "relativePath": "fonts\\8-BIT WONDER.TTF"
   },
   "9ff7316d-45ea-402b-87c4-c3af1451be32": {
-    "asset": 1639902233356,
-    "meta": 1639902237888,
+    "asset": 1639963215099,
+    "meta": 1639963217428,
     "relativePath": "Scripts\\GameContainer.js"
+  },
+  "fb76c291-cd5d-431b-a936-8b4aba61c279": {
+    "asset": 1639963252541,
+    "meta": 1639963256401,
+    "relativePath": "Scripts\\blockControl.js"
   }
 }

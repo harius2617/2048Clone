@@ -153,7 +153,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 494.68528625248535
+      "z": 494.5005055609145
     },
     "_scale": {
       "__type__": "cc.Vec3",
@@ -1232,12 +1232,12 @@
     "cell": {
       "__uuid__": "da22e953-f1e2-412f-8326-95b8a5a10bf8"
     },
-    "_padX": 10,
-    "_padY": 10,
-    "arr": [],
-    "dataPos": [],
+    "_lstBlock": [],
+    "_lstPosition": [],
+    "_lstEmptySlot": [],
     "_posX": null,
     "_posY": null,
+    "canMove": true,
     "_id": "73ZGSlEHlExKWZOV8tswMt"
   },
   {
