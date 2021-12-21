@@ -1,3 +1,5 @@
+const Emitter = require('mEmitter');
+
 const PAD_X = 10;
 const PAD_Y = 10;
 const ROWS = 4;
@@ -21,7 +23,11 @@ cc.Class({
     },
     
     onLoad() {
-        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+        Emitter.instance = new Emitter();
+        Emitter.instance.registerEvent("RIGHT", this.blockMoveRight.bind(this));
+        Emitter.instance.registerEvent("LEFT", this.blockMoveLeft.bind(this));
+        Emitter.instance.registerEvent("UP", this.blockMoveUp.bind(this));
+        Emitter.instance.registerEvent("DOWN", this.blockMoveDown.bind(this));
     },
     
     start() {
@@ -29,8 +35,6 @@ cc.Class({
         this.createBlockBg();
         this.createNewBlock();
         this.createNewBlock(); 
-        cc.warn(this._lstBlock)
-        cc.warn(this._lstPosition)
     },
     
     createBlockBg() {
@@ -84,41 +88,28 @@ cc.Class({
         newBlock.getComponent("blockControl").setCoordinates(data.i, data.j);
     },
 
-    onKeyDown: function (event) {
-        // if(!this.canMove) return;
-        switch (event.keyCode) {
-            case cc.macro.KEY.right:
-                this.canMove = false
-                this.blockMoveRight();
-                break;
-            case cc.macro.KEY.left:
-                this.blockMoveLeft();
-                break;
-            case cc.macro.KEY.up:
-                this.blockMoveUp();
-                break;
-            case cc.macro.KEY.down:
-                this.blockMoveDown();
-                break;
-        }
-    },
-
-    blSameNum(block1, block2) {
-        cc.log(1)
-        block1 = null
-        cc.log(block1)
-        cc.log(block2.children[0].getComponent(cc.Label).string)
-        num = Number(block2.children[0].getComponent(cc.Label).string) *2
-        newBlock.children[0].getComponent(cc.Label).string = num.toString()
-    },
+    // onKeyDown: function (event) {
+    //     switch (event.keyCode) {
+    //         case cc.macro.KEY.right:
+    //             this.canMove = false
+    //             this.blockMoveRight();
+    //             break;
+    //         case cc.macro.KEY.left:
+    //             this.blockMoveLeft();
+    //             break;
+    //         case cc.macro.KEY.up:
+    //             this.blockMoveUp();
+    //             break;
+    //         case cc.macro.KEY.down:
+    //             this.blockMoveDown();
+    //             break;
+    //     }
+    // },
 
     blockMoveRight() {
         cc.warn('moveRight')
-        // let arr = this._lstBlock
-        // let posBlock = this._lstPosition
-        // cc.log("lstBlock1",this._lstBlock)
         const moveCalculator = (block, callBack) =>{
-            const currBlock = block.getComponent("blockControl")
+            const currBlock = block.getComponent("blockControl");
             const currI =  currBlock.getCoordinates().i;
             const currJ =  currBlock.getCoordinates().j;
             if(currJ === 3) {
@@ -150,34 +141,31 @@ cc.Class({
 
     blockMoveLeft() {
         cc.warn('moveLeft')
-        let arr = this._lstBlock
-        let posBlock = this._lstPosition
-        let moveCalculator = function(){
-            for(let i = 0; i < 4; i++) {
-                for(let j = 3; j > 0; j --) {
-                    if(arr[i][j-1] === null && arr[i][j] != null){
-                        arr[i][j-1] = arr[i][j];
-                        arr[i][j] = null
-                        arr[i][j-1].setPosition(cc.v2(posBlock[i][j-1].x, posBlock[i][j-1].y))
-                    }else if (arr[i][j] != null && arr[i][j-1] != null){
-                        // cc.log(arr[i][j-1], arr[i][j])
-                        // let block2 = arr[i][j-1].children[0].getComponent(cc.Label).string
-                        // let block1 = arr[i][j].children[0].getComponent(cc.Label).string
-                        // if(block1 == block2) {
-                        //     arr[i][j].destroy()
-                        //     cc.log(arr[i][j])
-                        //     let num = Number(block2) *2;
-                        //     arr[i][j-1].children[0].getComponent(cc.Label).string = num.toString()
-                        // }
-                        // cc.log(block1, block2)
-
+        const moveCalculator = (block, callBack) => {
+            const currBlock = block.getComponent("blockControl");
+            const currI =  currBlock.getCoordinates().i;
+            const currJ =  currBlock.getCoordinates().j;
+            if(currJ === 0) {
+                return;
+            }else if(this._lstBlock[currI][currJ - 1] === null) {
+                this._lstBlock[currI][currJ - 1] = block;
+                this._lstBlock[currI][currJ] = null;
+                currBlock.setCoordinates(currI, currJ -1);
+                currBlock.move(this._lstPosition[currI][currJ-1], callBack);
+                moveCalculator(block, callBack);
+            }else if(this._lstBlock[currI][currJ - 1] != null) {
+                const nextBlock = this._lstBlock[currI][currJ - 1];
+                if(nextBlock.getComponent('blockControl').getValue() === block.getComponent('blockControl').getValue()){
+                    const callBack = () => {
+                        this.makeCombine(block, nextBlock)
                     }
+                    block.getComponent('blockControl').move(this._lstPosition[currI][currJ - 1], callBack)
+                } else {
+                    callBack && callBack()
                 }
             }
-        }
-        cc.warn("lstBlock2",this._lstBlock)
+        }   
         const lstBlock =this.getListBlockByTypeMove("LEFT");
-        // cc.warn(lstBlock);
         for(let i = 0; i < lstBlock.length; i++){
             const callBack = () => {};
             moveCalculator(lstBlock[i], callBack)
@@ -186,20 +174,30 @@ cc.Class({
 
     blockMoveUp() {
         cc.warn('moveUp')
-        let arr = this._lstBlock
-        let posBlock = this._lstPosition
-        const moveCalculator = function(){
-            for(let i = 3; i > 0 ; i--) {
-                for(let j = 0; j < 4; j ++) {
-                    if(arr[i-1][j] === null && arr[i][j] != null){
-                        arr[i-1][j] = arr[i][j];
-                        arr[i][j] = null;
-                        arr[i-1][j].setPosition(cc.v2(posBlock[i-1][j].x, posBlock[i-1][j].y))
+        const moveCalculator = (block, callBack) =>{
+            const currBlock = block.getComponent("blockControl");
+            const currI =  currBlock.getCoordinates().i;
+            const currJ =  currBlock.getCoordinates().j;
+            if(currI === 0) {
+                return;
+            }else if (this._lstBlock[currI - 1][currJ] == null) {
+                this._lstBlock[currI - 1][currJ] = block;
+                this._lstBlock[currI][currJ] = null
+                currBlock.setCoordinates(currI - 1, currJ);
+                currBlock.move(this._lstPosition[currI - 1][currJ],callBack);
+                moveCalculator(block, callBack)
+            }else if(this._lstBlock[currI -1][currJ] != null) {
+                const nextBlock = this._lstBlock[currI - 1][currJ];
+                if(nextBlock.getComponent('blockControl').getValue() === block.getComponent('blockControl').getValue()){
+                    const callBack = () => {
+                        this.makeCombine(block, nextBlock)
                     }
+                    block.getComponent('blockControl').move(this._lstPosition[currI - 1][currJ], callBack)
+                } else {
+                    callBack && callBack()
                 }
             }
         }
-        cc.warn("lstBlock2",this._lstBlock)
         const lstBlock =this.getListBlockByTypeMove("UP");
         for(let i = 0; i < lstBlock.length; i++){
             const callBack = () => {};
@@ -209,26 +207,31 @@ cc.Class({
 
     blockMoveDown() {
         cc.warn('moveDown')
-        let arr = this._lstBlock
-        let posBlock = this._lstPosition
-        // cc.log("lstBlock1",this._lstBlock)
-        const moveCalculator = function(){
-            for(let i = 0; i < 3; i++) {
-                for(let j = 0; j < 4; j ++) {
-                    // cc.log(block)
-                    if(arr[i+1][j] === null && arr[i][j] != null){
-                        arr[i+1][j] = arr[i][j];
-                        arr[i][j] = null;
-                        arr[i+1][j].setPosition(cc.v2(posBlock[i+1][j].x, posBlock[i+1][j].y))
+        const moveCalculator = (block, callBack) =>{
+            const currBlock = block.getComponent("blockControl");
+            const currI =  currBlock.getCoordinates().i;
+            const currJ =  currBlock.getCoordinates().j;
+            if(currI === 3) {
+                return;
+            }else if (this._lstBlock[currI + 1][currJ] == null) {
+                this._lstBlock[currI + 1][currJ] = block;
+                this._lstBlock[currI][currJ] = null
+                currBlock.setCoordinates(currI + 1, currJ);
+                currBlock.move(this._lstPosition[currI + 1][currJ],callBack);
+                moveCalculator(block, callBack)
+            }else if(this._lstBlock[currI + 1][currJ] != null) {
+                const nextBlock = this._lstBlock[currI + 1][currJ];
+                if(nextBlock.getComponent('blockControl').getValue() === block.getComponent('blockControl').getValue()){
+                    const callBack = () => {
+                        this.makeCombine(block, nextBlock)
                     }
-                    // cc.log(arr[i][j], arr[i+1][j])
+                    block.getComponent('blockControl').move(this._lstPosition[currI + 1][currJ], callBack)
+                } else {
+                    callBack && callBack()
                 }
             }
         }
-        // cc.warn("lstBlock2",this._lstBlock)
-        // cc.warn("lstPos",this._lstPosition)
         const lstBlock =this.getListBlockByTypeMove("DOWN");
-        // cc.warn(lstBlock);
         for(let i = 0; i < lstBlock.length; i++){
             const callBack = () => {};
             moveCalculator(lstBlock[i], callBack)
@@ -242,12 +245,20 @@ cc.Class({
         const newJ = block2.getComponent('blockControl').getCoordinates().j
         newBlock.setPosition(this._lstPosition[newI][newJ]);
         this._lstBlock[newI][newJ] = newBlock;
+        if(newJ === 3) {
+            this._lstBlock[newI][newJ - 1] = null;
+        }else if(newJ === 0) {
+            this._lstBlock[newI][newJ + 1] = null;
+        }else if(newI === 3) {
+            this._lstBlock[newI - 1][newJ] = null;
+        }else if(newI === 0) {
+            this._lstBlock[newI + 1][newJ] = null;
+        }
         const val = block2.getComponent('blockControl').getValue();
         newBlock.getComponent("blockControl").setValue(val * 2);
         newBlock.getComponent("blockControl").setCoordinates(newI, newJ);
         block1.destroy();
         block2.destroy();
-
     },
 
     getListBlockByTypeMove(type){
@@ -290,7 +301,6 @@ cc.Class({
                     }
                 }
                 return lstBlock;
-
             default: break;
         }
     },

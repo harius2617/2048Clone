@@ -13,9 +13,10 @@ cc.Class({
 
     onRuleBtn() {
         this.node.active = true;
+        this.node.getComponent(cc.PageView).scrollToPage(0, 0.01)
     },
 
-    offRuleBtn() {
+    offRuleBtn() {      
         this.node.active = false;
     },
 

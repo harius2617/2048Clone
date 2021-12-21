@@ -1,7 +1,6 @@
 {
   "name": "2048clone",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,5 +17,6 @@
   "homepage": "https://github.com/harius2617/2048Clone#readme",
   "dependencies": {
     "events": "^3.3.0"
-  }
+  },
+  "description": ""
 }
