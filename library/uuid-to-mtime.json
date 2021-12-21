@@ -460,8 +460,8 @@
     "relativePath": "Scene"
   },
   "8029e165-9a07-4adb-a404-d6b6558b12a1": {
-    "asset": 1640102108322,
-    "meta": 1640102108346,
+    "asset": 1640108387417,
+    "meta": 1640108387441,
     "relativePath": "Scene\\New Scene.fire"
   },
   "45f7400a-4f7b-46de-b922-c37f96526c48": {
@@ -559,19 +559,14 @@
     "meta": 1640089995068,
     "relativePath": "Scripts\\ruleBtn.js"
   },
-  "7aec95a6-f2d8-45d4-a9f1-b3c45a6a7656": {
-    "asset": 1640090912516,
-    "meta": 1640090912536,
-    "relativePath": "fonts\\clear-sans.regular.ttf"
-  },
   "b47ec4bd-b4ba-450a-8920-f703bfe382cd": {
     "asset": 1640100980975,
     "meta": 1640101042998,
     "relativePath": "Scripts\\keyBoard.js"
   },
   "9ff7316d-45ea-402b-87c4-c3af1451be32": {
-    "asset": 1640102416535,
-    "meta": 1640102417960,
+    "asset": 1640108389949,
+    "meta": 1640108392473,
     "relativePath": "Scripts\\GameContainer.js"
   }
 }

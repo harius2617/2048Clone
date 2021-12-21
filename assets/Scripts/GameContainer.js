@@ -78,7 +78,6 @@ cc.Class({
             posY: this._lstPosition[this._lstEmptySlot[slot].i][this._lstEmptySlot[slot].j].y
         }
         this._lstEmptySlot.splice(slot, 1);
-        cc.warn(this._lstEmptySlot)
         return data;
     },
     
@@ -93,13 +92,13 @@ cc.Class({
     },
     
     updateEmptyList() {
+        this._lstEmptySlot = []
         for(let i = 0; i < 4; i++){;
             for(let j = 0; j < 4; j++){
-                if (this._lstBlock[i][j] = null) {
+                if (this._lstBlock[i][j] === null) {
                     this._lstEmptySlot.push({i, j});
                 }
             }
-            return this._lstEmptySlot;
         }
     },
     
@@ -121,16 +120,16 @@ cc.Class({
             //     }
             // },
             
-            moveFinish(flag){
-                if(flag) {
-                    cc.warn('moveDone')
-
+            moveFinish(canCreateBlock){
+                if(canCreateBlock) {
+                    this.createNewBlock()
                 }
             },
 
             blockMoveRight() {
                 cc.warn('moveRight')
                 let flagMove = false;
+                let canCreateNewBlock = false;
                 const moveCalculator = (block, callBack) =>{
                     const currBlock = block.getComponent("blockControl");
                     const currI =  currBlock.getCoordinates().i;
@@ -142,20 +141,22 @@ cc.Class({
                         this._lstBlock[currI][currJ + 1] = block;
                         this._lstBlock[currI][currJ] = null
                         currBlock.setCoordinates(currI, currJ + 1);
-                        currBlock.move(this._lstPosition[currI][currJ + 1],callBack);
-                        moveCalculator(block, callBack)
-                        flagMove = true;
+                        currBlock.move(this._lstPosition[currI][currJ + 1],() => {
+                            moveCalculator(block, callBack)
+                        });
+                        canCreateNewBlock = true
                     }else if(this._lstBlock[currI][currJ + 1] != null) {
                         const nextBlock = this._lstBlock[currI][currJ + 1];
                         if(nextBlock.getComponent('blockControl').getValue() === block.getComponent('blockControl').getValue()){
                             flagMove = true;
                             const callBack2 = () => {
-                                this.makeCombine(block, nextBlock)
+                                this.makeCombine(block, nextBlock, callBack);
                             }
-                            block.getComponent('blockControl').move(this._lstPosition[currI][currJ + 1], callBack2)
-                        } else {
-                            callBack && callBack()
-                        }
+                            block.getComponent('blockControl').move(this._lstPosition[currI][currJ + 1], callBack2)}
+                        // } else {
+                        //     callBack && callBack()
+                        // }
+                        canCreateNewBlock = true;
                     } else {
                         callBack && callBack();
                     }
@@ -163,16 +164,17 @@ cc.Class({
                 const lstBlock =this.getListBlockByTypeMove("RIGHT");
                 for(let i = 0; i < lstBlock.length; i++){
                     let callBack = () => {
-                        // if(i === lstBlock.lstBlock.length - 1){
-                        //     this.moveFinish(flagMove)
-                        // }
-                    };
+                        if(lstBlock[i] === lstBlock[lstBlock.length - 1]){
+                            this.moveFinish(canCreateNewBlock)
+                        }
+                    }
                     moveCalculator(lstBlock[i], callBack)
                 }
             },
             
             blockMoveLeft() {
                 cc.warn('moveLeft')
+                cc.warn(this._lstEmptySlot)
                 const moveCalculator = (block, callBack) => {
                     const currBlock = block.getComponent("blockControl");
                     const currI =  currBlock.getCoordinates().i;
@@ -270,26 +272,20 @@ cc.Class({
                 }
             },
             
-            makeCombine(block1, block2){
+            makeCombine(block1, block2, callBack){
                 const newBlock = cc.instantiate(this.block2);
                 this.node.addChild(newBlock);
                 const newI = block2.getComponent('blockControl').getCoordinates().i;
-                const newJ = block2.getComponent('blockControl').getCoordinates().j
+                const newJ = block2.getComponent('blockControl').getCoordinates().j;
+                const oldI = block1.getComponent('blockControl').getCoordinates().i;
+                const oldJ = block1.getComponent('blockControl').getCoordinates().j
                 newBlock.setPosition(this._lstPosition[newI][newJ]);
                 this._lstBlock[newI][newJ] = newBlock;
-                if(newJ === 3) {
-                    this._lstBlock[newI][newJ - 1] = null;
-                }else if(newJ === 0) {
-                    this._lstBlock[newI][newJ + 1] = null;
-                }
-                if(newI === 3) {
-                    this._lstBlock[newI - 1][newJ] = null;
-                }else if(newI === 0) {
-                    this._lstBlock[newI + 1][newJ] = null;
-                }
+                this._lstBlock[oldI][oldJ] = null;
                 const val = block2.getComponent('blockControl').getValue();
                 newBlock.getComponent("blockControl").setValue(val * 2);
                 newBlock.getComponent("blockControl").setCoordinates(newI, newJ);
+                callBack && callBack()
                 block1.destroy();
                 block2.destroy();
             },
