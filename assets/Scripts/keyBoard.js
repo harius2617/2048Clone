@@ -24,7 +24,6 @@ cc.Class({
         }
     },
     moveRight() {
-        cc.warn(1)
         Emitter.instance.emit('RIGHT');
     },
 
