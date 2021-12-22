@@ -9,7 +9,7 @@
       "x": 0,
       "y": 25,
       "width": 1680,
-      "height": 947,
+      "height": 945,
       "layout": {
         "children": [
           {
@@ -19,23 +19,23 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 413.46875,
+                "height": 427.5,
                 "type": "panel",
-                "width": 268.40625
+                "width": 270.578125
               },
               {
                 "active": 0,
                 "children": [
                   "assets"
                 ],
-                "height": 412.515625,
+                "height": 427.5,
                 "type": "panel",
-                "width": 268.40625
+                "width": 270.578125
               }
             ],
-            "height": 828,
+            "height": 857,
             "type": "dock-v",
-            "width": 268.40625
+            "width": 270.578125
           },
           {
             "children": [
@@ -44,9 +44,9 @@
                 "children": [
                   "scene"
                 ],
-                "height": 559.015625,
+                "height": 578.609375,
                 "type": "panel",
-                "width": 991.4375
+                "width": 1001.5625
               },
               {
                 "active": 0,
@@ -55,14 +55,14 @@
                   "timeline",
                   "game-window"
                 ],
-                "height": 266.984375,
+                "height": 276.375,
                 "type": "panel",
-                "width": 991.4375
+                "width": 1001.5625
               }
             ],
-            "height": 828,
+            "height": 857,
             "type": "dock-v",
-            "width": 991.4375
+            "width": 1001.5625
           },
           {
             "active": 0,
@@ -71,9 +71,9 @@
               "cocos-services",
               "node-library"
             ],
-            "height": 828,
+            "height": 857,
             "type": "panel",
-            "width": 400.140625
+            "width": 403.859375
           }
         ],
         "type": "dock-h"
