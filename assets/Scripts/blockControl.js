@@ -7,36 +7,38 @@ cc.Class({
         _value: 0,
         _coordinateX: 0,
         _coordinateY: 0,
+        _canMove: true,
     },
 
-    init(){
+    init() {
         const num = Math.random() <= 0.9 ? 2 : 4;
         this._value = num;
         this.numLabel.string = num.toString();
     },
 
-    setCoordinates(i, j){
+    setCoordinates(i, j) {
         this._coordinateX = i;
         this._coordinateY = j;
     },
 
-    getCoordinates(){
-        return {i: this._coordinateX, j: this._coordinateY};
+    getCoordinates() {
+        return { i: this._coordinateX, j: this._coordinateY };
     },
 
-    setValue(val){
+    setValue(val) {
         this._value = val;
         this.numLabel.string = val.toString();
     },
 
-    getValue(){
+    getValue() {
         return this._value;
-    },  
-    
+    },
+
     move(pos, callBack) {
+
         this.node.stopAllActions();
-        const move = cc.moveTo(0.5, pos)
-        const end = cc.callFunc(() => {callBack && callBack()})
+        const move = cc.moveTo(0.2, pos)
+        const end = cc.callFunc(() => { callBack && callBack() })
         this.node.runAction(cc.sequence(move, end))
     }
 });

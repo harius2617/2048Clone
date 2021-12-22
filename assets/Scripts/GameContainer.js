@@ -14,13 +14,14 @@ cc.Class({
         currScore: cc.Label,
         bestScore: cc.Label,
         winNoti: cc.Node,
+        soundWin: cc.AudioSource,
         _newGameFlag: false,
         _lstBlock: [],
         _lstPosition: [],
         _lstEmptySlot: [],
         _posX: null,
         _posY: null,
-        count: 0,
+        _count: 0,
         canMove: {
             default: true,
             visible: false
@@ -34,7 +35,6 @@ cc.Class({
         Emitter.instance.registerEvent("UP", this.blockMoveUp.bind(this));
         Emitter.instance.registerEvent("DOWN", this.blockMoveDown.bind(this));
         this.winNoti.scale = 0
-        cc.warn(this.winNoti)
         this.winNoti.active = false;
     },
 
@@ -43,6 +43,7 @@ cc.Class({
         this.createBlockBg();
         this.createNewBlock();
         this.createNewBlock();
+        this.getScoreStorge()
     },
 
     createBlockBg() {
@@ -110,9 +111,9 @@ cc.Class({
     },
 
     updateScore(val) {
-        if(this._newGameFlag) {
+        if (this._newGameFlag) {
             this.currScore.getComponent("Score").setValue(val);
-        }else {
+        } else {
             this.currScore.getComponent("Score").updateValue(val);
         }
     },
@@ -138,6 +139,7 @@ cc.Class({
     moveFinish(canCreateBlock) {
         if (canCreateBlock) {
             this.createNewBlock();
+            this.checkBestScore();
         }
     },
 
@@ -209,10 +211,10 @@ cc.Class({
                     }
                     block.getComponent('blockControl').move(this._lstPosition[currI][currJ - 1], callBack2)
                     canCreateNewBlock = true;
-                    } else {
-                        callBack && callBack();
-                    }
+                } else {
+                    callBack && callBack();
                 }
+            }
         }
         const lstBlock = this.getListBlockByTypeMove("LEFT");
         for (let i = 0; i < lstBlock.length; i++) {
@@ -324,7 +326,7 @@ cc.Class({
         newBlock.getComponent("blockControl").setCoordinates(newI, newJ);
         callBack && callBack()
         this.updateScore(val)
-        this.checkGame(val)
+        this.checkGameWin(val)
         block1.destroy();
         block2.destroy();
     },
@@ -336,7 +338,7 @@ cc.Class({
                 for (let i = 0; i < ROWS; i++) {
                     for (let j = COLS - 1; j >= 0; j--) {
                         if (this._lstBlock[i][j] != null) {
-                            lstBlock.push(this._lstBlock[i][j]);
+                            lstBlock.push(this._lstBlock[i][j]);``
                         }
                     }
                 }
@@ -372,19 +374,42 @@ cc.Class({
         }
     },
 
-    checkGame(val) {
+    checkGameWin(val) {
         // let count = 0
-        if(val === 4 && this.count === 0) {
-            // this.winNoti.active = true;
-            // this.winNoti.getComponent(cc.Node).active = true;
-        this.winNoti.active = true
-        cc.tween(this.winNoti)
-            .to(1, { scale: 1 })
-
-        .start()
-        this.count += 1;
-    }
+        if (val === 16 && this._count === 0) {
+            this.soundWin.play(this.soundWin, false, 1)
+            this.winNoti.active = true
+            cc.tween(this.winNoti)
+                .to(1, { scale: 1 })
+                .start()
+            this._count += 1;
+        }
     },
+
+    checkGameLose() {
+        if(this._lstEmptySlot.length === 0){
+
+        }
+    },
+
+    getScoreStorge() {
+        let scoreStorge = cc.sys.localStorage.getItem('bestScore');
+        if (scoreStorge !== null) {
+            this.bestScore.string = JSON.parse(scoreStorge);
+        } else {
+            this.bestScore.string = "0";
+        }
+    },
+
+    checkBestScore() {
+        let newScore = Number(this.currScore.getComponent("Score").getValue())
+        if (newScore > Number(this.bestScore.string)) {
+            cc.sys.localStorage.setItem('bestScore', JSON.stringify(newScore));
+            this.bestScore.string = newScore;
+            cc.warn(2)
+        }
+    },
+
 
     newGame() {
         this._newGameFlag = true;
@@ -398,7 +423,7 @@ cc.Class({
         this.createNewBlock();
         this.updateScore(0);
         this._newGameFlag = false;
-        this.winNoti.node.active = false;
+        this.winNoti.active = false;
     },
 
     quitGame() {

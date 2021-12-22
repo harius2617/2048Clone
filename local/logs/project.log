@@ -68,3 +68,277 @@
 2021-12-22T02:13:37.249Z - normal: Run Application
 2021-12-22T05:25:07.785Z - info: Only the prefab node "2" and its child nodes are saved.
 2021-12-22T08:43:46.170Z - warn: Custom should not be false if file is not specified.
+2021-12-22T09:38:07.510Z - warn: [db-task][sync-changes] Backup unused meta file: db://assets/Scripts/CheckGameWinOrLose.js.meta
+2021-12-22T09:38:19.538Z - warn: Script attached to "2" in prefab "2.prefab" is missing or invalid. Detailed information:
+Node path: "2"
+Asset url: "db://assets/Prefab/2.prefab"
+Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
+Class ID: "c70ecAepGFFBJoSbyliueG8"
+
+2021-12-22T09:38:45.223Z - warn: Script attached to "New Node" is missing or invalid. Detailed information:
+Node path: "Canvas/Background/New Node"
+Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
+Class ID: "c70ecAepGFFBJoSbyliueG8"
+
+2021-12-22T09:39:04.639Z - warn: Script attached to "2" in prefab "2.prefab" is missing or invalid. Detailed information:
+Node path: "2"
+Asset url: "db://assets/Prefab/2.prefab"
+Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
+Class ID: "c70ecAepGFFBJoSbyliueG8"
+
+2021-12-22T09:39:33.818Z - warn: Script attached to "2" in prefab "2.prefab" is missing or invalid. Detailed information:
+Node path: "2"
+Asset url: "db://assets/Prefab/2.prefab"
+Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
+Class ID: "c70ecAepGFFBJoSbyliueG8"
+
+2021-12-22T09:45:25.074Z - warn: Script attached to "2" in prefab "2.prefab" is missing or invalid. Detailed information:
+Node path: "2"
+Asset url: "db://assets/Prefab/2.prefab"
+Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
+Class ID: "c70ecAepGFFBJoSbyliueG8"
+
+2021-12-22T09:49:05.701Z - warn: Script attached to "2" in prefab "2.prefab" is missing or invalid. Detailed information:
+Node path: "2"
+Asset url: "db://assets/Prefab/2.prefab"
+Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
+Class ID: "c70ecAepGFFBJoSbyliueG8"
+
+2021-12-22T09:49:36.247Z - warn: Script attached to "2" in prefab "2.prefab" is missing or invalid. Detailed information:
+Node path: "2"
+Asset url: "db://assets/Prefab/2.prefab"
+Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
+Class ID: "c70ecAepGFFBJoSbyliueG8"
+
+2021-12-22T09:50:24.377Z - warn: Script attached to "2" in prefab "2.prefab" is missing or invalid. Detailed information:
+Node path: "2"
+Asset url: "db://assets/Prefab/2.prefab"
+Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
+Class ID: "c70ecAepGFFBJoSbyliueG8"
+
+2021-12-22T09:50:33.652Z - warn: Script attached to "2" in prefab "2.prefab" is missing or invalid. Detailed information:
+Node path: "2"
+Asset url: "db://assets/Prefab/2.prefab"
+Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
+Class ID: "c70ecAepGFFBJoSbyliueG8"
+
+2021-12-22T09:50:33.661Z - warn: Script attached to "2" in prefab "2.prefab" is missing or invalid. Detailed information:
+Node path: "2"
+Asset url: "db://assets/Prefab/2.prefab"
+Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
+Class ID: "c70ecAepGFFBJoSbyliueG8"
+
+2021-12-22T09:50:40.836Z - info: Only the prefab node "2" and its child nodes are saved.
+2021-12-22T10:33:26.028Z - warn: Please change the definition of property 'soundWin' in class 'GameContainer'. Starting from v1.10,
+properties in CCClass can not be abbreviated if they are of type RawAsset.
+Please use the complete form.
+For example, if the type is Texture2D, the previous definition is:
+    soundWin: cc.Texture2D,
+If you use JS, it should be changed to:
+    soundWin: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+      default: null,     // object's default value is null
+    },
+If you use TS, it should be changed to:
+    %s: {
+      type: cc.Texture2D // use 'type:' to define Texture2D object directly
+    }
+    %s: cc.Texture2D = null;
+(This helps us to successfully refactor all RawAssets at v2.0, sorry for the inconvenience. 😰 )
+2021-12-22T10:36:37.340Z - warn: Script attached to "New Node" is missing or invalid. Detailed information:
+Node path: "Canvas/Background/New Node"
+Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
+Class ID: "c70ecAepGFFBJoSbyliueG8"
+
+2021-12-22T10:36:46.868Z - warn: Script attached to "New Node" is missing or invalid. Detailed information:
+Node path: "Canvas/Background/New Node"
+Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
+Class ID: "c70ecAepGFFBJoSbyliueG8"
+
+2021-12-22T10:44:26.768Z - normal: Start building with options : {
+  "actualPlatform": "web-mobile",
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "apiLevel": "",
+  "appABIs": [],
+  "appBundle": false,
+  "baidugame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "testappid",
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "buildPath": "/Users/fe-danghai-fresher/Desktop/2048Clone/build",
+  "debug": false,
+  "dest": "/Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile",
+  "embedWebDebugger": false,
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.2048Clone",
+  "platform": "web-mobile",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait",
+    "zip": false
+  },
+  "scenes": [
+    "8029e165-9a07-4adb-a404-d6b6558b12a1"
+  ],
+  "sourceMaps": false,
+  "startScene": "8029e165-9a07-4adb-a404-d6b6558b12a1",
+  "template": "link",
+  "title": "2048Clone",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx6ac3f5090a6b99c5",
+    "orientation": "portrait",
+    "separate_engine": false,
+    "subContext": ""
+  },
+  "xxteaKey": "fa8493f6-625b-4f",
+  "zipCompressJs": true,
+  "project": "/Users/fe-danghai-fresher/Desktop/2048Clone",
+  "projectName": "2048Clone",
+  "debugBuildWorker": false
+}
+2021-12-22T10:44:26.773Z - normal: Building /Users/fe-danghai-fresher/Desktop/2048Clone
+2021-12-22T10:44:26.773Z - normal: Destination /Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile
+2021-12-22T10:44:26.901Z - normal: Delete /Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile/subpackages/**/*,/Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile/**/*
+2021-12-22T10:44:28.702Z - normal: Start building assets
+2021-12-22T10:44:28.702Z - normal: Start spawn build-worker
+2021-12-22T10:44:29.364Z - normal: Finish spawn build-worker
+2021-12-22T10:44:29.365Z - normal: Start init build-worker
+2021-12-22T10:44:32.015Z - normal: Finish init build-worker
+2021-12-22T10:44:32.015Z - normal: Start build-assets in worker
+2021-12-22T10:44:32.441Z - normal: Finish build-assets in worker
+2021-12-22T10:44:32.444Z - normal: Finish building assets
+2021-12-22T10:44:32.452Z - normal: Start building plugin scripts
+2021-12-22T10:44:32.481Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
+2021-12-22T10:44:32.489Z - normal: Generating html from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/web-mobile/template/index.html
+2021-12-22T10:44:32.504Z - normal: Built to "/Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile" successfully
+2021-12-22T10:45:36.263Z - normal: Start building with options : {
+  "actualPlatform": "web-mobile",
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "apiLevel": "",
+  "appABIs": [],
+  "appBundle": false,
+  "baidugame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "testappid",
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "buildPath": "/Users/fe-danghai-fresher/Desktop/2048Clone/build",
+  "debug": false,
+  "dest": "/Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile",
+  "embedWebDebugger": false,
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeSDKBox": false,
+  "inlineSpriteFrames": true,
+  "inlineSpriteFrames_native": true,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.2048Clone",
+  "platform": "web-mobile",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait",
+    "zip": false
+  },
+  "scenes": [
+    "8029e165-9a07-4adb-a404-d6b6558b12a1"
+  ],
+  "sourceMaps": false,
+  "startScene": "8029e165-9a07-4adb-a404-d6b6558b12a1",
+  "template": "link",
+  "title": "2048Clone",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx6ac3f5090a6b99c5",
+    "orientation": "portrait",
+    "separate_engine": false,
+    "subContext": ""
+  },
+  "xxteaKey": "fa8493f6-625b-4f",
+  "zipCompressJs": true,
+  "project": "/Users/fe-danghai-fresher/Desktop/2048Clone",
+  "projectName": "2048Clone",
+  "debugBuildWorker": false
+}
+2021-12-22T10:45:36.264Z - normal: Building /Users/fe-danghai-fresher/Desktop/2048Clone
+2021-12-22T10:45:36.264Z - normal: Destination /Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile
+2021-12-22T10:45:36.265Z - normal: Delete /Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile/subpackages/**/*,/Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile/**/*
+2021-12-22T10:45:38.548Z - normal: Start building assets
+2021-12-22T10:45:38.548Z - normal: Start spawn build-worker
+2021-12-22T10:45:39.147Z - normal: Finish spawn build-worker
+2021-12-22T10:45:39.147Z - normal: Start init build-worker
+2021-12-22T10:45:41.381Z - normal: Finish init build-worker
+2021-12-22T10:45:41.381Z - normal: Start build-assets in worker
+2021-12-22T10:45:41.755Z - normal: Finish build-assets in worker
+2021-12-22T10:45:41.758Z - normal: Finish building assets
+2021-12-22T10:45:41.766Z - normal: Start building plugin scripts
+2021-12-22T10:45:41.791Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
+2021-12-22T10:45:41.798Z - normal: Generating html from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/web-mobile/template/index.html
+2021-12-22T10:45:41.807Z - normal: Built to "/Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile" successfully
+2021-12-22T10:52:06.513Z - failed: [db-task][sync-changes] Failed to import asset /Users/fe-danghai-fresher/Desktop/2048Clone/assets/Scripts/touchPad.js, message: Compile error: SyntaxError: /Users/fe-danghai-fresher/Desktop/2048Clone/assets/Scripts/touchPad.js: Unexpected token, expected , (43:1)
+  41 |         Emitter.instance.emit("DOWN");
+  42 |     }
+> 43 | };
+     |  ^
+    at Parser.pp$5.raise (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp.expect (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1749:33)
+    at Parser.pp$3.parseCallExpressionArguments (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3564:12)
+    at Parser.pp$3.parseSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3533:31)
+    at Parser.pp$3.parseExprSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3504:15)
+    at Parser.pp$3.parseMaybeUnary (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3474:19)
+    at Parser.pp$3.parseExprOps (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3344:19)

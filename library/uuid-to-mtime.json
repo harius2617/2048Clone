@@ -460,8 +460,8 @@
     "relativePath": "Scene"
   },
   "8029e165-9a07-4adb-a404-d6b6558b12a1": {
-    "asset": 1640165393075,
-    "meta": 1640165393084,
+    "asset": 1640169908093,
+    "meta": 1640169908104,
     "relativePath": "Scene/New Scene.fire"
   },
   "45f7400a-4f7b-46de-b922-c37f96526c48": {
@@ -475,8 +475,8 @@
     "relativePath": "Prefab/item.prefab"
   },
   "2581ec5a-9324-4009-8600-f7e591dd99c0": {
-    "asset": 1640150707793,
-    "meta": 1640150707802,
+    "asset": 1640166640843,
+    "meta": 1640166640854,
     "relativePath": "Prefab/2.prefab"
   },
   "d1ee7272-05e3-4869-b1f9-7ee90a3b4a36": {
@@ -544,11 +544,6 @@
     "meta": 1640139216369,
     "relativePath": "fonts/8-BIT WONDER.TTF"
   },
-  "fb76c291-cd5d-431b-a936-8b4aba61c279": {
-    "asset": 1640052149705,
-    "meta": 1640139216712,
-    "relativePath": "Scripts/blockControl.js"
-  },
   "fba99cbe-0fb5-4e18-9ebd-165ba97262f3": {
     "asset": 1640071666807,
     "meta": 1640139216907,
@@ -559,24 +554,39 @@
     "meta": 1640139216899,
     "relativePath": "Scripts/keyBoard.js"
   },
-  "a08ce163-65b4-4b3d-b8cc-c293259c6c2c": {
-    "asset": 1640160009788,
-    "meta": 1640160024821,
-    "relativePath": "Scripts/Score.js"
-  },
   "fd8e52c7-5014-417b-8a64-cbacd7fa3d13": {
     "asset": 1640160867773,
     "meta": 1640160872708,
     "relativePath": "Scripts/ruleBtn.js"
   },
-  "c70ec01e-a461-4504-9a12-6f2962b9e1bc": {
-    "asset": 1640161796728,
-    "meta": 1640161799220,
-    "relativePath": "Scripts/CheckGameWinOrLose.js"
+  "bfab71ec-5a79-40ca-9636-d766d8c9ecfc": {
+    "asset": 1640165885427,
+    "meta": 1640165887791,
+    "relativePath": "Scripts/temporaryBtn.js"
+  },
+  "a08ce163-65b4-4b3d-b8cc-c293259c6c2c": {
+    "asset": 1640166730534,
+    "meta": 1640166731726,
+    "relativePath": "Scripts/Score.js"
+  },
+  "fb76c291-cd5d-431b-a936-8b4aba61c279": {
+    "asset": 1640168319656,
+    "meta": 1640168442842,
+    "relativePath": "Scripts/blockControl.js"
+  },
+  "2e9cb666-4e85-4ee5-a7d7-2d4064dbc346": {
+    "asset": 1640168864065,
+    "meta": 1640168864079,
+    "relativePath": "Audios/congratulations.mp3"
   },
   "9ff7316d-45ea-402b-87c4-c3af1451be32": {
-    "asset": 1640165678928,
-    "meta": 1640165680185,
+    "asset": 1640169928229,
+    "meta": 1640169935565,
     "relativePath": "Scripts/GameContainer.js"
+  },
+  "8cf1e009-8813-474b-8982-ae141f63dc32": {
+    "asset": 1640170324302,
+    "meta": 1640170008459,
+    "relativePath": "Scripts/touchPad.js"
   }
 }

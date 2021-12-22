@@ -33,10 +33,8 @@ cc.Class ({
         this._value += val*2;
         this.score.string = this._value.toString();
         this.scoreArr.push(this.score.string)
-        cc.warn(this.scoreArr)
         // this.updateBestScore();
         // cc.warn(this.updateBestScore())
-
     },
 
     // updateBestScore(){
