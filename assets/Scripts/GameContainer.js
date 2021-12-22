@@ -21,11 +21,12 @@ cc.Class({
         _lstEmptySlot: [],
         _posX: null,
         _posY: null,
-        _count: 0,
         canMove: {
             default: true,
             visible: false
-        }
+        },
+        _isFirstWin: false
+
     },
 
     onLoad() {
@@ -36,6 +37,7 @@ cc.Class({
         Emitter.instance.registerEvent("DOWN", this.blockMoveDown.bind(this));
         this.winNoti.scale = 0
         this.winNoti.active = false;
+        this._isFirstWin = true;
     },
 
     start() {
@@ -44,6 +46,7 @@ cc.Class({
         this.createNewBlock();
         this.createNewBlock();
         this.getScoreStorge()
+        this.canMove = true;
     },
 
     createBlockBg() {
@@ -101,7 +104,6 @@ cc.Class({
     updateEmptyList() {
         this._lstEmptySlot = []
         for (let i = 0; i < 4; i++) {
-            ;
             for (let j = 0; j < 4; j++) {
                 if (this._lstBlock[i][j] === null) {
                     this._lstEmptySlot.push({ i, j });
@@ -118,33 +120,27 @@ cc.Class({
         }
     },
 
-    // onKeyDown: function (event) {
-    //     switch (event.keyCode) {
-    //         case cc.macro.KEY.right:
-    //             this.canMove = false
-    //             this.blockMoveRight();
-    //             break;
-    //         case cc.macro.KEY.left:
-    //             this.blockMoveLeft();
-    //             break;
-    //         case cc.macro.KEY.up:
-    //             this.blockMoveUp();
-    //             break;
-    //         case cc.macro.KEY.down:
-    //             this.blockMoveDown();
-    //             break;
-    //     }
-    // },
-
-    moveFinish(canCreateBlock) {
+    moveFinish(canCreateBlock, lstBlock) {
         if (canCreateBlock) {
             this.createNewBlock();
             this.checkBestScore();
         }
+        for(let i= 0; i <this._lstBlock.length; i++){
+            for(let j = 0; j < this._lstBlock[i].length; j++){
+                this._lstBlock[i][j] && this._lstBlock[i][j].getComponent('blockControl').setCanCombine(true)
+            }
+        }
+        if(this.checkGameWin()){
+            this.canMove = false;
+            this.showGameWin();
+        }else {
+            this.canMove = true;
+        }
     },
 
     blockMoveRight() {
-        cc.warn('moveRight')
+        if(!this.canMove) return;
+        this.canMove = false;
         let canCreateNewBlock = false;
         const moveCalculator = (block, callBack) => {
             const currBlock = block.getComponent("blockControl");
@@ -163,9 +159,15 @@ cc.Class({
                 canCreateNewBlock = true
             } else if (this._lstBlock[currI][currJ + 1] != null) {
                 const nextBlock = this._lstBlock[currI][currJ + 1];
-                if (nextBlock.getComponent('blockControl').getValue() === block.getComponent('blockControl').getValue()) {
+                const currBlock = this._lstBlock[currI][currJ];
+                if (nextBlock.getComponent('blockControl').getValue() === block.getComponent('blockControl').getValue() && nextBlock.getComponent('blockControl').getCanCombine()) {
+                    const newI = nextBlock.getComponent('blockControl').getCoordinates().i;
+                    const newJ = nextBlock.getComponent('blockControl').getCoordinates().j;
+                    const oldI = currBlock.getComponent('blockControl').getCoordinates().i;
+                    const oldJ = currBlock.getComponent('blockControl').getCoordinates().j;
+                    this._lstBlock[oldI][oldJ] = null;
                     const callBack2 = () => {
-                        this.makeCombine(block, nextBlock, callBack);
+                        this.makeCombine(block, nextBlock, newI, newJ, callBack);
                     }
                     block.getComponent('blockControl').move(this._lstPosition[currI][currJ + 1], callBack2)
                     canCreateNewBlock = true;
@@ -174,11 +176,13 @@ cc.Class({
                 }
             }
         }
+        let countBlock = 0;
         const lstBlock = this.getListBlockByTypeMove("RIGHT");
         for (let i = 0; i < lstBlock.length; i++) {
             let callBack = () => {
-                if (lstBlock[i] === lstBlock[lstBlock.length - 1]) {
-                    this.moveFinish(canCreateNewBlock)
+                countBlock++
+                if (countBlock == lstBlock.length) {
+                    this.moveFinish(canCreateNewBlock, lstBlock)
                 }
             }
             moveCalculator(lstBlock[i], callBack)
@@ -186,7 +190,8 @@ cc.Class({
     },
 
     blockMoveLeft() {
-        cc.warn('moveLeft')
+        if(!this.canMove) return;
+        this.canMove = false;
         let canCreateNewBlock = false;
         const moveCalculator = (block, callBack) => {
             const currBlock = block.getComponent("blockControl");
@@ -205,9 +210,15 @@ cc.Class({
                 canCreateNewBlock = true;
             } else if (this._lstBlock[currI][currJ - 1] != null) {
                 const nextBlock = this._lstBlock[currI][currJ - 1];
-                if (nextBlock.getComponent('blockControl').getValue() === block.getComponent('blockControl').getValue()) {
+                const currBlock = this._lstBlock[currI][currJ];
+                if (nextBlock.getComponent('blockControl').getValue() === block.getComponent('blockControl').getValue() && nextBlock.getComponent('blockControl').getCanCombine()) {
+                    const newI = nextBlock.getComponent('blockControl').getCoordinates().i;
+                    const newJ = nextBlock.getComponent('blockControl').getCoordinates().j;
+                    const oldI = currBlock.getComponent('blockControl').getCoordinates().i;
+                    const oldJ = currBlock.getComponent('blockControl').getCoordinates().j;
+                    this._lstBlock[oldI][oldJ] = null;
                     const callBack2 = () => {
-                        this.makeCombine(block, nextBlock, callBack)
+                        this.makeCombine(block, nextBlock, newI, newJ, callBack)
                     }
                     block.getComponent('blockControl').move(this._lstPosition[currI][currJ - 1], callBack2)
                     canCreateNewBlock = true;
@@ -216,11 +227,13 @@ cc.Class({
                 }
             }
         }
+        let countBlock = 0;
         const lstBlock = this.getListBlockByTypeMove("LEFT");
         for (let i = 0; i < lstBlock.length; i++) {
             const callBack = () => {
-                if (lstBlock[i] === lstBlock[lstBlock.length - 1]) {
-                    this.moveFinish(canCreateNewBlock)
+                countBlock++
+                if (countBlock == lstBlock.length) {
+                    this.moveFinish(canCreateNewBlock, lstBlock)
                 }
             };
             moveCalculator(lstBlock[i], callBack)
@@ -228,7 +241,8 @@ cc.Class({
     },
 
     blockMoveUp() {
-        cc.warn('moveUp')
+        if(!this.canMove) return;
+        this.canMove = false;
         let canCreateNewBlock = false;
         const moveCalculator = (block, callBack) => {
             const currBlock = block.getComponent("blockControl");
@@ -247,9 +261,15 @@ cc.Class({
                 canCreateNewBlock = true;
             } else if (this._lstBlock[currI - 1][currJ] != null) {
                 const nextBlock = this._lstBlock[currI - 1][currJ];
-                if (nextBlock.getComponent('blockControl').getValue() === block.getComponent('blockControl').getValue()) {
+                const currBlock = this._lstBlock[currI][currJ];
+                if (nextBlock.getComponent('blockControl').getValue() === block.getComponent('blockControl').getValue() && nextBlock.getComponent('blockControl').getCanCombine()) {
+                    const newI = nextBlock.getComponent('blockControl').getCoordinates().i;
+                    const newJ = nextBlock.getComponent('blockControl').getCoordinates().j;
+                    const oldI = currBlock.getComponent('blockControl').getCoordinates().i;
+                    const oldJ = currBlock.getComponent('blockControl').getCoordinates().j;
+                    this._lstBlock[oldI][oldJ] = null;
                     const callBack2 = () => {
-                        this.makeCombine(block, nextBlock, callBack)
+                        this.makeCombine(block, nextBlock, newI, newJ, callBack)
                     }
                     block.getComponent('blockControl').move(this._lstPosition[currI - 1][currJ], callBack2)
                     canCreateNewBlock = true;
@@ -258,11 +278,13 @@ cc.Class({
                 }
             }
         }
+        let countBlock = 0;
         const lstBlock = this.getListBlockByTypeMove("UP");
         for (let i = 0; i < lstBlock.length; i++) {
             const callBack = () => {
-                if (i === lstBlock.length - 1) {
-                    this.moveFinish(canCreateNewBlock)
+                countBlock++;
+                if (countBlock == lstBlock.length) {
+                    this.moveFinish(canCreateNewBlock, lstBlock)
                 }
             };
             moveCalculator(lstBlock[i], callBack)
@@ -270,7 +292,8 @@ cc.Class({
     },
 
     blockMoveDown() {
-        cc.warn('moveDown')
+        if(!this.canMove) return;
+        this.canMove = false;
         let canCreateNewBlock = false;
         const moveCalculator = (block, callBack) => {
             const currBlock = block.getComponent("blockControl");
@@ -289,9 +312,15 @@ cc.Class({
                 canCreateNewBlock = true;
             } else if (this._lstBlock[currI + 1][currJ] != null) {
                 const nextBlock = this._lstBlock[currI + 1][currJ];
-                if (nextBlock.getComponent('blockControl').getValue() === block.getComponent('blockControl').getValue()) {
+                const currBlock = this._lstBlock[currI][currJ];
+                if (nextBlock.getComponent('blockControl').getValue() === block.getComponent('blockControl').getValue() && nextBlock.getComponent('blockControl').getCanCombine()) {
+                    const newI = nextBlock.getComponent('blockControl').getCoordinates().i;
+                    const newJ = nextBlock.getComponent('blockControl').getCoordinates().j;
+                    const oldI = currBlock.getComponent('blockControl').getCoordinates().i;
+                    const oldJ = currBlock.getComponent('blockControl').getCoordinates().j;
+                    this._lstBlock[oldI][oldJ] = null;
                     const callBack2 = () => {
-                        this.makeCombine(block, nextBlock, callBack)
+                        this.makeCombine(block, nextBlock, newI, newJ, callBack)
                     }
                     block.getComponent('blockControl').move(this._lstPosition[currI + 1][currJ], callBack2)
                     canCreateNewBlock = true;
@@ -300,33 +329,30 @@ cc.Class({
                 }
             }
         }
+        let countBlock = 0;
         const lstBlock = this.getListBlockByTypeMove("DOWN");
         for (let i = 0; i < lstBlock.length; i++) {
             const callBack = () => {
-                if (i === lstBlock.length - 1) {
-                    this.moveFinish(canCreateNewBlock)
+                countBlock++;
+                if (countBlock == lstBlock.length) {
+                    this.moveFinish(canCreateNewBlock, lstBlock)
                 }
             };
             moveCalculator(lstBlock[i], callBack)
         }
     },
 
-    makeCombine(block1, block2, callBack) {
+    makeCombine(block1, block2, i, j, callBack) {
         const newBlock = cc.instantiate(this.block2);
         this.node.addChild(newBlock);
-        const newI = block2.getComponent('blockControl').getCoordinates().i;
-        const newJ = block2.getComponent('blockControl').getCoordinates().j;
-        const oldI = block1.getComponent('blockControl').getCoordinates().i;
-        const oldJ = block1.getComponent('blockControl').getCoordinates().j
-        newBlock.setPosition(this._lstPosition[newI][newJ]);
-        this._lstBlock[newI][newJ] = newBlock;
-        this._lstBlock[oldI][oldJ] = null;
+        newBlock.setPosition(this._lstPosition[i][j]);
+        this._lstBlock[i][j] = newBlock;
         const val = block2.getComponent('blockControl').getValue();
         newBlock.getComponent("blockControl").setValue(val * 2);
-        newBlock.getComponent("blockControl").setCoordinates(newI, newJ);
+        newBlock.getComponent("blockControl").setCanCombine(false);
+        newBlock.getComponent("blockControl").setCoordinates(i, j);
         callBack && callBack()
         this.updateScore(val)
-        this.checkGameWin(val)
         block1.destroy();
         block2.destroy();
     },
@@ -335,17 +361,17 @@ cc.Class({
         const lstBlock = [];
         switch (type) {
             case "RIGHT":
-                for (let i = 0; i < ROWS; i++) {
-                    for (let j = COLS - 1; j >= 0; j--) {
+                for (let j = COLS - 1; j >= 0; j--) {
+                    for (let i = 0; i < ROWS; i++) {
                         if (this._lstBlock[i][j] != null) {
-                            lstBlock.push(this._lstBlock[i][j]);``
+                            lstBlock.push(this._lstBlock[i][j]);
                         }
                     }
                 }
                 return lstBlock;
             case "LEFT":
-                for (let i = 0; i < ROWS; i++) {
-                    for (let j = 0; j < COLS; j++) {
+                for (let j = 0; j < COLS; j++) {
+                    for (let i = 0; i < ROWS; i++) {
                         if (this._lstBlock[i][j] != null) {
                             lstBlock.push(this._lstBlock[i][j]);
                         }
@@ -374,16 +400,25 @@ cc.Class({
         }
     },
 
-    checkGameWin(val) {
-        // let count = 0
-        if (val === 16 && this._count === 0) {
-            this.soundWin.play(this.soundWin, false, 1)
-            this.winNoti.active = true
-            cc.tween(this.winNoti)
-                .to(1, { scale: 1 })
-                .start()
-            this._count += 1;
+    checkGameWin() {
+        for(let i= 0; i <this._lstBlock.length; i++){
+            for(let j = 0; j < this._lstBlock[i].length; j++){
+                if(this._lstBlock[i][j] && this._lstBlock[i][j].getComponent('blockControl').getValue() === 2048 && this._isFirstWin){
+                    this._isFirstWin = false;
+                    return true;
+                }
+            }
         }
+        return false;
+    },
+
+    showGameWin(){
+
+        this.soundWin.play(this.soundWin, false, 1)
+        this.winNoti.active = true
+        cc.tween(this.winNoti)
+            .to(1, { scale: 1 })
+            .start()
     },
 
     checkGameLose() {
@@ -406,7 +441,6 @@ cc.Class({
         if (newScore > Number(this.bestScore.string)) {
             cc.sys.localStorage.setItem('bestScore', JSON.stringify(newScore));
             this.bestScore.string = newScore;
-            cc.warn(2)
         }
     },
 
@@ -424,6 +458,8 @@ cc.Class({
         this.updateScore(0);
         this._newGameFlag = false;
         this.winNoti.active = false;
+        this.canMove = true;
+        this._isFirstWin = true
     },
 
     quitGame() {

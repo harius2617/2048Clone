@@ -1,344 +1,83 @@
-2021-12-22T02:13:25.866Z - normal: Load ~/.CocosCreator/settings.json
-2021-12-22T02:13:25.918Z - normal: Initializing Asset Database
-2021-12-22T02:13:25.920Z - normal: checking language setting...
-2021-12-22T02:13:25.920Z - normal: Language: en
-2021-12-22T02:13:26.637Z - success: preview server running at http://localhost:7456
-2021-12-22T02:13:26.648Z - success: protocol editor-framework registered
-2021-12-22T02:13:26.649Z - success: protocol app registered
-2021-12-22T02:13:26.649Z - success: protocol theme registered
-2021-12-22T02:13:26.649Z - success: protocol packages registered
-2021-12-22T02:13:26.649Z - success: protocol uuid registerred
-2021-12-22T02:13:26.649Z - success: protocol db registerred
-2021-12-22T02:13:26.649Z - success: protocol thumbnail registerred
-2021-12-22T02:13:26.649Z - success: protocol unpack registerred
-2021-12-22T02:13:26.649Z - success: protocol disable-commonjs registerred
-2021-12-22T02:13:29.638Z - normal: failed to connect login server due to request timeout
-2021-12-22T02:13:29.639Z - normal: Check project /Users/fe-danghai-fresher/Desktop/2048Clone
-2021-12-22T02:13:29.641Z - normal: Initializing project /Users/fe-danghai-fresher/Desktop/2048Clone
-2021-12-22T02:13:30.014Z - normal: Initializing Cocos2d
-2021-12-22T02:13:30.707Z - normal: Initializing engine extends
-2021-12-22T02:13:30.746Z - success: alipay-adapter loaded
-2021-12-22T02:13:30.755Z - success: asset-db-debugger loaded
-2021-12-22T02:13:30.759Z - success: baidu-adapter loaded
-2021-12-22T02:13:30.766Z - success: color-picker loaded
-2021-12-22T02:13:30.925Z - success: fb-audience-network loaded
-2021-12-22T02:13:30.990Z - success: fb-live-stream loaded
-2021-12-22T02:13:30.993Z - success: google-play-instant loaded
-2021-12-22T02:13:31.002Z - success: huawei-runtime loaded
-2021-12-22T02:13:31.232Z - success: cpk-publish loaded
-2021-12-22T02:13:31.234Z - success: jsb-adapter loaded
-2021-12-22T02:13:31.239Z - success: oppo-runtime loaded
-2021-12-22T02:13:31.244Z - success: package-manager loaded
-2021-12-22T02:13:31.378Z - success: qqplay-adapter loaded
-2021-12-22T02:13:31.380Z - success: runtime-dev-tools loaded
-2021-12-22T02:13:31.385Z - success: sdkbox loaded
-2021-12-22T02:13:31.388Z - success: tester loaded
-2021-12-22T02:13:31.391Z - success: ui-kit-preview-extra loaded
-2021-12-22T02:13:31.394Z - success: ui-kit-preview loaded
-2021-12-22T02:13:31.396Z - success: ui-kit loaded
-2021-12-22T02:13:31.401Z - success: vivo-runtime loaded
-2021-12-22T02:13:31.401Z - success: weapp-adapter loaded
-2021-12-22T02:13:31.402Z - success: xiaomi-adapter loaded
-2021-12-22T02:13:31.404Z - success: alipay-minigame loaded
-2021-12-22T02:13:31.435Z - success: assets loaded
-2021-12-22T02:13:31.439Z - success: builder loaded
-2021-12-22T02:13:31.706Z - success: cocos-services loaded
-2021-12-22T02:13:31.713Z - success: console loaded
-2021-12-22T02:13:31.741Z - success: fb-instant-games loaded
-2021-12-22T02:13:31.744Z - success: game-window loaded
-2021-12-22T02:13:31.745Z - success: google-instant-games loaded
-2021-12-22T02:13:31.750Z - success: hierarchy loaded
-2021-12-22T02:13:31.754Z - success: inspector loaded
-2021-12-22T02:13:31.756Z - success: keystore loaded
-2021-12-22T02:13:31.761Z - success: node-library loaded
-2021-12-22T02:13:31.762Z - success: package-asset loaded
-2021-12-22T02:13:31.764Z - success: preferences loaded
-2021-12-22T02:13:31.766Z - success: project-exporter loaded
-2021-12-22T02:13:31.773Z - success: project-importer loaded
-2021-12-22T02:13:31.799Z - success: project-settings loaded
-2021-12-22T02:13:31.807Z - success: scene loaded
-2021-12-22T02:13:31.808Z - success: simulator-debugger loaded
-2021-12-22T02:13:31.810Z - success: sprite-editor loaded
-2021-12-22T02:13:31.814Z - success: store loaded
-2021-12-22T02:13:31.822Z - success: timeline loaded
-2021-12-22T02:13:31.826Z - success: xiaomi-runtime loaded
-2021-12-22T02:13:34.401Z - info: Cocos Services load base data!
-2021-12-22T02:13:37.170Z - normal: Loading packages
-2021-12-22T02:13:37.175Z - normal: Watching packages
-2021-12-22T02:13:37.249Z - normal: Run Application
-2021-12-22T05:25:07.785Z - info: Only the prefab node "2" and its child nodes are saved.
-2021-12-22T08:43:46.170Z - warn: Custom should not be false if file is not specified.
-2021-12-22T09:38:07.510Z - warn: [db-task][sync-changes] Backup unused meta file: db://assets/Scripts/CheckGameWinOrLose.js.meta
-2021-12-22T09:38:19.538Z - warn: Script attached to "2" in prefab "2.prefab" is missing or invalid. Detailed information:
-Node path: "2"
-Asset url: "db://assets/Prefab/2.prefab"
-Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
-Class ID: "c70ecAepGFFBJoSbyliueG8"
-
-2021-12-22T09:38:45.223Z - warn: Script attached to "New Node" is missing or invalid. Detailed information:
-Node path: "Canvas/Background/New Node"
-Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
-Class ID: "c70ecAepGFFBJoSbyliueG8"
-
-2021-12-22T09:39:04.639Z - warn: Script attached to "2" in prefab "2.prefab" is missing or invalid. Detailed information:
-Node path: "2"
-Asset url: "db://assets/Prefab/2.prefab"
-Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
-Class ID: "c70ecAepGFFBJoSbyliueG8"
-
-2021-12-22T09:39:33.818Z - warn: Script attached to "2" in prefab "2.prefab" is missing or invalid. Detailed information:
-Node path: "2"
-Asset url: "db://assets/Prefab/2.prefab"
-Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
-Class ID: "c70ecAepGFFBJoSbyliueG8"
-
-2021-12-22T09:45:25.074Z - warn: Script attached to "2" in prefab "2.prefab" is missing or invalid. Detailed information:
-Node path: "2"
-Asset url: "db://assets/Prefab/2.prefab"
-Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
-Class ID: "c70ecAepGFFBJoSbyliueG8"
-
-2021-12-22T09:49:05.701Z - warn: Script attached to "2" in prefab "2.prefab" is missing or invalid. Detailed information:
-Node path: "2"
-Asset url: "db://assets/Prefab/2.prefab"
-Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
-Class ID: "c70ecAepGFFBJoSbyliueG8"
-
-2021-12-22T09:49:36.247Z - warn: Script attached to "2" in prefab "2.prefab" is missing or invalid. Detailed information:
-Node path: "2"
-Asset url: "db://assets/Prefab/2.prefab"
-Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
-Class ID: "c70ecAepGFFBJoSbyliueG8"
-
-2021-12-22T09:50:24.377Z - warn: Script attached to "2" in prefab "2.prefab" is missing or invalid. Detailed information:
-Node path: "2"
-Asset url: "db://assets/Prefab/2.prefab"
-Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
-Class ID: "c70ecAepGFFBJoSbyliueG8"
-
-2021-12-22T09:50:33.652Z - warn: Script attached to "2" in prefab "2.prefab" is missing or invalid. Detailed information:
-Node path: "2"
-Asset url: "db://assets/Prefab/2.prefab"
-Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
-Class ID: "c70ecAepGFFBJoSbyliueG8"
-
-2021-12-22T09:50:33.661Z - warn: Script attached to "2" in prefab "2.prefab" is missing or invalid. Detailed information:
-Node path: "2"
-Asset url: "db://assets/Prefab/2.prefab"
-Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
-Class ID: "c70ecAepGFFBJoSbyliueG8"
-
-2021-12-22T09:50:40.836Z - info: Only the prefab node "2" and its child nodes are saved.
-2021-12-22T10:33:26.028Z - warn: Please change the definition of property 'soundWin' in class 'GameContainer'. Starting from v1.10,
-properties in CCClass can not be abbreviated if they are of type RawAsset.
-Please use the complete form.
-For example, if the type is Texture2D, the previous definition is:
-    soundWin: cc.Texture2D,
-If you use JS, it should be changed to:
-    soundWin: {
-      type: cc.Texture2D // use 'type:' to define Texture2D object directly
-      default: null,     // object's default value is null
-    },
-If you use TS, it should be changed to:
-    %s: {
-      type: cc.Texture2D // use 'type:' to define Texture2D object directly
-    }
-    %s: cc.Texture2D = null;
-(This helps us to successfully refactor all RawAssets at v2.0, sorry for the inconvenience. 😰 )
-2021-12-22T10:36:37.340Z - warn: Script attached to "New Node" is missing or invalid. Detailed information:
-Node path: "Canvas/Background/New Node"
-Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
-Class ID: "c70ecAepGFFBJoSbyliueG8"
-
-2021-12-22T10:36:46.868Z - warn: Script attached to "New Node" is missing or invalid. Detailed information:
-Node path: "Canvas/Background/New Node"
-Script UUID: "c70ec01e-a461-4504-9a12-6f2962b9e1bc"
-Class ID: "c70ecAepGFFBJoSbyliueG8"
-
-2021-12-22T10:44:26.768Z - normal: Start building with options : {
-  "actualPlatform": "web-mobile",
-  "android-instant": {
-    "REMOTE_SERVER_ROOT": "",
-    "host": "",
-    "pathPattern": "",
-    "recordPath": "",
-    "scheme": "https",
-    "skipRecord": false
-  },
-  "apiLevel": "",
-  "appABIs": [],
-  "appBundle": false,
-  "baidugame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "testappid",
-    "orientation": "portrait",
-    "subContext": ""
-  },
-  "buildPath": "/Users/fe-danghai-fresher/Desktop/2048Clone/build",
-  "debug": false,
-  "dest": "/Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile",
-  "embedWebDebugger": false,
-  "encryptJs": true,
-  "excludeScenes": [],
-  "excludedModules": [],
-  "fb-instant-games": {},
-  "includeSDKBox": false,
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "md5Cache": false,
-  "mergeStartScene": false,
-  "optimizeHotUpdate": false,
-  "orientation": {
-    "landscapeLeft": true,
-    "landscapeRight": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "packageName": "org.cocos2d.2048Clone",
-  "platform": "web-mobile",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "qqplay": {
-    "REMOTE_SERVER_ROOT": "",
-    "orientation": "portrait",
-    "zip": false
-  },
-  "scenes": [
-    "8029e165-9a07-4adb-a404-d6b6558b12a1"
-  ],
-  "sourceMaps": false,
-  "startScene": "8029e165-9a07-4adb-a404-d6b6558b12a1",
-  "template": "link",
-  "title": "2048Clone",
-  "useDebugKeystore": true,
-  "vsVersion": "auto",
-  "webOrientation": "auto",
-  "wechatgame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "wx6ac3f5090a6b99c5",
-    "orientation": "portrait",
-    "separate_engine": false,
-    "subContext": ""
-  },
-  "xxteaKey": "fa8493f6-625b-4f",
-  "zipCompressJs": true,
-  "project": "/Users/fe-danghai-fresher/Desktop/2048Clone",
-  "projectName": "2048Clone",
-  "debugBuildWorker": false
-}
-2021-12-22T10:44:26.773Z - normal: Building /Users/fe-danghai-fresher/Desktop/2048Clone
-2021-12-22T10:44:26.773Z - normal: Destination /Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile
-2021-12-22T10:44:26.901Z - normal: Delete /Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile/subpackages/**/*,/Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile/**/*
-2021-12-22T10:44:28.702Z - normal: Start building assets
-2021-12-22T10:44:28.702Z - normal: Start spawn build-worker
-2021-12-22T10:44:29.364Z - normal: Finish spawn build-worker
-2021-12-22T10:44:29.365Z - normal: Start init build-worker
-2021-12-22T10:44:32.015Z - normal: Finish init build-worker
-2021-12-22T10:44:32.015Z - normal: Start build-assets in worker
-2021-12-22T10:44:32.441Z - normal: Finish build-assets in worker
-2021-12-22T10:44:32.444Z - normal: Finish building assets
-2021-12-22T10:44:32.452Z - normal: Start building plugin scripts
-2021-12-22T10:44:32.481Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
-2021-12-22T10:44:32.489Z - normal: Generating html from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/web-mobile/template/index.html
-2021-12-22T10:44:32.504Z - normal: Built to "/Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile" successfully
-2021-12-22T10:45:36.263Z - normal: Start building with options : {
-  "actualPlatform": "web-mobile",
-  "android-instant": {
-    "REMOTE_SERVER_ROOT": "",
-    "host": "",
-    "pathPattern": "",
-    "recordPath": "",
-    "scheme": "https",
-    "skipRecord": false
-  },
-  "apiLevel": "",
-  "appABIs": [],
-  "appBundle": false,
-  "baidugame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "testappid",
-    "orientation": "portrait",
-    "subContext": ""
-  },
-  "buildPath": "/Users/fe-danghai-fresher/Desktop/2048Clone/build",
-  "debug": false,
-  "dest": "/Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile",
-  "embedWebDebugger": false,
-  "encryptJs": true,
-  "excludeScenes": [],
-  "excludedModules": [],
-  "fb-instant-games": {},
-  "includeSDKBox": false,
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "md5Cache": false,
-  "mergeStartScene": false,
-  "optimizeHotUpdate": false,
-  "orientation": {
-    "landscapeLeft": true,
-    "landscapeRight": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "packageName": "org.cocos2d.2048Clone",
-  "platform": "web-mobile",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "qqplay": {
-    "REMOTE_SERVER_ROOT": "",
-    "orientation": "portrait",
-    "zip": false
-  },
-  "scenes": [
-    "8029e165-9a07-4adb-a404-d6b6558b12a1"
-  ],
-  "sourceMaps": false,
-  "startScene": "8029e165-9a07-4adb-a404-d6b6558b12a1",
-  "template": "link",
-  "title": "2048Clone",
-  "useDebugKeystore": true,
-  "vsVersion": "auto",
-  "webOrientation": "auto",
-  "wechatgame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "wx6ac3f5090a6b99c5",
-    "orientation": "portrait",
-    "separate_engine": false,
-    "subContext": ""
-  },
-  "xxteaKey": "fa8493f6-625b-4f",
-  "zipCompressJs": true,
-  "project": "/Users/fe-danghai-fresher/Desktop/2048Clone",
-  "projectName": "2048Clone",
-  "debugBuildWorker": false
-}
-2021-12-22T10:45:36.264Z - normal: Building /Users/fe-danghai-fresher/Desktop/2048Clone
-2021-12-22T10:45:36.264Z - normal: Destination /Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile
-2021-12-22T10:45:36.265Z - normal: Delete /Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile/subpackages/**/*,/Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile/**/*
-2021-12-22T10:45:38.548Z - normal: Start building assets
-2021-12-22T10:45:38.548Z - normal: Start spawn build-worker
-2021-12-22T10:45:39.147Z - normal: Finish spawn build-worker
-2021-12-22T10:45:39.147Z - normal: Start init build-worker
-2021-12-22T10:45:41.381Z - normal: Finish init build-worker
-2021-12-22T10:45:41.381Z - normal: Start build-assets in worker
-2021-12-22T10:45:41.755Z - normal: Finish build-assets in worker
-2021-12-22T10:45:41.758Z - normal: Finish building assets
-2021-12-22T10:45:41.766Z - normal: Start building plugin scripts
-2021-12-22T10:45:41.791Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
-2021-12-22T10:45:41.798Z - normal: Generating html from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/web-mobile/template/index.html
-2021-12-22T10:45:41.807Z - normal: Built to "/Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile" successfully
-2021-12-22T10:52:06.513Z - failed: [db-task][sync-changes] Failed to import asset /Users/fe-danghai-fresher/Desktop/2048Clone/assets/Scripts/touchPad.js, message: Compile error: SyntaxError: /Users/fe-danghai-fresher/Desktop/2048Clone/assets/Scripts/touchPad.js: Unexpected token, expected , (43:1)
+2021-12-22T15:28:07.780Z - normal: Load ~/.CocosCreator/settings.json
+2021-12-22T15:28:08.897Z - normal: Initializing Asset Database
+2021-12-22T15:28:08.899Z - normal: checking language setting...
+2021-12-22T15:28:08.899Z - normal: Language: en
+2021-12-22T15:28:09.457Z - success: preview server running at http://localhost:7456
+2021-12-22T15:28:09.458Z - success: protocol editor-framework registered
+2021-12-22T15:28:09.459Z - success: protocol app registered
+2021-12-22T15:28:09.459Z - success: protocol theme registered
+2021-12-22T15:28:09.459Z - success: protocol packages registered
+2021-12-22T15:28:09.459Z - success: protocol uuid registerred
+2021-12-22T15:28:09.459Z - success: protocol db registerred
+2021-12-22T15:28:09.459Z - success: protocol thumbnail registerred
+2021-12-22T15:28:09.459Z - success: protocol unpack registerred
+2021-12-22T15:28:09.459Z - success: protocol disable-commonjs registerred
+2021-12-22T15:28:10.982Z - normal: connected!
+2021-12-22T15:28:10.984Z - normal: Check project C:\Users\Dell\OneDrive\Desktop\2048Clone
+2021-12-22T15:28:10.985Z - normal: Initializing project C:\Users\Dell\OneDrive\Desktop\2048Clone
+2021-12-22T15:28:11.314Z - normal: Initializing Cocos2d
+2021-12-22T15:28:11.986Z - normal: Initializing engine extends
+2021-12-22T15:28:12.004Z - success: alipay-adapter loaded
+2021-12-22T15:28:12.009Z - success: asset-db-debugger loaded
+2021-12-22T15:28:12.013Z - success: baidu-adapter loaded
+2021-12-22T15:28:12.017Z - success: color-picker loaded
+2021-12-22T15:28:12.119Z - success: fb-audience-network loaded
+2021-12-22T15:28:12.173Z - success: fb-live-stream loaded
+2021-12-22T15:28:12.180Z - success: google-play-instant loaded
+2021-12-22T15:28:12.190Z - success: huawei-runtime loaded
+2021-12-22T15:28:12.367Z - success: cpk-publish loaded
+2021-12-22T15:28:12.368Z - success: jsb-adapter loaded
+2021-12-22T15:28:12.371Z - success: oppo-runtime loaded
+2021-12-22T15:28:12.373Z - success: package-manager loaded
+2021-12-22T15:28:12.460Z - success: qqplay-adapter loaded
+2021-12-22T15:28:12.462Z - success: runtime-dev-tools loaded
+2021-12-22T15:28:12.465Z - success: sdkbox loaded
+2021-12-22T15:28:12.467Z - success: tester loaded
+2021-12-22T15:28:12.468Z - success: ui-kit-preview-extra loaded
+2021-12-22T15:28:12.469Z - success: ui-kit-preview loaded
+2021-12-22T15:28:12.470Z - success: ui-kit loaded
+2021-12-22T15:28:12.475Z - success: vivo-runtime loaded
+2021-12-22T15:28:12.475Z - success: weapp-adapter loaded
+2021-12-22T15:28:12.476Z - success: xiaomi-adapter loaded
+2021-12-22T15:28:12.478Z - success: alipay-minigame loaded
+2021-12-22T15:28:12.517Z - success: assets loaded
+2021-12-22T15:28:12.519Z - success: builder loaded
+2021-12-22T15:28:12.732Z - success: cocos-services loaded
+2021-12-22T15:28:12.735Z - success: console loaded
+2021-12-22T15:28:12.761Z - success: fb-instant-games loaded
+2021-12-22T15:28:12.763Z - success: game-window loaded
+2021-12-22T15:28:12.764Z - success: google-instant-games loaded
+2021-12-22T15:28:12.767Z - success: hierarchy loaded
+2021-12-22T15:28:12.768Z - success: inspector loaded
+2021-12-22T15:28:12.769Z - success: keystore loaded
+2021-12-22T15:28:12.773Z - success: node-library loaded
+2021-12-22T15:28:12.774Z - success: package-asset loaded
+2021-12-22T15:28:12.775Z - success: preferences loaded
+2021-12-22T15:28:12.776Z - success: project-exporter loaded
+2021-12-22T15:28:12.777Z - success: project-importer loaded
+2021-12-22T15:28:12.779Z - success: project-settings loaded
+2021-12-22T15:28:12.781Z - success: scene loaded
+2021-12-22T15:28:12.782Z - success: simulator-debugger loaded
+2021-12-22T15:28:12.783Z - success: sprite-editor loaded
+2021-12-22T15:28:12.786Z - success: store loaded
+2021-12-22T15:28:12.789Z - success: timeline loaded
+2021-12-22T15:28:12.796Z - success: xiaomi-runtime loaded
+2021-12-22T15:28:15.005Z - info: Cocos Services load base data!
+2021-12-22T15:28:17.670Z - failed: [db-task][init] Failed to import asset C:\Users\Dell\OneDrive\Desktop\2048Clone\assets\Scripts\touchPad.js, message: Compile error: SyntaxError: C:/Users/Dell/OneDrive/Desktop/2048Clone/assets/Scripts/touchPad.js: Unexpected token, expected , (43:1)
   41 |         Emitter.instance.emit("DOWN");
   42 |     }
 > 43 | };
      |  ^
-    at Parser.pp$5.raise (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4454:13)
-    at Parser.pp.unexpected (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1761:8)
-    at Parser.pp.expect (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1749:33)
-    at Parser.pp$3.parseCallExpressionArguments (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3564:12)
-    at Parser.pp$3.parseSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3533:31)
-    at Parser.pp$3.parseExprSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3504:15)
-    at Parser.pp$3.parseMaybeUnary (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3474:19)
-    at Parser.pp$3.parseExprOps (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3404:19)
-    at Parser.pp$3.parseMaybeConditional (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3381:19)
-    at Parser.pp$3.parseMaybeAssign (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3344:19)
+    at Parser.pp$5.raise (D:\IT\Gemi\app\cocos\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.pp.unexpected (D:\IT\Gemi\app\cocos\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1761:8)
+    at Parser.pp.expect (D:\IT\Gemi\app\cocos\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1749:33)
+    at Parser.pp$3.parseCallExpressionArguments (D:\IT\Gemi\app\cocos\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3564:12)
+    at Parser.pp$3.parseSubscripts (D:\IT\Gemi\app\cocos\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3533:31)
+    at Parser.pp$3.parseExprSubscripts (D:\IT\Gemi\app\cocos\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3504:15)
+    at Parser.pp$3.parseMaybeUnary (D:\IT\Gemi\app\cocos\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3474:19)
+    at Parser.pp$3.parseExprOps (D:\IT\Gemi\app\cocos\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (D:\IT\Gemi\app\cocos\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (D:\IT\Gemi\app\cocos\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3344:19)
+2021-12-22T15:28:17.950Z - normal: Loading packages
+2021-12-22T15:28:17.955Z - normal: Watching packages
+2021-12-22T15:28:18.296Z - normal: Run Application

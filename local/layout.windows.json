@@ -7,9 +7,9 @@
       "url": "app://editor/index.html",
       "windowType": "dockable",
       "x": 0,
-      "y": 25,
-      "width": 1680,
-      "height": 945,
+      "y": 0,
+      "width": 1920,
+      "height": 1032,
       "layout": {
         "children": [
           {
@@ -19,23 +19,23 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 427.5,
+                "height": 456,
                 "type": "panel",
-                "width": 270.578125
+                "width": 306.75
               },
               {
                 "active": 0,
                 "children": [
                   "assets"
                 ],
-                "height": 427.5,
+                "height": 455,
                 "type": "panel",
-                "width": 270.578125
+                "width": 306.75
               }
             ],
-            "height": 857,
+            "height": 913,
             "type": "dock-v",
-            "width": 270.578125
+            "width": 306.75
           },
           {
             "children": [
@@ -44,9 +44,9 @@
                 "children": [
                   "scene"
                 ],
-                "height": 578.609375,
+                "height": 616.921875,
                 "type": "panel",
-                "width": 1001.5625
+                "width": 1135.421875
               },
               {
                 "active": 0,
@@ -55,14 +55,14 @@
                   "timeline",
                   "game-window"
                 ],
-                "height": 276.375,
+                "height": 294.078125,
                 "type": "panel",
-                "width": 1001.5625
+                "width": 1135.421875
               }
             ],
-            "height": 857,
+            "height": 913,
             "type": "dock-v",
-            "width": 1001.5625
+            "width": 1135.421875
           },
           {
             "active": 0,
@@ -71,9 +71,9 @@
               "cocos-services",
               "node-library"
             ],
-            "height": 857,
+            "height": 913,
             "type": "panel",
-            "width": 403.859375
+            "width": 457.828125
           }
         ],
         "type": "dock-h"
