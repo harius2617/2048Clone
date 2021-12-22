@@ -12,12 +12,15 @@ cc.Class({
         block2: cc.Prefab,
         cell: cc.Prefab,
         currScore: cc.Label,
+        bestScore: cc.Label,
+        winNoti: cc.Node,
         _newGameFlag: false,
         _lstBlock: [],
         _lstPosition: [],
         _lstEmptySlot: [],
         _posX: null,
         _posY: null,
+        count: 0,
         canMove: {
             default: true,
             visible: false
@@ -30,6 +33,9 @@ cc.Class({
         Emitter.instance.registerEvent("LEFT", this.blockMoveLeft.bind(this));
         Emitter.instance.registerEvent("UP", this.blockMoveUp.bind(this));
         Emitter.instance.registerEvent("DOWN", this.blockMoveDown.bind(this));
+        this.winNoti.scale = 0
+        cc.warn(this.winNoti)
+        this.winNoti.active = false;
     },
 
     start() {
@@ -104,7 +110,6 @@ cc.Class({
     },
 
     updateScore(val) {
-        // this.score.getComponent("Score").setValue();
         if(this._newGameFlag) {
             this.currScore.getComponent("Score").setValue(val);
         }else {
@@ -132,7 +137,7 @@ cc.Class({
 
     moveFinish(canCreateBlock) {
         if (canCreateBlock) {
-            this.createNewBlock()
+            this.createNewBlock();
         }
     },
 
@@ -319,6 +324,7 @@ cc.Class({
         newBlock.getComponent("blockControl").setCoordinates(newI, newJ);
         callBack && callBack()
         this.updateScore(val)
+        this.checkGame(val)
         block1.destroy();
         block2.destroy();
     },
@@ -366,6 +372,20 @@ cc.Class({
         }
     },
 
+    checkGame(val) {
+        // let count = 0
+        if(val === 4 && this.count === 0) {
+            // this.winNoti.active = true;
+            // this.winNoti.getComponent(cc.Node).active = true;
+        this.winNoti.active = true
+        cc.tween(this.winNoti)
+            .to(1, { scale: 1 })
+
+        .start()
+        this.count += 1;
+    }
+    },
+
     newGame() {
         this._newGameFlag = true;
         const a = this.node.children.length;
@@ -378,6 +398,7 @@ cc.Class({
         this.createNewBlock();
         this.updateScore(0);
         this._newGameFlag = false;
+        this.winNoti.node.active = false;
     },
 
     quitGame() {

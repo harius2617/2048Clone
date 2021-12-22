@@ -460,8 +460,8 @@
     "relativePath": "Scene"
   },
   "8029e165-9a07-4adb-a404-d6b6558b12a1": {
-    "asset": 1640145207527,
-    "meta": 1640145207539,
+    "asset": 1640165393075,
+    "meta": 1640165393084,
     "relativePath": "Scene/New Scene.fire"
   },
   "45f7400a-4f7b-46de-b922-c37f96526c48": {
@@ -475,8 +475,8 @@
     "relativePath": "Prefab/item.prefab"
   },
   "2581ec5a-9324-4009-8600-f7e591dd99c0": {
-    "asset": 1640139188390,
-    "meta": 1640139216498,
+    "asset": 1640150707793,
+    "meta": 1640150707802,
     "relativePath": "Prefab/2.prefab"
   },
   "d1ee7272-05e3-4869-b1f9-7ee90a3b4a36": {
@@ -554,24 +554,29 @@
     "meta": 1640139216907,
     "relativePath": "Scripts/mEmitter.js"
   },
-  "fd8e52c7-5014-417b-8a64-cbacd7fa3d13": {
-    "asset": 1640075449613,
-    "meta": 1640139216909,
-    "relativePath": "Scripts/ruleBtn.js"
-  },
   "b47ec4bd-b4ba-450a-8920-f703bfe382cd": {
     "asset": 1640139188392,
     "meta": 1640139216899,
     "relativePath": "Scripts/keyBoard.js"
   },
   "a08ce163-65b4-4b3d-b8cc-c293259c6c2c": {
-    "asset": 1640147413907,
-    "meta": 1640147415274,
+    "asset": 1640160009788,
+    "meta": 1640160024821,
     "relativePath": "Scripts/Score.js"
   },
+  "fd8e52c7-5014-417b-8a64-cbacd7fa3d13": {
+    "asset": 1640160867773,
+    "meta": 1640160872708,
+    "relativePath": "Scripts/ruleBtn.js"
+  },
+  "c70ec01e-a461-4504-9a12-6f2962b9e1bc": {
+    "asset": 1640161796728,
+    "meta": 1640161799220,
+    "relativePath": "Scripts/CheckGameWinOrLose.js"
+  },
   "9ff7316d-45ea-402b-87c4-c3af1451be32": {
-    "asset": 1640147795941,
-    "meta": 1640147797187,
+    "asset": 1640165678928,
+    "meta": 1640165680185,
     "relativePath": "Scripts/GameContainer.js"
   }
 }

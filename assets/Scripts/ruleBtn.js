@@ -20,7 +20,4 @@ cc.Class({
         this.node.active = false;
     },
 
-    start () {
-
-    },
 });

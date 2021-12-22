@@ -66,3 +66,5 @@
 2021-12-22T02:13:37.170Z - normal: Loading packages
 2021-12-22T02:13:37.175Z - normal: Watching packages
 2021-12-22T02:13:37.249Z - normal: Run Application
+2021-12-22T05:25:07.785Z - info: Only the prefab node "2" and its child nodes are saved.
+2021-12-22T08:43:46.170Z - warn: Custom should not be false if file is not specified.
