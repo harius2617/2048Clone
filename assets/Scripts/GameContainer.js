@@ -136,6 +136,9 @@ cc.Class({
         }else {
             this.canMove = true;
         }
+        if(this.checkGameLose()){
+            Emitter.instance.emit("LOSE")
+        }
     },
 
     blockMoveRight() {
@@ -413,7 +416,6 @@ cc.Class({
     },
 
     showGameWin(){
-
         this.soundWin.play(this.soundWin, false, 1)
         this.winNoti.active = true
         cc.tween(this.winNoti)
@@ -422,8 +424,26 @@ cc.Class({
     },
 
     checkGameLose() {
+        this.updateEmptyList();
         if(this._lstEmptySlot.length === 0){
+            for(let i = 0; i < 4; i ++) {
+                for(let j = 0; j < 4; j ++) {
+                    let num = this._lstBlock[i][j].getComponent("blockControl").getValue();
 
+                    let numRight = this._lstBlock[i + 1] ? this._lstBlock[i + 1][j].getComponent("blockControl").getValue() : null;
+                    let numLeft = this._lstBlock[i - 1] ? this._lstBlock[i - 1][j].getComponent("blockControl").getValue() : null;
+                    let numUp = this._lstBlock[i][j - 1] ? this._lstBlock[i][j -1].getComponent("blockControl").getValue() : null;
+                    let numDown = this._lstBlock[i][j + 1] ? this._lstBlock[i][j + 1].getComponent("blockControl").getValue() : null;
+
+                    if(i < 3 && num === numRight) return false;
+                    if(i >0 && num === numLeft) return false;
+                    if(j < 3 && num === numDown) return false;
+                    if(j > 0 && num === numUp) return false;
+                }
+            }
+            return true;
+        }else {
+            return false;
         }
     },
 

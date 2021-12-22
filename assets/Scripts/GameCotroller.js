@@ -31,7 +31,7 @@ cc.Class({
         this.enterBtn.interacterble = false;
         // this.loseLayout.active = true;
         this.soundBg.play(this.soundBg, true,1);
-        Emitter.instance.registerEvent("LOSE1", this.loseGame.bind(this));
+        Emitter.instance.registerEvent("LOSE", this.loseGame.bind(this));
         cc.warn(this.userNameBox.string)
     },
     soundOnFunc() {
