@@ -38,15 +38,23 @@ cc.Class({
         this.soundBg.play(this.soundBg, true,1);
         Emitter.instance.registerEvent("LOSE", this.loseGame.bind(this));
         Emitter.instance.registerEvent("WIN", this.winGame.bind(this));
-        cc.warn(this.winLayout.scale)
         Emitter.instance.registerEvent("HIGHSCORE", this.notiNewHighScore.bind(this));
+        Emitter.instance.registerEvent("SOUND", this.soundOnFunc.bind(this));
+    },
+
+    controlSound() {
+        if(this.soundOnBtn.node.active) {
+            // this.soundOnFunc()
+        }else if(this.soundOffBtn.node.active){
+            // this.soundOffFunc()
+        }
     },
     soundOnFunc() {
         this.soundOnBtn.node.active = true;
         this.soundOffBtn.active = false;
-        this.soundBg.play(this.soundBg, true,1)
+        this.soundBg.play(this.soundBg, false,1)
     },
-
+    
     soundOffFunc() {
         this.soundOnBtn.node.active = false;
         this.soundOffBtn.node.active = true;
@@ -55,6 +63,7 @@ cc.Class({
 
     onRule () {
         this.ruleLayout.node.active = true;
+        this.leaderboard.active = false;
         this.ruleLayout.node.getComponent(cc.PageView).scrollToPage(0, 0.01);
     },
 
@@ -70,10 +79,13 @@ cc.Class({
     },
 
     winGame() {
-        // cc.log(this.winLayout)
-        this.soundWin.play(this.soundWin, false, 1)
-        this.winLayout.active = true;
+        if(this.soundOnBtn.node.active === true){
+            this.soundWin.play(this.soundWin, false, 1)
+        }
         cc.tween(this.winLayout)
+            .call(()=> {
+                this.winLayout.active = true;
+            })
             .to(1, {scale: 1})
             .start()
     },
@@ -115,6 +127,7 @@ cc.Class({
     },
 
     onLeaderboard () {
+        this.ruleLayout.node.active = false
         this.leaderboard.active = true;
     },
 

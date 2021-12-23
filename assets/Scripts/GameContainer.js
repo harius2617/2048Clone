@@ -14,6 +14,7 @@ cc.Class({
         currScore: cc.Label,
         bestScore: cc.Label,
         spriteArr: [cc.SpriteFrame],
+        soundOn: cc.Button,
         _newGameFlag: false,
         _lstBlock: [],
         _lstPosition: [],
@@ -33,9 +34,6 @@ cc.Class({
         Emitter.instance.registerEvent("UP", this.blockMoveUp.bind(this));
         Emitter.instance.registerEvent("DOWN", this.blockMoveDown.bind(this));
         Emitter.instance.registerEvent("CONTINUE", this.continueGame.bind(this));
-
-        // this.winNoti.scale = 0
-        // this.winNoti.active = false;
         this._isFirstWin = true;
     },
 
@@ -134,7 +132,6 @@ cc.Class({
         }
         if(this.checkGameWin()){
             this.canMove = false;
-            // this.showGameWin();
             Emitter.instance.emit("WIN")
         }else {
             this.canMove = true;
@@ -359,35 +356,28 @@ cc.Class({
         newBlock.getComponent("blockControl").setCoordinates(i, j);
         if(val == 2) {
             newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[1];
-        }
-        if(val == 4) {
+        }else if(val == 4) {
             newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[2];
-        }
-        if(val == 8) {
+        }else if(val == 8) {
             newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[3];
-        }
-        if(val == 16) {
+        }else if(val == 16) {
             newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[4];
-        }
-        if(val == 32) {
+        }else if(val == 32) {
             newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[5];
-        }
-        if(val == 64) {
+        }else if(val == 64) {
             newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[6];
-        }
-        if(val == 128) {
+        }else if(val == 128) {
             newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[7];
-        }
-        if(val == 256) {
+        }else if(val >= 256) {
             newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[8];
-        }
-        if(val >= 512) {
-            newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[9];
         }
         callBack && callBack()
         this.updateScore(val)
         block1.destroy();
         block2.destroy();
+        if(this.soundOn.node.active === true) {
+            Emitter.instance.emit("SOUND");
+        }
     },
 
     getListBlockByTypeMove(type) {

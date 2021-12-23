@@ -19,23 +19,23 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 428,
+                "height": 412.484375,
                 "type": "panel",
-                "width": 271
+                "width": 268.40625
               },
               {
                 "active": 0,
                 "children": [
                   "assets"
                 ],
-                "height": 427,
+                "height": 411.515625,
                 "type": "panel",
-                "width": 271
+                "width": 268.40625
               }
             ],
-            "height": 857,
+            "height": 826,
             "type": "dock-v",
-            "width": 271
+            "width": 268.40625
           },
           {
             "children": [
@@ -44,9 +44,9 @@
                 "children": [
                   "scene"
                 ],
-                "height": 579,
+                "height": 558,
                 "type": "panel",
-                "width": 1000.984375
+                "width": 991.4375
               },
               {
                 "active": 0,
@@ -55,14 +55,14 @@
                   "timeline",
                   "game-window"
                 ],
-                "height": 276,
+                "height": 266,
                 "type": "panel",
-                "width": 1000.984375
+                "width": 991.4375
               }
             ],
-            "height": 857,
+            "height": 826,
             "type": "dock-v",
-            "width": 1000.984375
+            "width": 991.4375
           },
           {
             "active": 0,
@@ -71,9 +71,9 @@
               "cocos-services",
               "node-library"
             ],
-            "height": 857,
+            "height": 826,
             "type": "panel",
-            "width": 404
+            "width": 400.140625
           }
         ],
         "type": "dock-h"
@@ -89,7 +89,8 @@
         "node-library",
         "scene"
       ]
-    }
+    },
+    "window-1640271361633": {}
   },
   "panels": {
     "sprite-editor": {
@@ -99,8 +100,8 @@
       "height": 947
     },
     "builder": {
-      "x": 0,
-      "y": 25,
+      "x": 112,
+      "y": 23,
       "width": 1680,
       "height": 947
     }

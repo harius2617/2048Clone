@@ -9,7 +9,7 @@ const DIRECTION = cc.Enum({
 cc.Class({
     extends: cc.Component,
     onLoad: function () {
-        cc.systemEvent.on(cc.Node.EventType.TOUCH_MOVE, this.onKeyDown, this);
+        cc.systemEvent.on(cc.Node.EventType.TOUCH_MOVE, this.touchEvent, this);
     },
 
     touchEvent(direction) {
