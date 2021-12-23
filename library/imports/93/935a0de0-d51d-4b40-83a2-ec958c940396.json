@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "pngegg",
+    "texture": "ff374743-3ccd-4758-957f-910e8d4c450d",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      980,
+      980
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      980,
+      980
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
