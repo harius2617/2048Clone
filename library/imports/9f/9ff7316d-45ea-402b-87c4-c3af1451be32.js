@@ -51,7 +51,7 @@ cc.Class({
         this.createNewBlock();
         this.createNewBlock();
         this.getScoreStorge();
-        this.eventHandler();
+        this.touchHandler();
         this.canMove = true;
     },
     createBlockBg: function createBlockBg() {
@@ -506,21 +506,22 @@ cc.Class({
     quitGame: function quitGame() {
         cc.game.end();
     },
-    eventHandler: function eventHandler() {
+    touchHandler: function touchHandler() {
         var _this5 = this;
 
-        this.bgBox.on("touchstart", function (event) {
-            cc.warn(1);
-            _this5._startPoint = event.getLocation();
-        });
-        this.bgBox.on("touchend", function (event) {
-            _this5._endPoint = event.getLocation();
-            _this5.reflectTouch();
-        });
-        this.bgBox.on("touchcancel", function (event) {
-            _this5._endPoint = event.getLocation();
-            _this5.reflectTouch();
-        });
+        if (cc.sys.isMobile) {
+            this.bgBox.on("touchstart", function (event) {
+                _this5._startPoint = event.getLocation();
+            });
+            this.bgBox.on("touchend", function (event) {
+                _this5._endPoint = event.getLocation();
+                _this5.reflectTouch();
+            });
+            this.bgBox.on("touchcancel", function (event) {
+                _this5._endPoint = event.getLocation();
+                _this5.reflectTouch();
+            });
+        }
     },
     reflectTouch: function reflectTouch() {
         var startVec = this._startPoint;

@@ -46,7 +46,7 @@ cc.Class({
         this.createNewBlock();
         this.createNewBlock();
         this.getScoreStorge();
-        this.eventHandler();
+        this.touchHandler();
         this.canMove = true;
     },
 
@@ -518,9 +518,9 @@ cc.Class({
         cc.game.end();
     },
 
-    eventHandler() {
+    touchHandler() {
+        if (cc.sys.isMobile) {
         this.bgBox.on("touchstart", (event) => {
-            cc.warn(1)
             this._startPoint = event.getLocation();
         })
         this.bgBox.on("touchend", (event) => {
@@ -531,6 +531,7 @@ cc.Class({
             this._endPoint = event.getLocation();
             this.reflectTouch();
         })
+    }
     },
 
     reflectTouch() {
