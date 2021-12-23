@@ -430,7 +430,7 @@ cc.Class({
     checkGameWin() {
         for (let i = 0; i < this._lstBlock.length; i++) {
             for (let j = 0; j < this._lstBlock[i].length; j++) {
-                if (this._lstBlock[i][j] && this._lstBlock[i][j].getComponent('blockControl').getValue() === 16 && this._isFirstWin) {
+                if (this._lstBlock[i][j] && this._lstBlock[i][j].getComponent('blockControl').getValue() === 2048 && this._isFirstWin) {
                     this._isFirstWin = false;
                     return true;
                 }
