@@ -9,10 +9,11 @@ cc.Class({
         userNameBox: cc.EditBox,
         tooltipName: cc.Label,
         enterButton: cc.Button,
-        // onRuleBtn: cc.Button,
-        // offRuleBtn: cc.Button,
         ruleLayout: cc.PageView,
         loseLayout: cc.Node,
+        newHigh: cc.Node,
+        leaderboard: cc.Node,
+        // winLayout: cc.Node,
         topUser: cc.Prefab,
         content: cc.Node,
         soundOn: true,
@@ -21,18 +22,22 @@ cc.Class({
     },
 
     onLoad () {
-        cc.warn(this.node);
         Emitter.instance = new Emitter();
         this.soundOnBtn.node.active = true;
         this.soundOffBtn.node.active = false;
         this.ruleLayout.node.active = false;
-        this.loseLayout.scale = 0;
+        this.loseLayout.scale = 1;
         this.tooltipName.node.active = false;
         this.enterBtn.interacterble = false;
-        // this.loseLayout.active = true;
+        // this.winLayout.scale = 0;
+        // this.winLayout.active = false;
+        this.loseLayout.active = false;
+        // this.newHigh.active = false;
+        this.newHigh.scale = 0;
         this.soundBg.play(this.soundBg, true,1);
         Emitter.instance.registerEvent("LOSE", this.loseGame.bind(this));
-        cc.warn(this.userNameBox.string)
+        // Emitter.instance.registerEvent("HIGHSCORE", this.notiNewHighScore.bind(this));
+        this.notiNewHighScore()
     },
     soundOnFunc() {
         this.soundOnBtn.node.active = true;
@@ -56,10 +61,19 @@ cc.Class({
     },
 
     loseGame(score) {
-        cc.warn(score)
         this.loseLayout.active = true;
         cc.tween(this.loseLayout)
             .to(1, {scale: 1})
+            .start()
+    },
+
+    notiNewHighScore (){
+        this.newHigh.active = true;
+        cc.tween(this.newHigh)
+            .to(0,1, {scale: 1})
+            .to(1, {opacity: 50})
+            .to(1, {opacity: 255})
+            .to(1, {scale: 0})
             .start()
     },
 
@@ -79,7 +93,16 @@ cc.Class({
             this.enterButton.interacterble = true;
             let userInput = cc.instantiate(this.topUser);
             this.content.addChild(userInput)
-            cc.warn(userInput.getComponent(cc.Label).string)
+            userInput.getComponent(cc.Label).string = this.userNameBox.getComponent(cc.EditBox).string + " :((";
         }
+        this.loseLayout.active = false;
+    },
+
+    onLeaderboard () {
+        this.leaderboard.active = true;
+    },
+
+    offLeaderboard() {
+        this.leaderboard.active = false;
     },
 });

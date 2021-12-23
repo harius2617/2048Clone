@@ -15,6 +15,7 @@ cc.Class({
         bestScore: cc.Label,
         winNoti: cc.Node,
         soundWin: cc.AudioSource,
+        conntinueBtn: cc.Button,
         _newGameFlag: false,
         _lstBlock: [],
         _lstPosition: [],
@@ -30,7 +31,6 @@ cc.Class({
     },
 
     onLoad() {
-        Emitter.instance = new Emitter();
         Emitter.instance.registerEvent("RIGHT", this.blockMoveRight.bind(this));
         Emitter.instance.registerEvent("LEFT", this.blockMoveLeft.bind(this));
         Emitter.instance.registerEvent("UP", this.blockMoveUp.bind(this));
@@ -354,6 +354,7 @@ cc.Class({
         newBlock.getComponent("blockControl").setValue(val * 2);
         newBlock.getComponent("blockControl").setCanCombine(false);
         newBlock.getComponent("blockControl").setCoordinates(i, j);
+        cc.warn(newBlock)
         callBack && callBack()
         this.updateScore(val)
         block1.destroy();
@@ -406,7 +407,7 @@ cc.Class({
     checkGameWin() {
         for(let i= 0; i <this._lstBlock.length; i++){
             for(let j = 0; j < this._lstBlock[i].length; j++){
-                if(this._lstBlock[i][j] && this._lstBlock[i][j].getComponent('blockControl').getValue() === 2048 && this._isFirstWin){
+                if(this._lstBlock[i][j] && this._lstBlock[i][j].getComponent('blockControl').getValue() === 16 && this._isFirstWin){
                     this._isFirstWin = false;
                     return true;
                 }
@@ -421,6 +422,11 @@ cc.Class({
         cc.tween(this.winNoti)
             .to(1, { scale: 1 })
             .start()
+    },
+
+    continueGame() {
+        this.winNoti.active = false;
+        this.canMove = true;
     },
 
     checkGameLose() {
@@ -461,6 +467,7 @@ cc.Class({
         if (newScore > Number(this.bestScore.string)) {
             cc.sys.localStorage.setItem('bestScore', JSON.stringify(newScore));
             this.bestScore.string = newScore;
+            Emitter.instance.emit("HIGHSCORE")
         }
     },
 
