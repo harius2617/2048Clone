@@ -13,12 +13,13 @@ cc.Class({
         loseLayout: cc.Node,
         newHigh: cc.Node,
         leaderboard: cc.Node,
-        // winLayout: cc.Node,
+        winLayout: cc.Node,
         topUser: cc.Prefab,
         content: cc.Node,
         soundOn: true,
         soundOff: false,
         soundBg: cc.AudioSource,
+        soundWin: cc.AudioSource,
     },
 
     onLoad () {
@@ -26,18 +27,19 @@ cc.Class({
         this.soundOnBtn.node.active = true;
         this.soundOffBtn.node.active = false;
         this.ruleLayout.node.active = false;
-        this.loseLayout.scale = 1;
         this.tooltipName.node.active = false;
         this.enterBtn.interacterble = false;
-        // this.winLayout.scale = 0;
-        // this.winLayout.active = false;
+        this.winLayout.scale = 0;
+        this.winLayout.active = false;
+        this.loseLayout.scale = 0;
         this.loseLayout.active = false;
-        // this.newHigh.active = false;
+        this.newHigh.active = false;
         this.newHigh.scale = 0;
         this.soundBg.play(this.soundBg, true,1);
         Emitter.instance.registerEvent("LOSE", this.loseGame.bind(this));
+        Emitter.instance.registerEvent("WIN", this.winGame.bind(this));
+        cc.warn(this.winLayout.scale)
         // Emitter.instance.registerEvent("HIGHSCORE", this.notiNewHighScore.bind(this));
-        this.notiNewHighScore()
     },
     soundOnFunc() {
         this.soundOnBtn.node.active = true;
@@ -65,6 +67,20 @@ cc.Class({
         cc.tween(this.loseLayout)
             .to(1, {scale: 1})
             .start()
+    },
+
+    winGame() {
+        // cc.log(this.winLayout)
+        this.soundWin.play(this.soundWin, false, 1)
+        this.winLayout.active = true;
+        cc.tween(this.winLayout)
+            .to(1, {scale: 1})
+            .start()
+    },
+
+    continueGame() {
+        this.winLayout.active = false;
+        Emitter.instance.emit("CONTINUE")
     },
 
     notiNewHighScore (){

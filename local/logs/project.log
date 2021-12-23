@@ -1,353 +1,69 @@
-2021-12-23T01:46:30.796Z - normal: Load ~/.CocosCreator/settings.json
-2021-12-23T01:46:30.839Z - normal: Initializing Asset Database
-2021-12-23T01:46:30.841Z - normal: checking language setting...
-2021-12-23T01:46:30.841Z - normal: Language: en
-2021-12-23T01:46:31.543Z - success: preview server running at http://localhost:7456
-2021-12-23T01:46:31.554Z - success: protocol editor-framework registered
-2021-12-23T01:46:31.554Z - success: protocol app registered
-2021-12-23T01:46:31.555Z - success: protocol theme registered
-2021-12-23T01:46:31.555Z - success: protocol packages registered
-2021-12-23T01:46:31.555Z - success: protocol uuid registerred
-2021-12-23T01:46:31.555Z - success: protocol db registerred
-2021-12-23T01:46:31.555Z - success: protocol thumbnail registerred
-2021-12-23T01:46:31.555Z - success: protocol unpack registerred
-2021-12-23T01:46:31.555Z - success: protocol disable-commonjs registerred
-2021-12-23T01:46:32.810Z - normal: connected!
-2021-12-23T01:46:32.812Z - normal: Check project /Users/fe-danghai-fresher/Desktop/2048Clone
-2021-12-23T01:46:32.814Z - normal: Initializing project /Users/fe-danghai-fresher/Desktop/2048Clone
-2021-12-23T01:46:33.177Z - normal: Initializing Cocos2d
-2021-12-23T01:46:33.874Z - normal: Initializing engine extends
-2021-12-23T01:46:33.908Z - success: alipay-adapter loaded
-2021-12-23T01:46:33.917Z - success: asset-db-debugger loaded
-2021-12-23T01:46:33.923Z - success: baidu-adapter loaded
-2021-12-23T01:46:33.927Z - success: color-picker loaded
-2021-12-23T01:46:34.095Z - success: fb-audience-network loaded
-2021-12-23T01:46:34.152Z - success: fb-live-stream loaded
-2021-12-23T01:46:34.156Z - success: google-play-instant loaded
-2021-12-23T01:46:34.163Z - success: huawei-runtime loaded
-2021-12-23T01:46:34.407Z - success: cpk-publish loaded
-2021-12-23T01:46:34.408Z - success: jsb-adapter loaded
-2021-12-23T01:46:34.415Z - success: oppo-runtime loaded
-2021-12-23T01:46:34.420Z - success: package-manager loaded
-2021-12-23T01:46:34.560Z - success: qqplay-adapter loaded
-2021-12-23T01:46:34.563Z - success: runtime-dev-tools loaded
-2021-12-23T01:46:34.568Z - success: sdkbox loaded
-2021-12-23T01:46:34.572Z - success: tester loaded
-2021-12-23T01:46:34.576Z - success: ui-kit-preview-extra loaded
-2021-12-23T01:46:34.581Z - success: ui-kit-preview loaded
-2021-12-23T01:46:34.584Z - success: ui-kit loaded
-2021-12-23T01:46:34.591Z - success: vivo-runtime loaded
-2021-12-23T01:46:34.593Z - success: weapp-adapter loaded
-2021-12-23T01:46:34.594Z - success: xiaomi-adapter loaded
-2021-12-23T01:46:34.598Z - success: alipay-minigame loaded
-2021-12-23T01:46:34.635Z - success: assets loaded
-2021-12-23T01:46:34.638Z - success: builder loaded
-2021-12-23T01:46:34.906Z - success: cocos-services loaded
-2021-12-23T01:46:34.911Z - success: console loaded
-2021-12-23T01:46:34.939Z - success: fb-instant-games loaded
-2021-12-23T01:46:34.943Z - success: game-window loaded
-2021-12-23T01:46:34.946Z - success: google-instant-games loaded
-2021-12-23T01:46:34.950Z - success: hierarchy loaded
-2021-12-23T01:46:34.954Z - success: inspector loaded
-2021-12-23T01:46:34.956Z - success: keystore loaded
-2021-12-23T01:46:34.961Z - success: node-library loaded
-2021-12-23T01:46:34.963Z - success: package-asset loaded
-2021-12-23T01:46:34.964Z - success: preferences loaded
-2021-12-23T01:46:34.967Z - success: project-exporter loaded
-2021-12-23T01:46:34.971Z - success: project-importer loaded
-2021-12-23T01:46:34.974Z - success: project-settings loaded
-2021-12-23T01:46:34.979Z - success: scene loaded
-2021-12-23T01:46:34.981Z - success: simulator-debugger loaded
-2021-12-23T01:46:34.982Z - success: sprite-editor loaded
-2021-12-23T01:46:34.986Z - success: store loaded
-2021-12-23T01:46:34.994Z - success: timeline loaded
-2021-12-23T01:46:34.999Z - success: xiaomi-runtime loaded
-2021-12-23T01:46:38.026Z - info: Cocos Services load base data!
-2021-12-23T01:46:40.188Z - failed: [db-task][init] Failed to import asset /Users/fe-danghai-fresher/Desktop/2048Clone/assets/Scripts/touchPad.js, message: Compile error: SyntaxError: /Users/fe-danghai-fresher/Desktop/2048Clone/assets/Scripts/touchPad.js: Unexpected token, expected , (43:1)
-  41 |         Emitter.instance.emit("DOWN");
-  42 |     }
-> 43 | };
-     |  ^
-    at Parser.pp$5.raise (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4454:13)
-    at Parser.pp.unexpected (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1761:8)
-    at Parser.pp.expect (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1749:33)
-    at Parser.pp$3.parseCallExpressionArguments (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3564:12)
-    at Parser.pp$3.parseSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3533:31)
-    at Parser.pp$3.parseExprSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3504:15)
-    at Parser.pp$3.parseMaybeUnary (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3474:19)
-    at Parser.pp$3.parseExprOps (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3404:19)
-    at Parser.pp$3.parseMaybeConditional (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3381:19)
-    at Parser.pp$3.parseMaybeAssign (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3344:19)
-2021-12-23T01:46:40.542Z - normal: Loading packages
-2021-12-23T01:46:40.546Z - normal: Watching packages
-2021-12-23T01:46:40.629Z - normal: Run Application
-2021-12-23T02:17:02.062Z - normal: Start building with options : {
-  "actualPlatform": "web-mobile",
-  "android-instant": {
-    "REMOTE_SERVER_ROOT": "",
-    "host": "",
-    "pathPattern": "",
-    "recordPath": "",
-    "scheme": "https",
-    "skipRecord": false
-  },
-  "apiLevel": "",
-  "appABIs": [],
-  "appBundle": false,
-  "baidugame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "testappid",
-    "orientation": "portrait",
-    "subContext": ""
-  },
-  "buildPath": "/Users/fe-danghai-fresher/Desktop/2048Clone/build",
-  "debug": false,
-  "dest": "/Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile",
-  "embedWebDebugger": false,
-  "encryptJs": true,
-  "excludeScenes": [],
-  "excludedModules": [],
-  "fb-instant-games": {},
-  "includeSDKBox": false,
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "md5Cache": false,
-  "mergeStartScene": false,
-  "optimizeHotUpdate": false,
-  "orientation": {
-    "landscapeLeft": true,
-    "landscapeRight": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "packageName": "org.cocos2d.2048Clone",
-  "platform": "web-mobile",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "qqplay": {
-    "REMOTE_SERVER_ROOT": "",
-    "orientation": "portrait",
-    "zip": false
-  },
-  "scenes": [
-    "8029e165-9a07-4adb-a404-d6b6558b12a1"
-  ],
-  "sourceMaps": false,
-  "startScene": "8029e165-9a07-4adb-a404-d6b6558b12a1",
-  "template": "link",
-  "title": "2048Clone",
-  "useDebugKeystore": true,
-  "vsVersion": "auto",
-  "webOrientation": "auto",
-  "wechatgame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "wx6ac3f5090a6b99c5",
-    "orientation": "portrait",
-    "separate_engine": false,
-    "subContext": ""
-  },
-  "xxteaKey": "fa8493f6-625b-4f",
-  "zipCompressJs": true,
-  "project": "/Users/fe-danghai-fresher/Desktop/2048Clone",
-  "projectName": "2048Clone",
-  "debugBuildWorker": false
-}
-2021-12-23T02:17:02.065Z - normal: Building /Users/fe-danghai-fresher/Desktop/2048Clone
-2021-12-23T02:17:02.066Z - normal: Destination /Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile
-2021-12-23T02:17:02.181Z - normal: Delete /Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile/subpackages/**/*,/Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile/**/*
-2021-12-23T02:17:03.820Z - normal: Start building assets
-2021-12-23T02:17:03.820Z - normal: Start spawn build-worker
-2021-12-23T02:17:04.351Z - normal: Finish spawn build-worker
-2021-12-23T02:17:04.352Z - normal: Start init build-worker
-2021-12-23T02:17:06.291Z - normal: Finish init build-worker
-2021-12-23T02:17:06.291Z - normal: Start build-assets in worker
-2021-12-23T02:17:06.700Z - normal: Finish build-assets in worker
-2021-12-23T02:17:06.703Z - normal: Finish building assets
-2021-12-23T02:17:06.713Z - normal: Start building plugin scripts
-2021-12-23T02:17:06.757Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
-2021-12-23T02:17:06.765Z - normal: Generating html from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/web-mobile/template/index.html
-2021-12-23T02:17:06.781Z - normal: Built to "/Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile" successfully
-2021-12-23T02:43:46.622Z - warn: The Asset used by component "cc.Sprite" is missing. Detailed information:
-Node path: "highScoreFrame"
-Missing uuid: "a2aaffa2-a061-49c5-ba8e-97dc8ae2748d"
-
-2021-12-23T02:43:46.637Z - warn: The Asset used by component "cc.Sprite" is missing. Detailed information:
-Node path: "frameHighScore"
-Missing uuid: "2d75a4d0-2dde-4432-a343-f79e395ee9e1"
-
-2021-12-23T03:35:16.427Z - info: Only the prefab node "userName" and its child nodes are saved.
-2021-12-23T03:38:55.154Z - info: Only the prefab node "userName" and its child nodes are saved.
-2021-12-23T03:42:08.794Z - info: Only the prefab node "userName" and its child nodes are saved.
-2021-12-23T04:04:25.671Z - info: Only the prefab node "userName" and its child nodes are saved.
-2021-12-23T04:41:37.453Z - normal: Start building with options : {
-  "actualPlatform": "web-mobile",
-  "android-instant": {
-    "REMOTE_SERVER_ROOT": "",
-    "host": "",
-    "pathPattern": "",
-    "recordPath": "",
-    "scheme": "https",
-    "skipRecord": false
-  },
-  "apiLevel": "",
-  "appABIs": [],
-  "appBundle": false,
-  "baidugame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "testappid",
-    "orientation": "portrait",
-    "subContext": ""
-  },
-  "buildPath": "/Users/fe-danghai-fresher/Desktop/2048Clone/build",
-  "debug": false,
-  "dest": "/Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile",
-  "embedWebDebugger": false,
-  "encryptJs": true,
-  "excludeScenes": [],
-  "excludedModules": [],
-  "fb-instant-games": {},
-  "includeSDKBox": false,
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "md5Cache": false,
-  "mergeStartScene": false,
-  "optimizeHotUpdate": false,
-  "orientation": {
-    "landscapeLeft": true,
-    "landscapeRight": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "packageName": "org.cocos2d.2048Clone",
-  "platform": "web-mobile",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "qqplay": {
-    "REMOTE_SERVER_ROOT": "",
-    "orientation": "portrait",
-    "zip": false
-  },
-  "scenes": [
-    "8029e165-9a07-4adb-a404-d6b6558b12a1"
-  ],
-  "sourceMaps": false,
-  "startScene": "8029e165-9a07-4adb-a404-d6b6558b12a1",
-  "template": "link",
-  "title": "2048Clone",
-  "useDebugKeystore": true,
-  "vsVersion": "auto",
-  "webOrientation": "auto",
-  "wechatgame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "wx6ac3f5090a6b99c5",
-    "orientation": "portrait",
-    "separate_engine": false,
-    "subContext": ""
-  },
-  "xxteaKey": "fa8493f6-625b-4f",
-  "zipCompressJs": true,
-  "project": "/Users/fe-danghai-fresher/Desktop/2048Clone",
-  "projectName": "2048Clone",
-  "debugBuildWorker": false
-}
-2021-12-23T04:41:37.457Z - normal: Building /Users/fe-danghai-fresher/Desktop/2048Clone
-2021-12-23T04:41:37.457Z - normal: Destination /Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile
-2021-12-23T04:41:37.458Z - normal: Delete /Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile/subpackages/**/*,/Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile/**/*
-2021-12-23T04:41:39.275Z - normal: Start building assets
-2021-12-23T04:41:39.275Z - normal: Start spawn build-worker
-2021-12-23T04:41:39.824Z - normal: Finish spawn build-worker
-2021-12-23T04:41:39.824Z - normal: Start init build-worker
-2021-12-23T04:41:41.864Z - normal: Finish init build-worker
-2021-12-23T04:41:41.864Z - normal: Start build-assets in worker
-2021-12-23T04:41:42.286Z - normal: Finish build-assets in worker
-2021-12-23T04:41:42.288Z - normal: Finish building assets
-2021-12-23T04:41:42.297Z - normal: Start building plugin scripts
-2021-12-23T04:41:42.325Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
-2021-12-23T04:41:42.332Z - normal: Generating html from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/web-mobile/template/index.html
-2021-12-23T04:41:42.342Z - normal: Built to "/Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile" successfully
-2021-12-23T04:42:08.353Z - normal: Start building with options : {
-  "actualPlatform": "web-mobile",
-  "android-instant": {
-    "REMOTE_SERVER_ROOT": "",
-    "host": "",
-    "pathPattern": "",
-    "recordPath": "",
-    "scheme": "https",
-    "skipRecord": false
-  },
-  "apiLevel": "",
-  "appABIs": [],
-  "appBundle": false,
-  "baidugame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "testappid",
-    "orientation": "portrait",
-    "subContext": ""
-  },
-  "buildPath": "/Users/fe-danghai-fresher/Desktop/2048Clone/build",
-  "debug": false,
-  "dest": "/Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile",
-  "embedWebDebugger": false,
-  "encryptJs": true,
-  "excludeScenes": [],
-  "excludedModules": [],
-  "fb-instant-games": {},
-  "includeSDKBox": false,
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "md5Cache": false,
-  "mergeStartScene": false,
-  "optimizeHotUpdate": false,
-  "orientation": {
-    "landscapeLeft": true,
-    "landscapeRight": true,
-    "portrait": false,
-    "upsideDown": false
-  },
-  "packageName": "org.cocos2d.2048Clone",
-  "platform": "web-mobile",
-  "previewHeight": "720",
-  "previewWidth": "1280",
-  "qqplay": {
-    "REMOTE_SERVER_ROOT": "",
-    "orientation": "portrait",
-    "zip": false
-  },
-  "scenes": [
-    "8029e165-9a07-4adb-a404-d6b6558b12a1"
-  ],
-  "sourceMaps": false,
-  "startScene": "8029e165-9a07-4adb-a404-d6b6558b12a1",
-  "template": "link",
-  "title": "2048Clone",
-  "useDebugKeystore": true,
-  "vsVersion": "auto",
-  "webOrientation": "auto",
-  "wechatgame": {
-    "REMOTE_SERVER_ROOT": "",
-    "appid": "wx6ac3f5090a6b99c5",
-    "orientation": "portrait",
-    "separate_engine": false,
-    "subContext": ""
-  },
-  "xxteaKey": "fa8493f6-625b-4f",
-  "zipCompressJs": true,
-  "project": "/Users/fe-danghai-fresher/Desktop/2048Clone",
-  "projectName": "2048Clone",
-  "debugBuildWorker": false
-}
-2021-12-23T04:42:08.354Z - normal: Building /Users/fe-danghai-fresher/Desktop/2048Clone
-2021-12-23T04:42:08.355Z - normal: Destination /Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile
-2021-12-23T04:42:08.356Z - normal: Delete /Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile/subpackages/**/*,/Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile/**/*
-2021-12-23T04:42:10.445Z - normal: Start building assets
-2021-12-23T04:42:10.446Z - normal: Start spawn build-worker
-2021-12-23T04:42:10.988Z - normal: Finish spawn build-worker
-2021-12-23T04:42:10.989Z - normal: Start init build-worker
-2021-12-23T04:42:13.476Z - normal: Finish init build-worker
-2021-12-23T04:42:13.476Z - normal: Start build-assets in worker
-2021-12-23T04:42:13.848Z - normal: Finish build-assets in worker
-2021-12-23T04:42:13.850Z - normal: Finish building assets
-2021-12-23T04:42:13.858Z - normal: Start building plugin scripts
-2021-12-23T04:42:13.881Z - normal: Generating main.js from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
-2021-12-23T04:42:13.886Z - normal: Generating html from /Applications/CocosCreator.app/Contents/Resources/static/build-templates/web-mobile/template/index.html
-2021-12-23T04:42:13.895Z - normal: Built to "/Users/fe-danghai-fresher/Desktop/2048Clone/build/web-mobile" successfully
+2021-12-23T08:26:52.108Z - normal: Load ~/.CocosCreator/settings.json
+2021-12-23T08:26:52.145Z - normal: Initializing Asset Database
+2021-12-23T08:26:52.146Z - normal: checking language setting...
+2021-12-23T08:26:52.147Z - normal: Language: en
+2021-12-23T08:26:52.582Z - success: preview server running at http://localhost:7456
+2021-12-23T08:26:52.592Z - success: protocol editor-framework registered
+2021-12-23T08:26:52.592Z - success: protocol app registered
+2021-12-23T08:26:52.592Z - success: protocol theme registered
+2021-12-23T08:26:52.593Z - success: protocol packages registered
+2021-12-23T08:26:52.593Z - success: protocol uuid registerred
+2021-12-23T08:26:52.593Z - success: protocol db registerred
+2021-12-23T08:26:52.593Z - success: protocol thumbnail registerred
+2021-12-23T08:26:52.593Z - success: protocol unpack registerred
+2021-12-23T08:26:52.593Z - success: protocol disable-commonjs registerred
+2021-12-23T08:26:54.377Z - normal: connected!
+2021-12-23T08:26:54.379Z - normal: Check project /Users/fe-danghai-fresher/Desktop/2048Clone
+2021-12-23T08:26:54.380Z - normal: Initializing project /Users/fe-danghai-fresher/Desktop/2048Clone
+2021-12-23T08:26:54.640Z - normal: Initializing Cocos2d
+2021-12-23T08:26:55.064Z - normal: Initializing engine extends
+2021-12-23T08:26:55.083Z - success: alipay-adapter loaded
+2021-12-23T08:26:55.090Z - success: asset-db-debugger loaded
+2021-12-23T08:26:55.093Z - success: baidu-adapter loaded
+2021-12-23T08:26:55.098Z - success: color-picker loaded
+2021-12-23T08:26:55.202Z - success: fb-audience-network loaded
+2021-12-23T08:26:55.258Z - success: fb-live-stream loaded
+2021-12-23T08:26:55.261Z - success: google-play-instant loaded
+2021-12-23T08:26:55.265Z - success: huawei-runtime loaded
+2021-12-23T08:26:55.403Z - success: cpk-publish loaded
+2021-12-23T08:26:55.404Z - success: jsb-adapter loaded
+2021-12-23T08:26:55.408Z - success: oppo-runtime loaded
+2021-12-23T08:26:55.411Z - success: package-manager loaded
+2021-12-23T08:26:55.481Z - success: qqplay-adapter loaded
+2021-12-23T08:26:55.482Z - success: runtime-dev-tools loaded
+2021-12-23T08:26:55.485Z - success: sdkbox loaded
+2021-12-23T08:26:55.487Z - success: tester loaded
+2021-12-23T08:26:55.489Z - success: ui-kit-preview-extra loaded
+2021-12-23T08:26:55.491Z - success: ui-kit-preview loaded
+2021-12-23T08:26:55.493Z - success: ui-kit loaded
+2021-12-23T08:26:55.497Z - success: vivo-runtime loaded
+2021-12-23T08:26:55.498Z - success: weapp-adapter loaded
+2021-12-23T08:26:55.498Z - success: xiaomi-adapter loaded
+2021-12-23T08:26:55.500Z - success: alipay-minigame loaded
+2021-12-23T08:26:55.529Z - success: assets loaded
+2021-12-23T08:26:55.531Z - success: builder loaded
+2021-12-23T08:26:55.688Z - success: cocos-services loaded
+2021-12-23T08:26:55.692Z - success: console loaded
+2021-12-23T08:26:55.714Z - success: fb-instant-games loaded
+2021-12-23T08:26:55.717Z - success: game-window loaded
+2021-12-23T08:26:55.718Z - success: google-instant-games loaded
+2021-12-23T08:26:55.721Z - success: hierarchy loaded
+2021-12-23T08:26:55.725Z - success: inspector loaded
+2021-12-23T08:26:55.727Z - success: keystore loaded
+2021-12-23T08:26:55.730Z - success: node-library loaded
+2021-12-23T08:26:55.731Z - success: package-asset loaded
+2021-12-23T08:26:55.731Z - success: preferences loaded
+2021-12-23T08:26:55.734Z - success: project-exporter loaded
+2021-12-23T08:26:55.737Z - success: project-importer loaded
+2021-12-23T08:26:55.739Z - success: project-settings loaded
+2021-12-23T08:26:55.743Z - success: scene loaded
+2021-12-23T08:26:55.744Z - success: simulator-debugger loaded
+2021-12-23T08:26:55.745Z - success: sprite-editor loaded
+2021-12-23T08:26:55.747Z - success: store loaded
+2021-12-23T08:26:55.752Z - success: timeline loaded
+2021-12-23T08:26:55.754Z - success: xiaomi-runtime loaded
+2021-12-23T08:26:57.559Z - info: Cocos Services load base data!
+2021-12-23T08:26:59.486Z - normal: Loading packages
+2021-12-23T08:26:59.490Z - normal: Watching packages
+2021-12-23T08:26:59.567Z - normal: Run Application
+2021-12-23T10:08:23.790Z - warn: [db-task][sync-changes] Backup unused meta file: db://assets/images/bgRule.jpg.meta

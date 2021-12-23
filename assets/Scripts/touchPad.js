@@ -1,4 +1,10 @@
 const Emitter = require('mEmitter');
+const DIRECTION = cc.Enum({
+    RIGHT: -1,
+    LEFT: -1,
+    UP: -1,
+    DOWN: -1
+});
 
 cc.Class({
     extends: cc.Component,
@@ -40,4 +46,4 @@ cc.Class({
     moveDown() {
         Emitter.instance.emit("DOWN");
     }
-};
+});

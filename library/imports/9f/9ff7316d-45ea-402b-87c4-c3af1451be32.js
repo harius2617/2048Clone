@@ -19,9 +19,7 @@ cc.Class({
         cell: cc.Prefab,
         currScore: cc.Label,
         bestScore: cc.Label,
-        winNoti: cc.Node,
-        soundWin: cc.AudioSource,
-        conntinueBtn: cc.Button,
+        spriteArr: [cc.SpriteFrame],
         _newGameFlag: false,
         _lstBlock: [],
         _lstPosition: [],
@@ -33,7 +31,6 @@ cc.Class({
             visible: false
         },
         _isFirstWin: false
-
     },
 
     onLoad: function onLoad() {
@@ -41,8 +38,10 @@ cc.Class({
         Emitter.instance.registerEvent("LEFT", this.blockMoveLeft.bind(this));
         Emitter.instance.registerEvent("UP", this.blockMoveUp.bind(this));
         Emitter.instance.registerEvent("DOWN", this.blockMoveDown.bind(this));
-        this.winNoti.scale = 0;
-        this.winNoti.active = false;
+        Emitter.instance.registerEvent("CONTINUE", this.continueGame.bind(this));
+
+        // this.winNoti.scale = 0
+        // this.winNoti.active = false;
         this._isFirstWin = true;
     },
     start: function start() {
@@ -100,6 +99,9 @@ cc.Class({
         this._lstBlock[data.i][data.j] = newBlock;
         newBlock.getComponent("blockControl").init();
         newBlock.getComponent("blockControl").setCoordinates(data.i, data.j);
+        if (newBlock.getComponent("blockControl").getValue() === 4) {
+            newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[1];
+        }
     },
     updateEmptyList: function updateEmptyList() {
         this._lstEmptySlot = [];
@@ -130,7 +132,8 @@ cc.Class({
         }
         if (this.checkGameWin()) {
             this.canMove = false;
-            this.showGameWin();
+            // this.showGameWin();
+            Emitter.instance.emit("WIN");
         } else {
             this.canMove = true;
         }
@@ -355,7 +358,33 @@ cc.Class({
         newBlock.getComponent("blockControl").setValue(val * 2);
         newBlock.getComponent("blockControl").setCanCombine(false);
         newBlock.getComponent("blockControl").setCoordinates(i, j);
-        cc.warn(newBlock);
+        if (val == 2) {
+            newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[1];
+        }
+        if (val == 4) {
+            newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[2];
+        }
+        if (val == 8) {
+            newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[3];
+        }
+        if (val == 16) {
+            newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[4];
+        }
+        if (val == 32) {
+            newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[5];
+        }
+        if (val == 64) {
+            newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[6];
+        }
+        if (val == 128) {
+            newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[7];
+        }
+        if (val == 256) {
+            newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[8];
+        }
+        if (val >= 512) {
+            newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[9];
+        }
         callBack && callBack();
         this.updateScore(val);
         block1.destroy();
@@ -421,7 +450,6 @@ cc.Class({
         cc.tween(this.winNoti).to(1, { scale: 1 }).start();
     },
     continueGame: function continueGame() {
-        this.winNoti.active = false;
         this.canMove = true;
     },
     checkGameLose: function checkGameLose() {
@@ -475,7 +503,6 @@ cc.Class({
         this.createNewBlock();
         this.updateScore(0);
         this._newGameFlag = false;
-        this.winNoti.active = false;
         this.canMove = true;
         this._isFirstWin = true;
     },

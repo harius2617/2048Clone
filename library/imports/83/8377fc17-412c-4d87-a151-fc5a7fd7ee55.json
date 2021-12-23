@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "intructor1",
+    "texture": "7298094d-d840-406d-8d34-63a1f2e06341",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      728,
+      546
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      728,
+      546
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
