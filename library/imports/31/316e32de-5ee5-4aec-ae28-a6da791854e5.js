@@ -40,12 +40,12 @@ cc.Class({
         this.loseLayout.scale = 0;
         this.loseLayout.active = false;
         this.newHigh.active = false;
-        this.newHigh.scale = 0;
+        this.newHigh.scale = 1;
         this.soundBg.play(this.soundBg, true, 1);
         Emitter.instance.registerEvent("LOSE", this.loseGame.bind(this));
         Emitter.instance.registerEvent("WIN", this.winGame.bind(this));
         cc.warn(this.winLayout.scale);
-        // Emitter.instance.registerEvent("HIGHSCORE", this.notiNewHighScore.bind(this));
+        Emitter.instance.registerEvent("HIGHSCORE", this.notiNewHighScore.bind(this));
     },
     soundOnFunc: function soundOnFunc() {
         this.soundOnBtn.node.active = true;

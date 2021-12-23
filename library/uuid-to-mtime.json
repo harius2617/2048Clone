@@ -534,16 +534,6 @@
     "meta": 1640224000136,
     "relativePath": "Scripts/keyBoard.js"
   },
-  "fd8e52c7-5014-417b-8a64-cbacd7fa3d13": {
-    "asset": 1640160867773,
-    "meta": 1640224000172,
-    "relativePath": "Scripts/ruleBtn.js"
-  },
-  "bfab71ec-5a79-40ca-9636-d766d8c9ecfc": {
-    "asset": 1640165885427,
-    "meta": 1640224000189,
-    "relativePath": "Scripts/temporaryBtn.js"
-  },
   "a08ce163-65b4-4b3d-b8cc-c293259c6c2c": {
     "asset": 1640166730534,
     "meta": 1640224000179,
@@ -639,19 +629,19 @@
     "meta": 1640254103867,
     "relativePath": "images/intructor3.jpeg"
   },
-  "316e32de-5ee5-4aec-ae28-a6da791854e5": {
-    "asset": 1640254828399,
-    "meta": 1640254837720,
-    "relativePath": "Scripts/GameCotroller.js"
-  },
   "8029e165-9a07-4adb-a404-d6b6558b12a1": {
-    "asset": 1640255274757,
-    "meta": 1640255274792,
+    "asset": 1640256922581,
+    "meta": 1640256922596,
     "relativePath": "Scene/New Scene.fire"
   },
+  "316e32de-5ee5-4aec-ae28-a6da791854e5": {
+    "asset": 1640256103256,
+    "meta": 1640256106844,
+    "relativePath": "Scripts/GameCotroller.js"
+  },
   "9ff7316d-45ea-402b-87c4-c3af1451be32": {
-    "asset": 1640255097413,
-    "meta": 1640255106022,
+    "asset": 1640256905781,
+    "meta": 1640256920853,
     "relativePath": "Scripts/GameContainer.js"
   }
 }
