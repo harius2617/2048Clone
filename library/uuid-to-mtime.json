@@ -489,11 +489,6 @@
     "meta": 1640179846932,
     "relativePath": "Audios"
   },
-  "7495c96e-c587-4647-8449-505b10a53dd3": {
-    "asset": 1640179846947,
-    "meta": 1640266837293,
-    "relativePath": "Audios\\soundBg.mp3"
-  },
   "9940f555-3a70-4753-8a99-c80e6bccc134": {
     "asset": 1640179846979,
     "meta": 1640266837559,
@@ -534,11 +529,6 @@
     "meta": 1640266838266,
     "relativePath": "Scripts\\keyBoard.js"
   },
-  "a08ce163-65b4-4b3d-b8cc-c293259c6c2c": {
-    "asset": 1640179846963,
-    "meta": 1640266838298,
-    "relativePath": "Scripts\\Score.js"
-  },
   "2e9cb666-4e85-4ee5-a7d7-2d4064dbc346": {
     "asset": 1640179846932,
     "meta": 1640266837198,
@@ -553,11 +543,6 @@
     "asset": 1640193641593,
     "meta": 1640266838173,
     "relativePath": "Scripts\\blockControl.js"
-  },
-  "100adf5d-c4fa-47dd-8ea5-414b758d1744": {
-    "asset": 1640266771359,
-    "meta": 1640266837403,
-    "relativePath": "images\\highScore.png"
   },
   "ca47bb20-50ea-4d8e-ac97-fbc3e9610612": {
     "asset": 1640266771363,
@@ -625,8 +610,8 @@
     "relativePath": "images\\intructor3.jpeg"
   },
   "8029e165-9a07-4adb-a404-d6b6558b12a1": {
-    "asset": 1640271662133,
-    "meta": 1640271662153,
+    "asset": 1640274148534,
+    "meta": 1640274148561,
     "relativePath": "Scene\\New Scene.fire"
   },
   "4ea993ca-8195-4e59-810d-b6e7a186aba3": {
@@ -634,19 +619,24 @@
     "meta": 1640269100674,
     "relativePath": "Audios\\answer-correct.mp3"
   },
-  "9ff7316d-45ea-402b-87c4-c3af1451be32": {
-    "asset": 1640270360374,
-    "meta": 1640270391369,
-    "relativePath": "Scripts\\GameContainer.js"
-  },
-  "316e32de-5ee5-4aec-ae28-a6da791854e5": {
-    "asset": 1640270490046,
-    "meta": 1640270491096,
-    "relativePath": "Scripts\\GameCotroller.js"
-  },
   "8cf1e009-8813-474b-8982-ae141f63dc32": {
     "asset": 1640271349176,
     "meta": 1640271356609,
     "relativePath": "Scripts\\touchPad.js"
+  },
+  "a08ce163-65b4-4b3d-b8cc-c293259c6c2c": {
+    "asset": 1640273673258,
+    "meta": 1640273699316,
+    "relativePath": "Scripts\\Score.js"
+  },
+  "9ff7316d-45ea-402b-87c4-c3af1451be32": {
+    "asset": 1640273975494,
+    "meta": 1640274014407,
+    "relativePath": "Scripts\\GameContainer.js"
+  },
+  "316e32de-5ee5-4aec-ae28-a6da791854e5": {
+    "asset": 1640274057638,
+    "meta": 1640274059445,
+    "relativePath": "Scripts\\GameCotroller.js"
   }
 }

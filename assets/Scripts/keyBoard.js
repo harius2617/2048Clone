@@ -6,7 +6,6 @@ cc.Class({
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
     },
 
-
     onKeyDown: function (event) {
         switch (event.keyCode) {
             case cc.macro.KEY.down:
@@ -35,5 +34,5 @@ cc.Class({
     },
     moveDown() {
         Emitter.instance.emit("DOWN")
-    }
+    },
 });

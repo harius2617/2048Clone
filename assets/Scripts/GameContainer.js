@@ -34,6 +34,7 @@ cc.Class({
         Emitter.instance.registerEvent("UP", this.blockMoveUp.bind(this));
         Emitter.instance.registerEvent("DOWN", this.blockMoveDown.bind(this));
         Emitter.instance.registerEvent("CONTINUE", this.continueGame.bind(this));
+        Emitter.instance.registerEvent("STOPMOVE", this.stopMove.bind(this));
         this._isFirstWin = true;
     },
 
@@ -445,6 +446,10 @@ cc.Class({
 
     continueGame() {
         this.canMove = true;
+    },
+
+    stopMove() {
+        this.canMove = false;
     },
 
     checkGameLose() {

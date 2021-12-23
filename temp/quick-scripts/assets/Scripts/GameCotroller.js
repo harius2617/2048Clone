@@ -47,13 +47,6 @@ cc.Class({
         Emitter.instance.registerEvent("HIGHSCORE", this.notiNewHighScore.bind(this));
         Emitter.instance.registerEvent("SOUND", this.soundOnFunc.bind(this));
     },
-    controlSound: function controlSound() {
-        if (this.soundOnBtn.node.active) {
-            // this.soundOnFunc()
-        } else if (this.soundOffBtn.node.active) {
-            // this.soundOffFunc()
-        }
-    },
     soundOnFunc: function soundOnFunc() {
         this.soundOnBtn.node.active = true;
         this.soundOffBtn.active = false;
@@ -68,9 +61,11 @@ cc.Class({
         this.ruleLayout.node.active = true;
         this.leaderboard.active = false;
         this.ruleLayout.node.getComponent(cc.PageView).scrollToPage(0, 0.01);
+        Emitter.instance.emit("STOPMOVE");
     },
     offRule: function offRule() {
         this.ruleLayout.node.active = false;
+        Emitter.instance.emit("CONTINUE");
     },
     loseGame: function loseGame(score) {
         this.loseLayout.active = true;
@@ -116,9 +111,11 @@ cc.Class({
     onLeaderboard: function onLeaderboard() {
         this.ruleLayout.node.active = false;
         this.leaderboard.active = true;
+        Emitter.instance.emit("STOPMOVE");
     },
     offLeaderboard: function offLeaderboard() {
         this.leaderboard.active = false;
+        Emitter.instance.emit("CONTINUE");
     }
 });
 

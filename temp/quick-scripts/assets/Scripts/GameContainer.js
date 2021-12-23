@@ -40,6 +40,7 @@ cc.Class({
         Emitter.instance.registerEvent("UP", this.blockMoveUp.bind(this));
         Emitter.instance.registerEvent("DOWN", this.blockMoveDown.bind(this));
         Emitter.instance.registerEvent("CONTINUE", this.continueGame.bind(this));
+        Emitter.instance.registerEvent("STOPMOVE", this.stopMove.bind(this));
         this._isFirstWin = true;
     },
     start: function start() {
@@ -441,6 +442,9 @@ cc.Class({
     },
     continueGame: function continueGame() {
         this.canMove = true;
+    },
+    stopMove: function stopMove() {
+        this.canMove = false;
     },
     checkGameLose: function checkGameLose() {
         this.updateEmptyList();
