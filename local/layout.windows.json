@@ -1,7 +1,6 @@
 {
   "version": "1.1.1",
   "windows": {
-    "worker": {},
     "main": {
       "main": true,
       "url": "app://editor/index.html",
@@ -19,23 +18,23 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 412.484375,
+                "height": 412,
                 "type": "panel",
-                "width": 268.40625
+                "width": 268
               },
               {
                 "active": 0,
                 "children": [
                   "assets"
                 ],
-                "height": 411.515625,
+                "height": 412,
                 "type": "panel",
-                "width": 268.40625
+                "width": 268
               }
             ],
             "height": 826,
             "type": "dock-v",
-            "width": 268.40625
+            "width": 268
           },
           {
             "children": [
@@ -46,7 +45,7 @@
                 ],
                 "height": 558,
                 "type": "panel",
-                "width": 991.4375
+                "width": 992
               },
               {
                 "active": 0,
@@ -57,12 +56,12 @@
                 ],
                 "height": 266,
                 "type": "panel",
-                "width": 991.4375
+                "width": 992
               }
             ],
             "height": 826,
             "type": "dock-v",
-            "width": 991.4375
+            "width": 992
           },
           {
             "active": 0,
@@ -73,7 +72,7 @@
             ],
             "height": 826,
             "type": "panel",
-            "width": 400.140625
+            "width": 400
           }
         ],
         "type": "dock-h"
@@ -90,7 +89,8 @@
         "scene"
       ]
     },
-    "window-1640275883016": {}
+    "window-1640277920892": {},
+    "worker": {}
   },
   "panels": {
     "sprite-editor": {
