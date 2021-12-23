@@ -520,18 +520,18 @@ cc.Class({
 
     touchHandler() {
         if (cc.sys.isMobile) {
-        this.bgBox.on("touchstart", (event) => {
-            this._startPoint = event.getLocation();
-        })
-        this.bgBox.on("touchend", (event) => {
-            this._endPoint = event.getLocation();
-            this.reflectTouch();
-        })
-        this.bgBox.on("touchcancel", (event) => {
-            this._endPoint = event.getLocation();
-            this.reflectTouch();
-        })
-    }
+            this.bgBox.on("touchstart", (event) => {
+                this._startPoint = event.getLocation();
+            })
+            this.bgBox.on("touchend", (event) => {
+                this._endPoint = event.getLocation();
+                this.reflectTouch();
+            })
+            this.bgBox.on("touchcancel", (event) => {
+                this._endPoint = event.getLocation();
+                this.reflectTouch();
+            })
+        }
     },
 
     reflectTouch() {
