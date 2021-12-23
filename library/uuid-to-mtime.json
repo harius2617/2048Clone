@@ -524,11 +524,6 @@
     "meta": 1640266838285,
     "relativePath": "Scripts\\mEmitter.js"
   },
-  "b47ec4bd-b4ba-450a-8920-f703bfe382cd": {
-    "asset": 1640179846963,
-    "meta": 1640266838266,
-    "relativePath": "Scripts\\keyBoard.js"
-  },
   "2e9cb666-4e85-4ee5-a7d7-2d4064dbc346": {
     "asset": 1640179846932,
     "meta": 1640266837198,
@@ -610,8 +605,8 @@
     "relativePath": "images\\intructor3.jpeg"
   },
   "8029e165-9a07-4adb-a404-d6b6558b12a1": {
-    "asset": 1640274148534,
-    "meta": 1640274148561,
+    "asset": 1640275919884,
+    "meta": 1640275919901,
     "relativePath": "Scene\\New Scene.fire"
   },
   "4ea993ca-8195-4e59-810d-b6e7a186aba3": {
@@ -629,14 +624,19 @@
     "meta": 1640273699316,
     "relativePath": "Scripts\\Score.js"
   },
-  "9ff7316d-45ea-402b-87c4-c3af1451be32": {
-    "asset": 1640273975494,
-    "meta": 1640274014407,
-    "relativePath": "Scripts\\GameContainer.js"
-  },
   "316e32de-5ee5-4aec-ae28-a6da791854e5": {
     "asset": 1640274057638,
     "meta": 1640274059445,
     "relativePath": "Scripts\\GameCotroller.js"
+  },
+  "b47ec4bd-b4ba-450a-8920-f703bfe382cd": {
+    "asset": 1640274464731,
+    "meta": 1640274780616,
+    "relativePath": "Scripts\\keyBoard.js"
+  },
+  "9ff7316d-45ea-402b-87c4-c3af1451be32": {
+    "asset": 1640275848035,
+    "meta": 1640275849396,
+    "relativePath": "Scripts\\GameContainer.js"
   }
 }

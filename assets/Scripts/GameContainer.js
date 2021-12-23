@@ -4,6 +4,7 @@ const PAD_X = 10;
 const PAD_Y = 10;
 const ROWS = 4;
 const COLS = 4;
+const MIN_LENGTH = 5;
 
 cc.Class({
     extends: cc.Component,
@@ -15,6 +16,7 @@ cc.Class({
         bestScore: cc.Label,
         spriteArr: [cc.SpriteFrame],
         soundOn: cc.Button,
+        bgBox: cc.Node,
         _newGameFlag: false,
         _lstBlock: [],
         _lstPosition: [],
@@ -43,7 +45,8 @@ cc.Class({
         this.createBlockBg();
         this.createNewBlock();
         this.createNewBlock();
-        this.getScoreStorge()
+        this.getScoreStorge();
+        this.eventHandler();
         this.canMove = true;
     },
 
@@ -97,7 +100,7 @@ cc.Class({
         this._lstBlock[data.i][data.j] = newBlock;
         newBlock.getComponent("blockControl").init();
         newBlock.getComponent("blockControl").setCoordinates(data.i, data.j);
-        if(newBlock.getComponent("blockControl").getValue() === 4) {
+        if (newBlock.getComponent("blockControl").getValue() === 4) {
             newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[1]
         }
     },
@@ -126,24 +129,24 @@ cc.Class({
             this.createNewBlock();
             this.checkBestScore();
         }
-        for(let i= 0; i <this._lstBlock.length; i++){
-            for(let j = 0; j < this._lstBlock[i].length; j++){
+        for (let i = 0; i < this._lstBlock.length; i++) {
+            for (let j = 0; j < this._lstBlock[i].length; j++) {
                 this._lstBlock[i][j] && this._lstBlock[i][j].getComponent('blockControl').setCanCombine(true)
             }
         }
-        if(this.checkGameWin()){
+        if (this.checkGameWin()) {
             this.canMove = false;
             Emitter.instance.emit("WIN")
-        }else {
+        } else {
             this.canMove = true;
         }
-        if(this.checkGameLose()){
+        if (this.checkGameLose()) {
             Emitter.instance.emit("LOSE")
         }
     },
 
     blockMoveRight() {
-        if(!this.canMove) return;
+        if (!this.canMove) return;
         this.canMove = false;
         let canCreateNewBlock = false;
         const moveCalculator = (block, callBack) => {
@@ -194,7 +197,7 @@ cc.Class({
     },
 
     blockMoveLeft() {
-        if(!this.canMove) return;
+        if (!this.canMove) return;
         this.canMove = false;
         let canCreateNewBlock = false;
         const moveCalculator = (block, callBack) => {
@@ -245,7 +248,7 @@ cc.Class({
     },
 
     blockMoveUp() {
-        if(!this.canMove) return;
+        if (!this.canMove) return;
         this.canMove = false;
         let canCreateNewBlock = false;
         const moveCalculator = (block, callBack) => {
@@ -296,7 +299,7 @@ cc.Class({
     },
 
     blockMoveDown() {
-        if(!this.canMove) return;
+        if (!this.canMove) return;
         this.canMove = false;
         let canCreateNewBlock = false;
         const moveCalculator = (block, callBack) => {
@@ -355,28 +358,28 @@ cc.Class({
         newBlock.getComponent("blockControl").setValue(val * 2);
         newBlock.getComponent("blockControl").setCanCombine(false);
         newBlock.getComponent("blockControl").setCoordinates(i, j);
-        if(val == 2) {
+        if (val == 2) {
             newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[1];
-        }else if(val == 4) {
+        } else if (val == 4) {
             newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[2];
-        }else if(val == 8) {
+        } else if (val == 8) {
             newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[3];
-        }else if(val == 16) {
+        } else if (val == 16) {
             newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[4];
-        }else if(val == 32) {
+        } else if (val == 32) {
             newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[5];
-        }else if(val == 64) {
+        } else if (val == 64) {
             newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[6];
-        }else if(val == 128) {
+        } else if (val == 128) {
             newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[7];
-        }else if(val >= 256) {
+        } else if (val >= 256) {
             newBlock.getComponent(cc.Sprite).spriteFrame = this.spriteArr[8];
         }
         callBack && callBack()
         this.updateScore(val)
         block1.destroy();
         block2.destroy();
-        if(this.soundOn.node.active === true) {
+        if (this.soundOn.node.active === true) {
             Emitter.instance.emit("SOUND");
         }
     },
@@ -425,9 +428,9 @@ cc.Class({
     },
 
     checkGameWin() {
-        for(let i= 0; i <this._lstBlock.length; i++){
-            for(let j = 0; j < this._lstBlock[i].length; j++){
-                if(this._lstBlock[i][j] && this._lstBlock[i][j].getComponent('blockControl').getValue() === 16 && this._isFirstWin){
+        for (let i = 0; i < this._lstBlock.length; i++) {
+            for (let j = 0; j < this._lstBlock[i].length; j++) {
+                if (this._lstBlock[i][j] && this._lstBlock[i][j].getComponent('blockControl').getValue() === 16 && this._isFirstWin) {
                     this._isFirstWin = false;
                     return true;
                 }
@@ -436,7 +439,7 @@ cc.Class({
         return false;
     },
 
-    showGameWin(){
+    showGameWin() {
         this.soundWin.play(this.soundWin, false, 1)
         this.winNoti.active = true
         cc.tween(this.winNoti)
@@ -454,24 +457,24 @@ cc.Class({
 
     checkGameLose() {
         this.updateEmptyList();
-        if(this._lstEmptySlot.length === 0){
-            for(let i = 0; i < 4; i ++) {
-                for(let j = 0; j < 4; j ++) {
+        if (this._lstEmptySlot.length === 0) {
+            for (let i = 0; i < 4; i++) {
+                for (let j = 0; j < 4; j++) {
                     let num = this._lstBlock[i][j].getComponent("blockControl").getValue();
 
                     let numRight = this._lstBlock[i + 1] ? this._lstBlock[i + 1][j].getComponent("blockControl").getValue() : null;
                     let numLeft = this._lstBlock[i - 1] ? this._lstBlock[i - 1][j].getComponent("blockControl").getValue() : null;
-                    let numUp = this._lstBlock[i][j - 1] ? this._lstBlock[i][j -1].getComponent("blockControl").getValue() : null;
+                    let numUp = this._lstBlock[i][j - 1] ? this._lstBlock[i][j - 1].getComponent("blockControl").getValue() : null;
                     let numDown = this._lstBlock[i][j + 1] ? this._lstBlock[i][j + 1].getComponent("blockControl").getValue() : null;
 
-                    if(i < 3 && num === numRight) return false;
-                    if(i >0 && num === numLeft) return false;
-                    if(j < 3 && num === numDown) return false;
-                    if(j > 0 && num === numUp) return false;
+                    if (i < 3 && num === numRight) return false;
+                    if (i > 0 && num === numLeft) return false;
+                    if (j < 3 && num === numDown) return false;
+                    if (j > 0 && num === numUp) return false;
                 }
             }
             return true;
-        }else {
+        } else {
             return false;
         }
     },
@@ -514,5 +517,37 @@ cc.Class({
     quitGame() {
         cc.game.end();
     },
+
+    eventHandler() {
+        this.bgBox.on("touchstart", (event) => {
+            cc.warn(1)
+            this._startPoint = event.getLocation();
+        })
+        this.bgBox.on("touchend", (event) => {
+            this._endPoint = event.getLocation();
+            this.reflectTouch();
+        })
+        this.bgBox.on("touchcancel", (event) => {
+            this._endPoint = event.getLocation();
+            this.reflectTouch();
+        })
+    },
+
+    reflectTouch() {
+        let startVec = this._startPoint;
+        let endVec = this._endPoint;
+        let pointsVec = endVec.sub(startVec);
+        let vecLength = pointsVec.mag();
+        if (vecLength > MIN_LENGTH) {
+            if (Math.abs(pointsVec.x) > Math.abs(pointsVec.y)) {
+                if (pointsVec.x > 0) this.blockMoveRight();
+                else this.blockMoveLeft();
+            } else {
+                if (pointsVec.y > 0) this.blockMoveUp();
+                else this.blockMoveDown();
+            }
+        }
+    },
+
 
 });

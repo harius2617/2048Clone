@@ -10,6 +10,7 @@ var PAD_X = 10;
 var PAD_Y = 10;
 var ROWS = 4;
 var COLS = 4;
+var MIN_LENGTH = 5;
 
 cc.Class({
     extends: cc.Component,
@@ -21,6 +22,7 @@ cc.Class({
         bestScore: cc.Label,
         spriteArr: [cc.SpriteFrame],
         soundOn: cc.Button,
+        bgBox: cc.Node,
         _newGameFlag: false,
         _lstBlock: [],
         _lstPosition: [],
@@ -49,6 +51,7 @@ cc.Class({
         this.createNewBlock();
         this.createNewBlock();
         this.getScoreStorge();
+        this.eventHandler();
         this.canMove = true;
     },
     createBlockBg: function createBlockBg() {
@@ -502,6 +505,35 @@ cc.Class({
     },
     quitGame: function quitGame() {
         cc.game.end();
+    },
+    eventHandler: function eventHandler() {
+        var _this5 = this;
+
+        this.bgBox.on("touchstart", function (event) {
+            cc.warn(1);
+            _this5._startPoint = event.getLocation();
+        });
+        this.bgBox.on("touchend", function (event) {
+            _this5._endPoint = event.getLocation();
+            _this5.reflectTouch();
+        });
+        this.bgBox.on("touchcancel", function (event) {
+            _this5._endPoint = event.getLocation();
+            _this5.reflectTouch();
+        });
+    },
+    reflectTouch: function reflectTouch() {
+        var startVec = this._startPoint;
+        var endVec = this._endPoint;
+        var pointsVec = endVec.sub(startVec);
+        var vecLength = pointsVec.mag();
+        if (vecLength > MIN_LENGTH) {
+            if (Math.abs(pointsVec.x) > Math.abs(pointsVec.y)) {
+                if (pointsVec.x > 0) this.blockMoveRight();else this.blockMoveLeft();
+            } else {
+                if (pointsVec.y > 0) this.blockMoveUp();else this.blockMoveDown();
+            }
+        }
     }
 });
 
