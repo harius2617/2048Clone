@@ -509,7 +509,7 @@ cc.Class({
     touchHandler: function touchHandler() {
         var _this5 = this;
 
-        if (cc.sys.isMobile) {
+        if (cc.sys.isMobile || cc.sys.IOS || cc.sys.ANDROID) {
             this.bgBox.on("touchstart", function (event) {
                 _this5._startPoint = event.getLocation();
             });
